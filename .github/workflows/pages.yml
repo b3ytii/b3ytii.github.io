@@ -17,7 +17,7 @@ concurrency:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -35,10 +35,14 @@ jobs:
         run: npm run build
 
       - name: Validate generated homepage
-        shell: bash
+        shell: pwsh
         run: |
-          test -s public/index.html
-          grep -q '<title>' public/index.html
+          if ((Get-Item public/index.html).Length -le 0) {
+            throw 'Generated homepage is empty'
+          }
+          if (-not (Select-String -Path public/index.html -Pattern '<title>' -Quiet)) {
+            throw 'Generated homepage has no title'
+          }
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
