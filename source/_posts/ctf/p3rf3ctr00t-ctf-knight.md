@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Knight"
-date: 2026-01-01 00:00:00 +0000
+date: 2026-04-24 16:53:08 +0530
 description: "CTF write-up for Knight by Narain Krishna."
 categories: ["Writeups", "CTF", "P3RF3CTR00T CTF"]
 tags: [ctf, writeup]

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Root Quest"
-date: 2026-01-01 00:00:00 +0000
+date: 2026-04-24 19:19:57 +0530
 description: "CTF write-up for Root Quest by Narain Krishna."
 categories: ["Writeups", "CTF", "Mobile Hacking Community CTF"]
 tags: [ctf, writeup]

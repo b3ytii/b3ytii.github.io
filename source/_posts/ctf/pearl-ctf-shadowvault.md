@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Shadow Vault"
-date: 2026-01-01 00:00:00 +0000
+date: 2026-05-04 20:20:08 +0530
 description: "CTF write-up for Shadow Vault by Narain Krishna."
 categories: ["Writeups", "CTF", "Pearl CTF"]
 tags: [ctf, writeup]

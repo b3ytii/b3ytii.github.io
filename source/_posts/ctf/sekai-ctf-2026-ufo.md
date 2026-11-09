@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "UFO"
-date: 2026-01-01 00:00:00 +0000
+date: 2026-08-07 17:48:57 +0530
 description: "CTF write-up for UFO by Narain Krishna."
 categories: ["Writeups", "CTF", "Sekai CTF (2026)"]
 tags: [ctf, writeup]

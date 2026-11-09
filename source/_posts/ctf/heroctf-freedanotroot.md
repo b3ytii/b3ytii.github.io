@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Freeda Not Root"
-date: 2026-01-01 00:00:00 +0000
+date: 2026-04-20 23:11:18 +0530
 description: "CTF write-up for Freeda Not Root by Narain Krishna."
 categories: ["Writeups", "CTF", "HeroCTF"]
 tags: [ctf, writeup]

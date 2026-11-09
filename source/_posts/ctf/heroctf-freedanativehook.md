@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Freeda Native Hook"
-date: 2026-01-01 00:00:00 +0000
+date: 2026-04-20 23:22:38 +0530
 description: "CTF write-up for Freeda Native Hook by Narain Krishna."
 categories: ["Writeups", "CTF", "HeroCTF"]
 tags: [ctf, writeup]

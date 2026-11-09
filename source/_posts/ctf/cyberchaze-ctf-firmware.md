@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Firmware"
-date: 2026-01-01 00:00:00 +0000
+date: 2026-04-17 16:29:52 +0530
 description: "CTF write-up for Firmware by Narain Krishna."
 categories: ["Writeups", "CTF", "Cyberchaze CTF"]
 tags: [ctf, writeup]

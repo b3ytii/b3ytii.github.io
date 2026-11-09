@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Gate Keeper"
-date: 2026-01-01 00:00:00 +0000
+date: 2026-04-18 10:56:56 +0530
 description: "CTF write-up for Gate Keeper by Narain Krishna."
 categories: ["Writeups", "CTF", "Payatu Hiring CTF"]
 tags: [ctf, writeup]

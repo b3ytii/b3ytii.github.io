@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Missing HomeWork"
-date: 2026-01-01 00:00:00 +0000
+date: 2026-09-06 14:48:40 +0530
 description: "CTF write-up for Missing HomeWork by Narain Krishna."
 categories: ["Writeups", "CTF", "BKCTF"]
 tags: [ctf, writeup]

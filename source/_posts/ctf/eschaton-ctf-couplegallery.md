@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Couple Gallery"
-date: 2026-01-01 00:00:00 +0000
+date: 2026-05-02 23:27:53 +0530
 description: "CTF write-up for Couple Gallery by Narain Krishna."
 categories: ["Writeups", "CTF", "Eschaton CTF"]
 tags: [ctf, writeup]

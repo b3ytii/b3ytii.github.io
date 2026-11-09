@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Brain Calc"
-date: 2026-01-01 00:00:00 +0000
+date: 2026-04-29 21:30:12 +0530
 description: "CTF write-up for Brain Calc by Narain Krishna."
 categories: ["Writeups", "CTF", "l3ak CTF"]
 tags: [ctf, writeup]

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "No Matter What You See"
-date: 2026-01-01 00:00:00 +0000
+date: 2026-04-24 17:10:53 +0530
 description: "CTF write-up for No Matter What You See by Narain Krishna."
 categories: ["Writeups", "CTF", "Mobile Hacking Community CTF"]
 tags: [ctf, writeup]

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Snorlax"
-date: 2026-01-01 00:00:00 +0000
+date: 2026-04-18 12:55:53 +0530
 description: "CTF write-up for Snorlax by Narain Krishna."
 categories: ["Writeups", "CTF", "Payatu Hiring CTF"]
 tags: [ctf, writeup]

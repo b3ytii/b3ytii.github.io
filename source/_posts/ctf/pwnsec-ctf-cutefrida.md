@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Cute Frida"
-date: 2026-01-01 00:00:00 +0000
+date: 2026-04-21 19:02:53 +0530
 description: "CTF write-up for Cute Frida by Narain Krishna."
 categories: ["Writeups", "CTF", "Pwnsec CTF"]
 tags: [ctf, writeup]

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Droid Cryptor"
-date: 2026-01-01 00:00:00 +0000
+date: 2026-05-07 21:48:19 +0530
 description: "CTF write-up for Droid Cryptor by Narain Krishna."
 categories: ["Writeups", "CTF", "m0leC0n CTF"]
 tags: [ctf, writeup]

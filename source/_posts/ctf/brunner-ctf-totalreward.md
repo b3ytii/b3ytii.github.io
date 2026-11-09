@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Total-Reward - BrunnerCTF Writeup"
-date: 2026-08-26 00:00:00 +0530
+date: 2026-08-26 13:37:52 +0530
 description: "Walkthrough for the Total-Reward Android reverse engineering challenge from BrunnerCTF."
 categories: [Writeups, CTF, Mobile Security]
 tags: [ctf, android, reverse engineering, mobile security]

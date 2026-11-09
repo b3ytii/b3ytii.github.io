@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Doremi"
-date: 2026-01-01 00:00:00 +0000
+date: 2026-09-03 19:58:50 +0530
 description: "CTF write-up for Doremi by Narain Krishna."
 categories: ["Writeups", "CTF", "BSIDESF CTF"]
 tags: [ctf, writeup]

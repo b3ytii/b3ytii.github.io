@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Spin And Win"
-date: 2026-01-01 00:00:00 +0000
+date: 2026-04-24 17:32:06 +0530
 description: "CTF write-up for Spin And Win by Narain Krishna."
 categories: ["Writeups", "CTF", "Mobile Hacking Community CTF"]
 tags: [ctf, writeup]
