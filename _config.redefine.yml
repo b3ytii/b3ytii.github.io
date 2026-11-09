@@ -5,9 +5,9 @@ info:
   url: https://narainkrishna.github.io
 
 defaults:
-  favicon:
-  logo:
-  avatar:
+  favicon: /images/favicon.svg
+  logo: /images/logo.svg
+  avatar: /images/avatar.svg
 
 colors:
   primary: "#8B7CFF"
@@ -33,7 +33,7 @@ global:
     enable: false
   open_graph:
     enable: true
-    image:
+    image: /images/og.webp
     description: Notes, projects, and experiments by Your Name.
   google_analytics:
     enable: false
@@ -42,8 +42,8 @@ home_banner:
   enable: true
   style: fixed
   image:
-    light: /images/wallhaven-wqery6-light.webp
-    dark: /images/wallhaven-wqery6-dark.webp
+    light: /images/banner-light.webp
+    dark: /images/banner-dark.webp
   title: Your Name
   subtitle:
     text:
