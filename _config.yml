@@ -4,7 +4,7 @@ description: Notes, projects, and experiments by Your Name.
 author: Your Name
 language: en
 timezone: Asia/Kolkata
-url: https://example.com
+url: https://narainkrishna.github.io
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
