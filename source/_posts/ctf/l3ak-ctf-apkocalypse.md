@@ -2,41 +2,53 @@
 layout: post
 title: "Apkocalypse"
 date: 2026-01-01 00:00:00 +0000
+description: "CTF write-up for Apkocalypse by Narain Krishna."
 categories: ["Writeups", "CTF", "l3ak CTF"]
 tags: [ctf, writeup]
 author: Narain Krishna
 toc: true
 ---
 
-# Apkocalypse 
-
-## Description
+## Challenge Description
 ```
 Just grab the flag from this simple file storage app.
 ```
 
 ## Solution
-- We can start by installing and opening the apk in our emulator
-- ![alt text](/images/ctf/l3ak-ctf-apkocalypse/image-1.png)
-- We cannot enter the app, it crashes immediately and a toast is displayed
+
+### Analysis
+
+We can start by installing and opening the apk in our emulator
+
+![alt text](/images/ctf/l3ak-ctf-apkocalypse/image-1.png)
+
+We cannot enter the app, it crashes immediately and a toast is displayed
+
 `Root access detected, some features may be disabled.`
-- Now, we can proceed to inspect it in jadx
-- ![alt text](/images/ctf/l3ak-ctf-apkocalypse/image-2.png)
-- We see that a class `RootDetection` has a method `isDeviceRooted()` which if returned true, the app is terminated
-- We can use frida to bypass the check and open the open
+Now, we can proceed to inspect it in jadx
+
+![alt text](/images/ctf/l3ak-ctf-apkocalypse/image-2.png)
+
+We see that a class `RootDetection` has a method `isDeviceRooted()` which if returned true, the app is terminated
+
+We can use frida to bypass the check and open the open
+
 ```
 Java.perform(() => {
     var Interceptor = Java.use("ctf.l3akctf.filestorage.RootDetection");
     Interceptor.isDeviceRooted.implementation = function(){
         return 0
     }
- 
+
 })
 
 ```
-- ![alt text](/images/ctf/l3ak-ctf-apkocalypse/image-3.png)
-- We can access the app now,
-- From the decompiled code, the app is using a native lib `libstoreftw.so` \
+![alt text](/images/ctf/l3ak-ctf-apkocalypse/image-3.png)
+
+We can access the app now,
+
+From the decompiled code, the app is using a native lib `libstoreftw.so`
+
 We can inspect that in Ghidra
 ```
           __s_00 = fopen((char *)__filename,"w");
@@ -60,7 +72,8 @@ We can inspect that in Ghidra
       operator.delete[](pvVar6);
     }
 ```
-- This function opens a file writes something starting with `L3AK{` but the file is immediately deleted, We can hook the `fwrite` function and log the argument
+This function opens a file writes something starting with `L3AK{` but the file is immediately deleted, We can hook the `fwrite` function and log the argument
+
 ```
 Interceptor.attach(Module.findExportByName("libc.so", "fwrite"), {
         onEnter: function(args) {
@@ -70,9 +83,10 @@ Interceptor.attach(Module.findExportByName("libc.so", "fwrite"), {
         }
     });
 ```
-- But, when we click the `Store Flag` method, the app immediately crashes
+But, when we click the `Store Flag` method, the app immediately crashes
+
 ```
-  
+
   local_38 = *(long *)(in_FS_OFFSET + 0x28);
   iVar4 = (**(code **)(*param_1 + 0x6d8))(param_1,&DAT_001d79c0);
   if (iVar4 != 0) {
@@ -85,14 +99,21 @@ Interceptor.attach(Module.findExportByName("libc.so", "fwrite"), {
     _DAT_001d79d8 = 1;
   }
 ```
-- At the starting of the native method, it starts a thread in which the function `FUN_001627d0` will be running
-- `FUN_001627d0` is a anti frida function which does various checking and terminates the app is frida is found
-- The bypass of this kind which specifically disables the thread making is available in github \
+At the starting of the native method, it starts a thread in which the function `FUN_001627d0` will be running
+
+`FUN_001627d0` is a anti frida function which does various checking and terminates the app is frida is found
+
+The bypass of this kind which specifically disables the thread making is available in github
+
 sauce:https://github.com/apkunpacker/AntiFrida_Bypass/blob/main/AntiAntiFrida3.js
-- So, our finally our frida script should:
-1. Bypass the Java root detection
-2. Disable the frida detection (hook the function what creates the thread)
-3. Hook `fwrite` and log its argument
+So, our finally our frida script should:
+
+Bypass the Java root detection
+
+Disable the frida detection (hook the function what creates the thread)
+
+Hook `fwrite` and log its argument
+
 ```
 // 1. Bypass the Java root detection
 Java.perform(() => {
@@ -148,5 +169,6 @@ Interceptor.attach(Module.findExportByName("libc.so", "fwrite"), {
         }
     });
 ```
-- We can load this script and click on the `store flag` button 
-- `FLAGL3AK{2fca62dde10486253541959b40635826}`
+We can load this script and click on the `store flag` button
+
+`FLAGL3AK{2fca62dde10486253541959b40635826}`

@@ -1,8 +1,8 @@
-title: Your Name
+title: Narain Krishna
 suffix: Personal blog and digital garden
-author: Your Name
+author: Narain Krishna
 keyword: personal blog, technology, design, notes
-web_description: Notes, projects, and experiments by Your Name.
+web_description: Notes, projects, and experiments by Narain Krishna.
 lang: en
 since_year: 2026
 
@@ -25,7 +25,7 @@ menus_link:
   about: /about
 
 about:
-  author: Your Name
+  author: Narain Krishna
   portrait: /images/avatar.svg
   description: Notes, projects, and experiments.
 

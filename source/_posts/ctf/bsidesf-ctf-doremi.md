@@ -2,15 +2,14 @@
 layout: post
 title: "Doremi"
 date: 2026-01-01 00:00:00 +0000
+description: "CTF write-up for Doremi by Narain Krishna."
 categories: ["Writeups", "CTF", "BSIDESF CTF"]
 tags: [ctf, writeup]
 author: Narain Krishna
 toc: true
 ---
 
-# Doremi 
-
-## Description 
+## Challenge Description
 ```
 Mobile 101
 Can you find the flag on the app?
@@ -21,13 +20,17 @@ Author: itsc0rg1
 ## Solution
 
 ### Overview
-- We can start by decompiling the APK in jadx,
-- The APK  is written in Kotlin, and has 2 classes.     
-1. MainActivity
-2. FrameActivity
+We can start by decompiling the APK in jadx,
+
+The APK  is written in Kotlin, and has 2 classes.
+
+MainActivity
+
+FrameActivity
 
 ### MainActivity
-- This is the decompiled code of `MainActivity`.
+This is the decompiled code of `MainActivity`.
+
 ```
 public final class MainActivity extends ComponentActivity {
     public static final int $stable = 8;
@@ -52,12 +55,14 @@ public final class MainActivity extends ComponentActivity {
     }
 }
 ```
-- The `MainActivty` is simple, it is just a Welcome Screen with a button.
-- When clicked on that button, an `intent` is created to start the `FrameActivity` 
+The `MainActivty` is simple, it is just a Welcome Screen with a button.
+
+When clicked on that button, an `intent` is created to start the `FrameActivity`
 
 ### FrameActivity
 
-- This is the decompiled code of `FrameActivity`.
+This is the decompiled code of `FrameActivity`.
+
 ```
 public final class FrameActivity extends ComponentActivity {
     public static final int $stable = 8;
@@ -81,13 +86,19 @@ public final class FrameActivity extends ComponentActivity {
     }
 }
 ```
-- Again, no flag logic in this activity.
-- Since, there is no flag logic in java or native lib, the flag must in hidden somewhere in the assets with which the APK is shipped
-- We see in this activity that this loads 6 drawables (images) to ImagesViews.
-- These files are available as `.xml` files in `res/drawable`, which we can inspect in jadx.
+Again, no flag logic in this activity.
+
+Since, there is no flag logic in java or native lib, the flag must in hidden somewhere in the assets with which the APK is shipped
+
+We see in this activity that this loads 6 drawables (images) to ImagesViews.
+
+These files are available as `.xml` files in `res/drawable`, which we can inspect in jadx.
+
 ### Sus Images
-- Instead of usual formats like `.png` or `.jpeg` , Android stores these images in `.xml` file
-- In this case , it looks like : 
+Instead of usual formats like `.png` or `.jpeg` , Android stores these images in `.xml` file
+
+In this case , it looks like :
+
 ```
 <?xml version="1.0" encoding="utf-8"?>
 <vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt"
@@ -146,23 +157,40 @@ public final class FrameActivity extends ComponentActivity {
         android:fillAlpha="0.898"/>
 </vector>
 ```
-- It is not possible to decode the image in this format, we must convert the image vector to svg
-- For that we can use a online tool      
+It is not possible to decode the image in this format, we must convert the image vector to svg
+
+For that we can use a online tool
+
 link:https://vd.floo.app/
-- From jadx we can export 
-1. aria.xml
-2. cadence.xml
-3. lyra.xml
-4. rythm.xml
-5. sonnect.xml
-6. tempo.xml
-- And then upload these individually to the converter.
-- After converting, we see the flag parts written in purple text in each svg files.
-1. aria.svg -> CTF{
-2. candence.svg -> sl1ce
-3. lyra.svg -> and
-4. sonnet.svg -> d1ce
-5. tempi -> th3m}
-- We can combine these to get the flag
-## Flag 
+From jadx we can export
+
+aria.xml
+
+cadence.xml
+
+lyra.xml
+
+rythm.xml
+
+sonnect.xml
+
+tempo.xml
+
+And then upload these individually to the converter.
+
+After converting, we see the flag parts written in purple text in each svg files.
+
+aria.svg -> CTF{
+
+candence.svg -> sl1ce
+
+lyra.svg -> and
+
+sonnet.svg -> d1ce
+
+tempi -> th3m}
+
+We can combine these to get the flag
+
+## Flag
 `CTF{sl1ceandd1ceth3m}`

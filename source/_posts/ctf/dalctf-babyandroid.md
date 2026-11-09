@@ -2,25 +2,28 @@
 layout: post
 title: "Baby Android"
 date: 2026-01-01 00:00:00 +0000
+description: "CTF write-up for Baby Android by Narain Krishna."
 categories: ["Writeups", "CTF", "DalCTF"]
 tags: [ctf, writeup]
 author: Narain Krishna
 toc: true
 ---
 
-# Baby Android 
-
-
-## Description 
+## Challenge Description
 ```
 Written by: Nir2602
 
 Welcome to Android Debugging. Can you find the flag in this application?
 
 ```
-## Solution 
-- We can start by decompiling the APK in jadx.
-- This is the decompiled code of MainActivity
+## Solution
+
+### Analysis
+
+We can start by decompiling the APK in jadx.
+
+This is the decompiled code of MainActivity
+
 ```
 public final class MainActivity extends ComponentActivity {
     public static final int $stable = 8;
@@ -34,14 +37,19 @@ public final class MainActivity extends ComponentActivity {
     }
 }
 ```
-- We already see the part 1 of the flag stored in the variable `flag1 = dalctf{4ndr0id` 
-- Since, the variable is named `flag1` we can use the global search function (`ctrl + SHIFT + F `) of jadx and search for `flag2`, `flag3` etc ..
-- The part 2 of the flag was hidden in `strings.xml`
+We already see the part 1 of the flag stored in the variable `flag1 = dalctf{4ndr0id`
+
+Since, the variable is named `flag1` we can use the global search function (`ctrl + SHIFT + F `) of jadx and search for `flag2`, `flag3` etc ..
+
+The part 2 of the flag was hidden in `strings.xml`
+
 ```
 <string name="flag2">_d3bugg1ng_</string>
 ```
-- Now, we can search for `flag3`,
-- Part 3 of the flag was hidden in the class `ColorKt`, here is the snippet of the decompiled code : 
+Now, we can search for `flag3`,
+
+Part 3 of the flag was hidden in the class `ColorKt`, here is the snippet of the decompiled code :
+
 ```
 public final class ColorKt {
     private static final long Purple80 = androidx.compose.ui.graphics.ColorKt.Color(4291869951L);
@@ -53,7 +61,7 @@ public final class ColorKt {
     private static final String flag3 = "_1s_e4sy}";
 
 ```
-- Finally, we have all the three parts , We can combine them to get the flag.
+Finally, we have all the three parts , We can combine them to get the flag.
 
-## Flag 
+## Flag
 `dalctf{4ndr0id_d3bugg1ng__1s_e4sy}`

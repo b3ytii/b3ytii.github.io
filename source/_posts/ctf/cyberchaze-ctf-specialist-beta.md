@@ -2,27 +2,43 @@
 layout: post
 title: "Specialist_Beta"
 date: 2026-01-01 00:00:00 +0000
+description: "CTF write-up for Specialist_Beta by Narain Krishna."
 categories: ["Writeups", "CTF", "Cyberchaze CTF"]
 tags: [ctf, writeup]
 author: Narain Krishna
 toc: true
 ---
 
-# Specialist_Beta
+## Solution
 
-- When we inspect the Manifest file,we see ann activity which handles deeplinks
-- ![alt text](/images/ctf/cyberchaze-ctf-specialist-beta/image.png)
-- Further, we can check the code of that activity
-- ![alt text](/images/ctf/cyberchaze-ctf-specialist-beta/image-1.png)
-- Our intent should have a data uri, the length of it should be more than 14 chars but not equal to 27
-- And a base64 value is getting decoded, to which a substring of our data uri is being checked
-- We can get that value from the strings.xml file 
-- ![alt text](/images/ctf/cyberchaze-ctf-specialist-beta/image-2.png)
-1. base64 encoded value : ZGVlcGxpbmstc2VjcmV0LWludGVudC1kYXRh
-2. base64 decoded value : deeplink-secret-intent-data
-- `strSubstring` will contain the string from the data uri we pass but starting only from the index 14
-- So the first 14(index 0 - 13) characters of the uri we pass does not matter, to that we can append `deeplink-secret-intent-data`
-- So, our POC app:
+### Analysis
+
+When we inspect the Manifest file,we see ann activity which handles deeplinks
+
+![alt text](/images/ctf/cyberchaze-ctf-specialist-beta/image.png)
+
+Further, we can check the code of that activity
+
+![alt text](/images/ctf/cyberchaze-ctf-specialist-beta/image-1.png)
+
+Our intent should have a data uri, the length of it should be more than 14 chars but not equal to 27
+
+And a base64 value is getting decoded, to which a substring of our data uri is being checked
+
+We can get that value from the strings.xml file
+
+![alt text](/images/ctf/cyberchaze-ctf-specialist-beta/image-2.png)
+
+base64 encoded value : ZGVlcGxpbmstc2VjcmV0LWludGVudC1kYXRh
+
+base64 decoded value : deeplink-secret-intent-data
+
+`strSubstring` will contain the string from the data uri we pass but starting only from the index 14
+
+So the first 14(index 0 - 13) characters of the uri we pass does not matter, to that we can append `deeplink-secret-intent-data`
+
+So, our POC app:
+
 ```
  b1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -37,6 +53,10 @@ toc: true
             }
         });
 ```
-- And then we get the flag,
-- ![alt text](/images/ctf/cyberchaze-ctf-specialist-beta/image-3.png)
-- `flag: cyberchaze{prot3ct_deeplink$_You_F0uNd_tHe_fl3g}`
+And then we get the flag,
+
+![alt text](/images/ctf/cyberchaze-ctf-specialist-beta/image-3.png)
+
+## Flag
+
+`flag: cyberchaze{prot3ct_deeplink$_You_F0uNd_tHe_fl3g}`

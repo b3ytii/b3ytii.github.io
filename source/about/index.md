@@ -9,7 +9,7 @@ aside: true
 
 # About me
 
-Hi, I’m **Your Name**.
+Hi, I’m **Narain Krishna**.
 
 This is a placeholder for your personal introduction. Add your background, interests, current work, and the kinds of projects or ideas you want to share.
 

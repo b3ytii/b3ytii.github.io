@@ -2,48 +2,62 @@
 layout: post
 title: "nowyouseeme"
 date: 2026-01-01 00:00:00 +0000
+description: "CTF write-up for nowyouseeme by Narain Krishna."
 categories: ["Writeups", "CTF", "Shakti CTF"]
 tags: [ctf, writeup]
 author: Narain Krishna
 toc: true
 ---
 
-# nowyouseeme
-
-## Description
+## Challenge Description
 ```
 Some secrets don’t like the spotlight. They prefer memory.
 ```
 
 ## Solution
-- We can  start by installing the APK and opening it in our emulator.
-- ![alt text](/images/ctf/shakti-ctf-nowyouseeme/image-1.png)
-- It displays the message in reverse, which we can read to  
+
+### Analysis
+
+We can  start by installing the APK and opening it in our emulator.
+
+![alt text](/images/ctf/shakti-ctf-nowyouseeme/image-1.png)
+
+It displays the message in reverse, which we can read to
+
 ```
 This is not a part of the module, making it too hard
 ```
-- Now, we can proceed to inspect it in jadx,
-- ![alt text](/images/ctf/shakti-ctf-nowyouseeme/image-2.png)
-- The Main Activity hasn't much in it, but wee see another class `FlagEngine` and calls a native method `getFlag(str)` but one thing is confusing , 
+Now, we can proceed to inspect it in jadx,
+
+![alt text](/images/ctf/shakti-ctf-nowyouseeme/image-2.png)
+
+The Main Activity hasn't much in it, but wee see another class `FlagEngine` and calls a native method `getFlag(str)` but one thing is confusing ,
+
 ```
 static {
         System.loadLibrary("flagengine");
     }
 }
 ```
-- The APK does not have `libflagengine.so` , the native lib bundles with it is `libnowyouseeme.so`, that means the native library is never loaded
-- If we tried to hook the `getFLag(str)` method using frida, we always get error:
+The APK does not have `libflagengine.so` , the native lib bundles with it is `libnowyouseeme.so`, that means the native library is never loaded
+
+If we tried to hook the `getFLag(str)` method using frida, we always get error:
+
 ```
-Spawned `com.shaktictf.nowyouseeme`. Resuming main thread!              
+Spawned `com.shaktictf.nowyouseeme`. Resuming main thread!
 Error: unable to find module 'libnowyouseeme.so'
     at value (frida/runtime/core.js:381)
     at <eval> (/home/notRain/Downloads/script.js:27)
 
 ```
-- So, we would have to rely on Ghidra to get the flag,
-- ![alt text](/images/ctf/shakti-ctf-nowyouseeme/image-3.png)
-- We see that this function takes in our input and compares it with `mysecretkey` and if it matches it does a xor encryption with the encrypted bytes stored in the memory `&DAT_001006b0` 
-- If we click on `&DAT_001006b0` we can view the raw bytes and extract it
+So, we would have to rely on Ghidra to get the flag,
+
+![alt text](/images/ctf/shakti-ctf-nowyouseeme/image-3.png)
+
+We see that this function takes in our input and compares it with `mysecretkey` and if it matches it does a xor encryption with the encrypted bytes stored in the memory `&DAT_001006b0`
+
+If we click on `&DAT_001006b0` we can view the raw bytes and extract it
+
 ```
         001006b0 00              ??         00h
         001006b1 00              ??         00h
@@ -52,8 +66,8 @@ Error: unable to find module 'libnowyouseeme.so'
         001006b4 00              ??         00h
         001006b5 00              ??         00h
         001006b6 00              ??         00h
-        001006b7 20              ??         20h     
-        001006b8 20              ??         20h     
+        001006b7 20              ??         20h
+        001006b8 20              ??         20h
         001006b9 24              ??         24h    $
         001006ba 48              ??         48h    H
         001006bb 03              ??         03h
@@ -101,7 +115,8 @@ Error: unable to find module 'libnowyouseeme.so'
         001006e5 06              ??         06h
         001006e6 03              ??         03h
 ```
-- There are 56 bytes, we can write a python program to xor these bytes with `myscretkey`
+There are 56 bytes, we can write a python program to xor these bytes with `myscretkey`
+
 ```
 data = [
     0x00,0x00,0x21,0x00,0x00,0x00,0x00,0x20,
@@ -118,24 +133,35 @@ key = "mysecretkey"
 for i in range(len(data)):
     print(chr(data[i] ^ ord(key[i % len(key)])), end="")
 ```
-- If we run the program we get garbage value, `myRecreTKA1n?;Gd]K>TDq>9+RC_f>[koI0?w2i!KMd<D5\jcz`
-- This happened probably because the key is not `mysecretkey`, Upon closer inspection in jadx,
-- ![alt text](/images/ctf/shakti-ctf-nowyouseeme/image-4.png)
-- This class has a static method `getKey` which opens zipped file `assets/resources.dat` and then does something but returns a string back
-- We can use frida to call this method and see if it returns the actual key
+If we run the program we get garbage value, `myRecreTKA1n;Gd]K>TDq>9+RC_f>[
+koI0w2i!KMd<D5\
+jcz`
+
+This happened probably because the key is not `mysecretkey`, Upon closer inspection in jadx,
+
+![alt text](/images/ctf/shakti-ctf-nowyouseeme/image-4.png)
+
+This class has a static method `getKey` which opens zipped file `assets/resources.dat` and then does something but returns a string back
+
+We can use frida to call this method and see if it returns the actual key
+
 ```
 Java.perform(() => {
     var ActivityThread = Java.use('android.app.ActivityThread');
     var context = ActivityThread.currentApplication().getApplicationContext();
     var Interceptor = Java.use("com.shaktictf.nowyouseeme.DataBridge");
     console.log(Interceptor.getKey(context))
-    
+
 })
 ```
-- We use `Java.use('android.app.ActivityThread');` and `ActivityThread.currentApplication().getApplicationContext();` since the argument passed has to be `context`
-- If we load this script,
-- ![alt text](/images/ctf/shakti-ctf-nowyouseeme/image-5.png)
-- It returns the string `Sh@ktiCtf_1337` we can try this as the key to decrypt the raw bytes we found
+We use `Java.use('android.app.ActivityThread');` and `ActivityThread.currentApplication().getApplicationContext();` since the argument passed has to be `context`
+
+If we load this script,
+
+![alt text](/images/ctf/shakti-ctf-nowyouseeme/image-5.png)
+
+It returns the string `Sh@ktiCtf_1337` we can try this as the key to decrypt the raw bytes we found
+
 ```
 data = [
     0x00,0x00,0x21,0x00,0x00,0x00,0x00,0x20,
@@ -152,4 +178,7 @@ key = "Sh@ktiCtf_1337"
 for i in range(len(data)):
     print(chr(data[i] ^ ord(key[i % len(key)])), end="")
 ```
-- We get the flag:`shakticTF{y0u_F0und_M3_b3hinD_th3_illusi0n_0f_c0D3_5050}`
+
+## Flag
+
+We get the flag:`shakticTF{y0u_F0und_M3_b3hinD_th3_illusi0n_0f_c0D3_5050}`

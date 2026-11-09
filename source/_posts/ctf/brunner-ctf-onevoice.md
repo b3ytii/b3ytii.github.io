@@ -18,8 +18,13 @@ toc: true
 | Category | Android / Reverse Engineering |
 
 ## Solution
-- We can start by decompiling the APK in jadx
-- The APK has a MainActivity and a class `StatementStore`, The flag logic is present in the latter class.
+
+### Analysis
+
+We can start by decompiling the APK in jadx
+
+The APK has a MainActivity and a class `StatementStore`, The flag logic is present in the latter class.
+
 ```
 private final byte[] readArchive(Context context, int resId) {
         Object objM151constructorimpl;
@@ -42,7 +47,8 @@ private final byte[] readArchive(Context context, int resId) {
         return (byte[]) (Result.m157isFailureimpl(objM151constructorimpl) ? null : objM151constructorimpl);
     }
 ```
-- The class has a method which reads a file from `res/raw`, which we can confirm by inspecting the 
+The class has a method which reads a file from `res/raw`, which we can confirm by inspecting the
+
 `res/raw` in jadx - A `message.bin` file is present in that dir.
 ```
 public final byte[] decode(byte[] encoded, byte[] salt) {
@@ -56,7 +62,8 @@ public final byte[] decode(byte[] encoded, byte[] salt) {
         return bArr;
     }
 ```
-- The APK has a custom decode function with salt
+The APK has a custom decode function with salt
+
 ```
 public final byte[] decode(byte[] encoded, byte[] salt) {
         Intrinsics.checkNotNullParameter(encoded, "encoded");
@@ -74,13 +81,17 @@ private final byte[] salt() {
         return bytes;
     }
 ```
-- The salt used for encryption is `onevoice-2026-W27`
-- We can use python to reverse the encoding, the encoded text is present in the file `message.bin`
-- The salt and the look-up table is hardcoded in the APK itself.
+The salt used for encryption is `onevoice-2026-W27`
+
+We can use python to reverse the encoding, the encoded text is present in the file `message.bin`
+
+The salt and the look-up table is hardcoded in the APK itself.
+
 ```
 private static final byte[] TABLE = {63, -95, 8, -44, 98, -100, 23, -27, 75, 122, -61, 46, -111, 86, -67, -16};
 ```
-- So, our python script should:
+So, our python script should:
+
 ```mermaid
 flowchart TD
     A["Encrypted chunk"] --> B["for i, b in enumerate(chunk)"]
@@ -111,7 +122,8 @@ flowchart TD
     N -->|No| O["bytes(decoded bytes)"]
     O --> P["Return result"]
 ```
-- We can write a script which does the above decoding,
+We can write a script which does the above decoding,
+
 ```
 TABLE = bytes([63, 161, 8, 212, 98, 156, 23, 229, 75, 122, 195, 46, 145, 86, 189, 240])
 SALT = b"onevoice-2026-W27"
@@ -144,7 +156,8 @@ with open("messaging.bin", "rb") as f:
 for i, record in enumerate(unpack(archive)):
     print(f"[{i}] {decode(record, SALT).decode('utf-8', errors='replace')}")
 ```
-- We save this as a `.py` and run this to get :
+We save this as a `.py` and run this to get :
+
 ```
 [0] Approved wording — week 2026-W27
 
