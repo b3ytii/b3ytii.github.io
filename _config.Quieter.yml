@@ -1,0 +1,121 @@
+title: Your Name
+suffix: Personal blog and digital garden
+author: Your Name
+keyword: personal blog, technology, design, notes
+web_description: Notes, projects, and experiments by Your Name.
+lang: en
+since_year: 2026
+
+menus_title:
+  home: Home
+  categories: Categories
+  tags: Tags
+  archives: Archives
+  galleries: Galleries
+  links: Links
+  about: About
+
+menus_link:
+  home: /
+  categories: /categories
+  tags: /tags
+  archives: /archives
+  galleries: /galleries
+  links: /links
+  about: /about
+
+about:
+  author: Your Name
+  portrait: /images/avatar.svg
+  description: Notes, projects, and experiments.
+
+logo: /images/headers_icon/logo.webp
+
+icon:
+  favicon: /images/icon/favicon.ico
+  locked: /images/icon/locked.png
+  normal: /images/icon/normal.png
+  go_top: /images/icon/go_top.png
+  go_bottom: /images/icon/go_bottom.png
+  search: /images/icon/search.png
+  aside: /images/icon/aside.png
+  toggle_theme: /images/icon/toggle_theme.png
+  copy: /images/icon/copy.png
+  close_code_block: /images/icon/close_code_block.png
+  sticky: /images/icon/sticky.png
+
+headers:
+  home:
+    message: Welcome to my corner of the internet.
+    icon: /images/headers_icon/logo_white.webp
+  categories:
+    message: Browse by category.
+    icon: /images/headers_icon/categories.svg
+  tags:
+    message: Explore the tags.
+    icon: /images/headers_icon/tags.svg
+  archives:
+    message: A record of everything I write.
+    message_month: Posts from month in year.
+    message_year: Posts from year.
+    icon: /images/headers_icon/archives.svg
+  galleries:
+    message: A visual collection.
+    icon: /images/headers_icon/galleries.svg
+  links:
+    message: A few useful links.
+    icon: /images/headers_icon/links.svg
+  about:
+    message: About me.
+    icon: /images/headers_icon/about.svg
+
+web_analytics:
+  enable: false
+  busuanzi: false
+
+giscus:
+  enable: false
+
+gitalk:
+  enable: false
+
+bottom_icon:
+  - name: github
+    icon: /images/bottom_icon/github.webp
+    link: https://github.com/NarainKrishna
+
+archive_aside: true
+tag_aside: true
+archive_toc: true
+tag_toc: true
+pagination: 3
+search: true
+lazyload: false
+wordcount: true
+replaceSpacesWithNbsp: true
+
+fancybox:
+  enable: true
+  css: css/plugins/fancybox.css
+  js: js/plugins/fancybox.umd.js
+
+mathjax:
+  enable: false
+
+katex:
+  enable: false
+
+mermaid:
+  enable: false
+
+default_cover: /images/banner-dark.webp
+random_top_img:
+  - /images/banner-dark.webp
+  - /images/banner-light.webp
+
+inject:
+  head:
+  bottom:
+
+icp:
+  enable: false
