@@ -11,11 +11,11 @@ aside: true
 
 Hi, I’m **Narain Krishna**.
 Btech cybersecurity Undergrad @ Amrita Vishwa Vidhyapeetham
-Member of [bi0s pentest club](https://pentest.bi0s.in/)
+Member of [bi0s pentest](https://pentest.bi0s.in/) - Android Security team
 
 I like to larp alot of things like android security,osint,video games etc
 Trying my best to larp cybersecurity more perfectly everyday.
-idk rest
+
 
 \- larp god
 ## OSINT me
