@@ -6,6 +6,7 @@ description: "CTF write-up for No Matter What You See by Narain Krishna."
 categories: ["Writeups", "CTF", "Mobile Hacking Community CTF"]
 tags: [ctf, writeup]
 author: Narain Krishna
+cover: https://i.pinimg.com/736x/f5/ea/73/f5ea734a80883d98fbbd62299f4270dd.jpg
 toc: true
 ---
 
