@@ -7,8 +7,8 @@ nav:
 
 hero:
   enable: true
-  title: Narain Krishna
-  eyebrow: Notes, projects, and experiments in security and technology.
+  title: ! beytii
+  eyebrow: write-ups,randoms,maybes
   intro: CTF write-ups, technical investigations, and things I learn along the way.
   split: 62
 
