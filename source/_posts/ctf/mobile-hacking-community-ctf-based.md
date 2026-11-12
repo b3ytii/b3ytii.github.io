@@ -6,6 +6,7 @@ description: "CTF write-up for Based by Narain Krishna."
 categories: ["Writeups", "CTF", "Mobile Hacking Community CTF"]
 tags: [ctf, writeup]
 author: Narain Krishna
+cover: https://i.pinimg.com/736x/44/52/c6/4452c6c68d0499faa766ed77c6c4febb.jpg
 toc: true
 ---
 
