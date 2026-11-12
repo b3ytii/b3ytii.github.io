@@ -7,6 +7,8 @@ cover: /images/random_covers/01.webp
 categories: ["Writeups", "CTF", "BKCTF"]
 tags: [ctf, writeup]
 author: Narain Krishna
+cover: https://i.pinimg.com/736x/8c/3c/ba/8c3cbac6af3af9a3ed0df10a160b6651.jpg
+
 toc: true
 ---
 
