@@ -6,6 +6,7 @@ description: "CTF write-up for nowyouseeme by Narain Krishna."
 categories: ["Writeups", "CTF", "Shakti CTF"]
 tags: [ctf, writeup]
 author: Narain Krishna
+cover: https://i.pinimg.com/736x/f3/fc/39/f3fc39860420bd289ea6e7f70c8d07f5.jpg
 toc: true
 ---
 
