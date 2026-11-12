@@ -6,6 +6,7 @@ description: "CTF write-up for Super Secure Catalog by Narain Krishna."
 categories: ["Writeups", "CTF", "Cyberchaze CTF"]
 tags: [ctf, writeup]
 author: Narain Krishna
+cover: https://i.pinimg.com/1200x/6b/92/7e/6b927e328e32a0f402e09aa1f2ad267b.jpg
 toc: true
 ---
 
