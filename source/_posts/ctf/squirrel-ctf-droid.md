@@ -5,6 +5,7 @@ date: 2026-04-17 11:23:25 +0530
 description: "CTF write-up for DROID by Narain Krishna."
 categories: ["Writeups", "CTF", "Squirrel CTF"]
 tags: [ctf, writeup]
+cover: https://i.pinimg.com/736x/e0/e1/82/e0e182b282305ff164b936b7b01ce531.jpg
 author: Narain Krishna
 toc: true
 ---
