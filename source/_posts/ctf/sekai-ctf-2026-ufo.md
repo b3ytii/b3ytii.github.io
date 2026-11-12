@@ -5,6 +5,7 @@ date: 2026-08-07 17:48:57 +0530
 description: "CTF write-up for UFO by Narain Krishna."
 categories: ["Writeups", "CTF", "Sekai CTF (2026)"]
 tags: [ctf, writeup]
+cover: https://i.pinimg.com/1200x/97/c4/a9/97c4a9e103b361eae6439bf9234cf174.jpg
 author: Narain Krishna
 toc: true
 ---
