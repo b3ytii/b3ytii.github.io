@@ -1,0 +1,40 @@
+{
+  "name": "hexo-theme-bisect",
+  "version": "1.0.0",
+  "description": "One line, two colors. A blue/white split theme for Hexo.",
+  "keywords": [
+    "hexo",
+    "hexo-theme",
+    "theme",
+    "blog",
+    "cjk",
+    "chinese",
+    "dark-mode",
+    "minimal"
+  ],
+  "homepage": "https://github.com/LiuXiu233/hexo-theme-bisect#readme",
+  "bugs": "https://github.com/LiuXiu233/hexo-theme-bisect/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LiuXiu233/hexo-theme-bisect.git"
+  },
+  "license": "MIT",
+  "author": "Liu Xiu (https://xiu.moe)",
+  "engines": {
+    "node": ">=18"
+  },
+  "peerDependencies": {
+    "hexo": ">=7.0.0",
+    "hexo-renderer-ejs": ">=2.0.0"
+  },
+  "files": [
+    "_config.yml",
+    "languages",
+    "layout",
+    "scripts",
+    "source",
+    "LICENSE",
+    "README.md",
+    "README.zh-CN.md"
+  ]
+}

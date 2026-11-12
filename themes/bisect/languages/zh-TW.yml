@@ -1,0 +1,115 @@
+skip: 跳到正文
+home_aria: '%s 首頁'
+nav_aria: 主導覽
+menu:
+  home: 文章
+  home_sub: Posts
+  archives: 歸檔
+  archives_sub: Archive
+  categories: 分類
+  categories_sub: Categories
+  tags: 標籤
+  tags_sub: Tags
+  about: 關於
+  about_sub: About
+  toggle: 選單
+theme_toggle: 切換深淺色
+latest: LATEST · 最新
+start_reading: 開始閱讀
+split_handle: 分界線位置，可用左右方向鍵調整
+index:
+  title: 全部文章
+  sub: INDEX
+  filter: 按分類篩選
+  all: 全部
+pager:
+  label: 分頁
+  prev: ← 較新
+  next: 較早 →
+year:
+  count: '%d 篇'
+  empty_count: 空
+  empty: 這一年一篇也沒有寫。
+words: '%s 字'
+untitled: 無題
+post:
+  date: 發布 DATE
+  words: 字數 WORDS
+  read: 閱讀 READ
+  minutes: '%d 分鐘'
+  toc: 目錄 · CONTENTS
+  rail: 閱讀進度與目錄
+  to_top: 回到頂部
+  tags: 標籤
+  license_label: LICENSE
+  license: '本文作者 %s，採用 %s 授權。'
+  reprint: '轉載請註明出處：%s'
+  reward: 讚賞
+  reward_wechatpay: 微信
+  reward_alipay: 支付寶
+  reward_caption: 謝謝你
+  follow: '在 %s 上追蹤我 ↗'
+  newer: ← 較新 NEWER
+  older: 較早 OLDER →
+  newest: 這是最新的一篇
+  oldest: 這是最早的一篇
+comments:
+  title: 留言
+  sub: COMMENTS
+  hint: 留言由 GitHub 驅動，登入 GitHub 即可留言。
+  noscript: 在 GitHub 上查看留言
+archive:
+  kicker: ARCHIVE · 年表
+  title: 歸檔
+  lead: '從 %2$d 年到現在，一共 %1$d 篇。沒寫的年份也照實留著。'
+  year_lead: '這一年寫下的 %d 篇。'
+category:
+  kicker: CATEGORY · 分類
+  lead: '這個分類下有 %d 篇文章。'
+categories:
+  kicker: CATEGORIES · 分類
+  title: 分類
+  lead: '寫過的東西分成 %d 類，一篇文章可以同時屬於幾類。'
+  latest: '最近：%s'
+  unit: 篇
+tag:
+  kicker: TAG · 標籤
+  lead: '帶有這個標籤的文章有 %d 篇。'
+  all: 查看全部標籤 →
+tags:
+  kicker: INDEX · 索引
+  title: 標籤
+  lead: '%d 個標籤，排成書後索引。'
+  letters: 字母索引
+page:
+  kicker: PAGE · 頁面
+not_found:
+  kicker: ERROR · 404
+  title: 這一頁在線的另一邊
+  lead: 它可能被移走了，也可能還沒寫出來。
+  back: 回到全部文章 →
+footer:
+  powered: '由 %s 與 %s 主題驅動'
+  contact: 聯絡我
+  to_top: 回到頂部 ↑
+search:
+  open: 搜尋
+  label: 搜尋文章或輸入指令
+  placeholder: 搜尋標題、正文、標籤……  輸入 > 查看指令
+  close: 關閉
+  results: 結果
+  hint_move: ↑↓ 選擇
+  hint_open: ↵ 開啟
+  empty: 沒有找到。換個詞試試，或輸入 > 查看指令。
+  unavailable: 沒有找到搜尋索引。安裝 hexo-generator-searchdb 後即可搜尋。
+  kind_title: 標題
+  kind_tag: 標籤
+  kind_text: 正文
+  cmd_theme: 切換深淺色
+  cmd_random: 隨機讀一篇
+  cmd_top: 回到頁面頂部
+  cmd_archive: 開啟歸檔
+code:
+  copy: 複製
+  copied: 已複製
+  failed: 複製失敗

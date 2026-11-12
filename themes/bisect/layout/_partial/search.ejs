@@ -1,0 +1,10 @@
+<dialog class="bs-search" id="bs-search" aria-label="<%= __('search.label') %>">
+  <form class="bs-search__bar" method="dialog" role="search">
+    <span class="bs-search__prompt" aria-hidden="true">&gt;</span>
+    <label class="bs-sr" for="bs-search-input"><%= __('search.label') %></label>
+    <input id="bs-search-input" type="search" autocomplete="off" spellcheck="false" placeholder="<%= __('search.placeholder') %>">
+    <button class="bs-search__close" type="submit" aria-label="<%= __('search.close') %>">esc</button>
+  </form>
+  <ol class="bs-search__list" id="bs-search-list" role="listbox" aria-label="<%= __('search.results') %>"></ol>
+  <p class="bs-search__hint"><span><%= __('search.hint_move') %></span><span><%= __('search.hint_open') %></span><span>&gt;theme · &gt;random · &gt;top · &gt;archive</span></p>
+</dialog>

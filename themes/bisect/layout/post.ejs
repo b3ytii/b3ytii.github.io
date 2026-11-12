@@ -1,0 +1,106 @@
+<%
+  const c = bs_count(page.content);
+  const no = bs_no(page);
+  const cover = bs_cover(page);
+  const cats = page.categories ? page.categories.toArray() : [];
+  const tags = page.tags ? page.tags.toArray() : [];
+  const font = bs_body_font(page);
+  const tocHtml = theme.toc && theme.toc.enable !== false ? toc(page.content, { list_number: theme.toc.number, max_depth: theme.toc.max_depth || 3, class: 'bs-toc' }) : '';
+  const cc = bs_cc();
+  const permalink = full_url_for(page.path).replace(/index\.html$/, '');
+  const reward = theme.reward || {};
+  const showReward = reward.enable && page.reward !== false && (reward.wechatpay || reward.alipay);
+  const comments = theme.comments || {};
+  const showComments = comments.provider && comments.provider !== 'none' && page.comments !== false;
+%>
+<article class="bs-post" data-font="<%= font %>">
+  <header class="bs-phead">
+    <div class="bs-phead__text">
+      <p class="bs-kicker">NO.<%= bs_pad(no) %><% cats.forEach(function (cat) { %> · <a href="<%- url_for(cat.path) %>"><%= cat.name %></a><% }) %></p>
+      <h1 class="bs-phead__title"><%= page.title || __('untitled') %></h1>
+      <% if (page.description) { %><p class="bs-phead__desc"><%= page.description %></p><% } %>
+      <dl class="bs-phead__meta">
+        <div><dt><%= __('post.date') %></dt><dd><time datetime="<%= date_xml(page.date) %>"><%= date(page.date, 'YYYY.MM.DD') %></time></dd></div>
+        <div><dt><%= __('post.words') %></dt><dd><%= c.total.toLocaleString('en-US') %></dd></div>
+        <div><dt><%= __('post.read') %></dt><dd><%= __('post.minutes', c.minutes) %></dd></div>
+      </dl>
+    </div>
+    <figure class="bs-phead__cover" aria-hidden="true">
+      <% if (cover) { %><img src="<%- cover %>" alt="" fetchpriority="high" decoding="async"><% } else { %><%- bs_gen_cover(page, no) %><% } %>
+    </figure>
+  </header>
+
+  <div class="bs-post__layout">
+    <aside class="bs-rail" aria-label="<%= __('post.rail') %>">
+      <div class="bs-rail__inner">
+        <a class="bs-progress" href="#top" data-to-top aria-label="<%= __('post.to_top') %>"><span class="bs-progress__fill"></span></a>
+        <% if (tocHtml) { %>
+        <p class="bs-rail__label"><%= __('post.toc') %></p>
+        <%- tocHtml %>
+        <% } %>
+      </div>
+    </aside>
+    <div class="bs-prose" data-prose>
+      <%- page.content %>
+    </div>
+  </div>
+
+  <footer class="bs-pfoot">
+    <% if (tags.length) { %>
+    <ul class="bs-tags" aria-label="<%= __('post.tags') %>">
+      <% tags.forEach(function (t) { %><li><a href="<%- url_for(t.path) %>">#<%= t.name %></a></li><% }) %>
+    </ul>
+    <% } %>
+    <div class="bs-pfoot__grid">
+      <% if (cc) { %>
+      <p class="bs-license">
+        <span class="bs-kicker"><%= __('post.license_label') %></span>
+        <%- __('post.license', escape_html(config.author || ''), '<a href="' + cc.url + '" target="_blank" rel="noopener">' + cc.name + '</a>') %>
+        <%- __('post.reprint', '<a href="' + permalink + '">' + escape_html(permalink) + '</a>') %>
+      </p>
+      <% } %>
+      <% if (showReward || Object.keys(theme.follow_me || {}).length) { %>
+      <div class="bs-pfoot__actions">
+        <% if (showReward) { %>
+        <button class="bs-btn bs-btn--blue" type="button" data-reward-toggle aria-expanded="false" aria-controls="bs-reward"><%= __('post.reward') %></button>
+        <% } %>
+        <% Object.keys(theme.follow_me || {}).forEach(function (k) { %>
+        <a class="bs-btn bs-btn--line" href="<%- theme.follow_me[k] %>" target="_blank" rel="noopener"><%= __('post.follow', k) %></a>
+        <% }) %>
+      </div>
+      <% } %>
+      <% if (showReward) { %>
+      <div class="bs-reward" id="bs-reward" hidden>
+        <% ['wechatpay', 'alipay'].forEach(function (k) { if (!reward[k]) return; %>
+        <figure>
+          <img data-src="<%- url_for(reward[k]) %>" alt="<%= __('post.reward_' + k) %>" width="200" height="200">
+          <figcaption><%= __('post.reward_' + k) %> · <%= __('post.reward_caption') %></figcaption>
+        </figure>
+        <% }) %>
+      </div>
+      <% } %>
+    </div>
+  </footer>
+
+  <nav class="bs-pnav" aria-label="<%= __('pager.label') %>">
+    <% if (page.prev) { %>
+    <a class="bs-pnav__item bs-pnav__item--newer" href="<%- url_for(page.prev.path) %>" rel="prev">
+      <span class="bs-kicker"><%= __('post.newer') %></span><span class="bs-pnav__t"><%= page.prev.title || __('untitled') %></span>
+    </a>
+    <% } else { %><span class="bs-pnav__item bs-pnav__item--newer is-empty"><span class="bs-kicker"><%= __('post.newest') %></span></span><% } %>
+    <% if (page.next) { %>
+    <a class="bs-pnav__item bs-pnav__item--older" href="<%- url_for(page.next.path) %>" rel="next">
+      <span class="bs-kicker"><%= __('post.older') %></span><span class="bs-pnav__t"><%= page.next.title || __('untitled') %></span>
+    </a>
+    <% } else { %><span class="bs-pnav__item bs-pnav__item--older is-empty"><span class="bs-kicker"><%= __('post.oldest') %></span></span><% } %>
+  </nav>
+
+  <% if (showComments) { const opt = comments[comments.provider] || {}; %>
+  <section class="bs-comments" id="comments" aria-labelledby="bs-comments-title">
+    <h2 class="bs-h2" id="bs-comments-title"><span><%= __('comments.title') %></span><% if (bs_t('comments.sub')) { %><em><%= bs_t('comments.sub') %></em><% } %></h2>
+    <p class="bs-comments__hint"><%= __('comments.hint') %></p>
+    <div class="bs-comments__box" data-comments-box></div>
+    <% if (opt.repo) { %><noscript><p><a href="https://github.com/<%= opt.repo %>/<%= comments.provider === 'giscus' ? 'discussions' : 'issues' %>"><%= __('comments.noscript') %></a></p></noscript><% } %>
+  </section>
+  <% } %>
+</article>

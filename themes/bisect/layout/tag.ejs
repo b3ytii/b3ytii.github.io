@@ -1,0 +1,11 @@
+<%- partial('_partial/pagehead', {
+  kicker: __('tag.kicker'),
+  title: '#' + page.tag,
+  lead: escape_html(__('tag.lead', page.posts.length)) + ' <a href="' + url_for('tags/') + '">' + escape_html(__('tag.all')) + '</a>',
+  label: 'TAG',
+  big: page.posts.length
+}) %>
+<section class="bs-index">
+  <%- partial('_partial/year-groups', { posts: page.posts, fill: false }) %>
+  <% if (page.total > 1) { %><nav class="bs-pager" aria-label="<%= __('pager.label') %>"><%- paginator({ prev_text: __('pager.prev'), next_text: __('pager.next') }) %></nav><% } %>
+</section>

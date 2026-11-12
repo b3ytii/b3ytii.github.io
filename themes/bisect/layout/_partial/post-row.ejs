@@ -1,0 +1,24 @@
+<%
+  const c = bs_count(post.content);
+  const no = bs_no(post);
+  const cover = bs_cover(post);
+  const cats = post.categories ? post.categories.map(function (x) { return x.name; }) : [];
+  const title = post.title || __('untitled');
+  let desc = post.description || (post.excerpt ? strip_html(post.excerpt) : '');
+  desc = desc.replace(/\s+/g, ' ').trim();
+  if (desc.length > 72) desc = desc.slice(0, 72) + '…';
+  const len = __('words', c.total.toLocaleString('en-US'));
+%>
+<li class="bs-row" data-cats="<%= cats.join('|') %>">
+  <a class="bs-row__link" href="<%- url_for(post.path) %>">
+    <span class="bs-row__no" data-meta=" · <%= date(post.date, 'YYYY.MM.DD') %><%= cats.length ? ' · ' + cats.join(' / ') : '' %> · <%= len %>">NO.<%= bs_pad(no) %></span>
+    <span class="bs-row__main">
+      <span class="bs-row__title"><%= title %></span>
+      <% if (desc) { %><span class="bs-row__desc"><%= desc %></span><% } %>
+    </span>
+    <span class="bs-row__cats"><%= cats.join(' / ') %></span>
+    <span class="bs-row__date"><time datetime="<%= date_xml(post.date) %>"><%= date(post.date, 'YYYY.MM.DD') %></time></span>
+    <span class="bs-row__len"><%= len %></span>
+    <span class="bs-row__thumb" aria-hidden="true"><% if (cover) { %><img data-src="<%- cover %>" alt="" decoding="async"><% } else { %><%- bs_gen_cover(post, no) %><% } %></span>
+  </a>
+</li>

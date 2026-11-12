@@ -1,0 +1,120 @@
+# ---------------------------------------------------------------
+# Bisect — one line, two colors.
+# A blue/white split theme for Hexo.
+#
+# Tip: copy this file to your site root as `_config.bisect.yml`
+# and edit it there, so theme updates never overwrite your settings.
+# ---------------------------------------------------------------
+
+# Navigation. Use `key` for a built-in, translated label
+# (home / archives / categories / tags / about), or set `name`
+# (and an optional secondary label `sub`) for anything else.
+nav:
+  - { key: home, url: / }
+  - { key: archives, url: /archives/ }
+  - { key: categories, url: /categories/ }
+  - { key: tags, url: /tags/ }
+  - { key: about, url: /about/ }
+  # - { name: GitHub, sub: Code, url: https://github.com/you, external: true }
+
+# Home page split screen.
+hero:
+  enable: true
+  # Big title across the divider. Defaults to the site `title`.
+  title:
+  # Large line on the white side. Defaults to the site `description`.
+  eyebrow:
+  # Smaller line under it (optional).
+  intro:
+  # Default divider position in percent (40–80). Visitors can drag it.
+  split: 62
+
+# The slogan shown on the blue side uses the site `subtitle`.
+# This optional second line sits under it, e.g. an English translation.
+slogan_sub:
+
+# Year your site started, for the footer copyright. Defaults to the year of your first post.
+since:
+
+# Optional secondary labels for categories, e.g. { 写作: Writing }
+category_sub: {}
+
+# Posts in these categories use the serif body font.
+# A post can also set `body_font: serif` or `body_font: sans` in its front matter.
+serif_categories: []
+
+toc:
+  enable: true
+  number: true
+  max_depth: 3
+
+# Fonts.
+# Latin (Archivo) and code (JetBrains Mono) fonts ship with the theme.
+# CJK fonts (Source Han Serif / Source Han Sans Heavy, a.k.a. Noto Serif SC / Noto Sans SC):
+#   google — load from a Google Fonts compatible host (default)
+#   local  — self-host; run `hexo bisect-fonts` once to download them into your site
+#   system — use the reader's system fonts only
+fonts:
+  cjk: google
+  # Google Fonts, or a mirror such as https://fonts.loli.net for readers in mainland China
+  host: https://fonts.googleapis.com
+
+# Footer links, shown as `name: url`.
+social: {}
+  # GitHub: https://github.com/you
+  # E-Mail: mailto:you@example.com
+
+# Your other sites, listed on the blue side of the footer.
+sites: []
+  # - { name: example.com, desc: Portfolio, url: https://example.com }
+
+# ---------------------------------------------------------------
+# Post footer
+# ---------------------------------------------------------------
+creative_commons:
+  # by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | cc-zero, or false to hide
+  license: by-nc-sa
+  # Language of the license deed, e.g. zh-hans, ja. Empty for English.
+  language:
+
+reward:
+  enable: false
+  wechatpay:   # image URL
+  alipay:      # image URL
+
+follow_me: {}
+  # X: https://x.com/you
+
+# ---------------------------------------------------------------
+# Comments: utterances | giscus | none
+# A post can turn comments off with `comments: false`.
+# ---------------------------------------------------------------
+comments:
+  provider: none
+  utterances:
+    repo:          # owner/repo
+    issue_term: pathname
+    label:
+  giscus:
+    repo:          # owner/repo
+    repo_id:
+    category:
+    category_id:
+    mapping: pathname
+    strict: 0
+    reactions: 1
+    input_position: top
+    lang:          # defaults to the site language
+
+# ---------------------------------------------------------------
+# Extras
+# ---------------------------------------------------------------
+# Chatra live chat. The bubble stays hidden; the footer "Contact me" button opens it.
+chatra:
+  enable: false
+  id:
+
+# Mermaid diagrams in ```mermaid code blocks. Loaded only on pages that have one.
+mermaid:
+  enable: true
+  js: https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.min.js

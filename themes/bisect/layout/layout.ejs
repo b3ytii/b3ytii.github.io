@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="<%= config.language ? (Array.isArray(config.language) ? config.language[0] : config.language) : 'en' %>">
+<head>
+<%- partial('_partial/head') %>
+</head>
+<body class="<%= is_home() ? 'is-home' : is_post() ? 'is-post' : 'is-page' %>">
+<a class="bs-skip" href="#main"><%= __('skip') %></a>
+<%- partial('_partial/svg-defs') %>
+<%- partial('_partial/header') %>
+<main id="main" tabindex="-1"><%- body %></main>
+<%- partial('_partial/footer') %>
+<%- partial('_partial/search') %>
+<script type="module" src="<%- url_for('js/bisect.js') %>"></script>
+</body>
+</html>

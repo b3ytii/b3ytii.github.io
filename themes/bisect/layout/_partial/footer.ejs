@@ -1,0 +1,56 @@
+<%
+  const since = theme.since || bs_first_year();
+  const now = new Date().getFullYear();
+  const cc = bs_cc();
+  const feed = bs_feed();
+  const comments = theme.comments || {};
+  const i18n = {
+    copy: __('code.copy'), copied: __('code.copied'), failed: __('code.failed'),
+    empty: __('search.empty'), unavailable: __('search.unavailable'),
+    kindTitle: __('search.kind_title'), kindTag: __('search.kind_tag'), kindText: __('search.kind_text'),
+    cmdTheme: __('search.cmd_theme'), cmdRandom: __('search.cmd_random'), cmdTop: __('search.cmd_top'), cmdArchive: __('search.cmd_archive')
+  };
+%>
+<footer class="bs-footer">
+  <div class="bs-footer__white">
+    <a class="bs-brand bs-brand--footer" href="<%- url_for('/') %>">
+      <span class="bs-mark" aria-hidden="true"></span>
+      <span class="bs-brand__name"><%= config.title %></span>
+    </a>
+    <% if (config.description) { %><p class="bs-footer__desc"><%= config.description %></p><% } %>
+    <ul class="bs-footer__social">
+      <% Object.keys(theme.social || {}).forEach(function (name) { %>
+      <li><a href="<%- theme.social[name] %>"<%- /^https?:/.test(theme.social[name]) ? ' target="_blank" rel="noopener"' : '' %>><%= name %></a></li>
+      <% }) %>
+      <% if (feed) { %><li><a href="<%- feed %>">RSS</a></li><% } %>
+    </ul>
+    <p class="bs-footer__meta">
+      © <%= since === now ? now : since + '—' + now %> <%= config.author %>
+      <% if (cc) { %> · <a href="<%- cc.url %>" target="_blank" rel="noopener"><%= cc.name %></a><% } %>
+      · <%- __('footer.powered', '<a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a>', '<a href="https://github.com/LiuXiu233/hexo-theme-bisect" target="_blank" rel="noopener">Bisect</a>') %>
+    </p>
+  </div>
+  <div class="bs-footer__blue">
+    <%- partial('_partial/slogan', { cls: 'bs-slogan--footer' }) %>
+    <% if ((theme.sites || []).length) { %>
+    <ul class="bs-footer__sites">
+      <% theme.sites.forEach(function (s) { %>
+      <li><a href="<%- s.url %>" target="_blank" rel="noopener"><span><%= s.name %></span><em><%= s.desc %> ↗</em></a></li>
+      <% }) %>
+    </ul>
+    <% } %>
+    <div class="bs-footer__actions">
+      <% if (theme.chatra && theme.chatra.enable) { %><button class="bs-btn bs-btn--paper" type="button" data-chat-open><%= __('footer.contact') %></button><% } %>
+      <a class="bs-btn bs-btn--line" href="#top" data-to-top><%= __('footer.to_top') %></a>
+    </div>
+  </div>
+</footer>
+<script id="bs-config" type="application/json"><%- JSON.stringify({
+  root: config.root,
+  search: url_for((config.search && config.search.path) || 'search.xml'),
+  lang: config.language,
+  comments: comments.provider && comments.provider !== 'none' ? { provider: comments.provider, options: comments[comments.provider] || {} } : null,
+  chatra: theme.chatra,
+  mermaid: theme.mermaid,
+  i18n: i18n
+}).replace(/</g, '\\u003c') %></script>

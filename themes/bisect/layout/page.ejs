@@ -1,0 +1,58 @@
+<% if (page.type === 'tags') { %>
+  <%
+    const tags = bs_sort_zh(site.tags.toArray().filter(function (t) { return t.length; }));
+    const groups = {};
+    tags.forEach(function (t) { const k = bs_initial(t.name); (groups[k] = groups[k] || []).push(t); });
+    const letters = Object.keys(groups).sort(function (a, b) { return a === '#' ? 1 : b === '#' ? -1 : a.localeCompare(b); });
+  %>
+  <%- partial('_partial/pagehead', { kicker: __('tags.kicker'), title: page.title || __('tags.title'), lead: escape_html(__('tags.lead', tags.length)), label: 'TAGS', big: tags.length }) %>
+  <section class="bs-tagindex">
+    <nav class="bs-letters" aria-label="<%= __('tags.letters') %>">
+      <% letters.forEach(function (l) { %><a href="#t-<%= l === '#' ? 'num' : l %>"><%= l %></a><% }) %>
+    </nav>
+    <div class="bs-tagindex__groups">
+      <% letters.forEach(function (l) { %>
+      <section class="bs-taggroup" id="t-<%= l === '#' ? 'num' : l %>">
+        <h2 class="bs-taggroup__letter"><%= l %></h2>
+        <ul>
+          <% groups[l].forEach(function (t) { %><li><a href="<%- url_for(t.path) %>"><span><%= t.name %></span><sup><%= t.length %></sup></a></li><% }) %>
+        </ul>
+      </section>
+      <% }) %>
+    </div>
+  </section>
+<% } else if (page.type === 'categories') { %>
+  <% const cats = site.categories.sort('length', -1).toArray().filter(function (c) { return c.length; }); %>
+  <%- partial('_partial/pagehead', { kicker: __('categories.kicker'), title: page.title || __('categories.title'), lead: escape_html(__('categories.lead', cats.length)), label: 'CATEGORIES', big: cats.length }) %>
+  <section class="bs-cats">
+    <% cats.forEach(function (c, i) {
+      const latest = c.posts.sort('date', -1).first();
+      const sub = (theme.category_sub || {})[c.name] || '';
+    %>
+    <a class="bs-cat" href="<%- url_for(c.path) %>">
+      <span class="bs-cat__no"><%= String(i + 1).padStart(2, '0') %></span>
+      <span class="bs-cat__name"><%= c.name %></span>
+      <% if (sub) { %><span class="bs-cat__en"><%= sub %></span><% } %>
+      <span class="bs-cat__count"><%= c.length %><small> <%= __('categories.unit') %></small></span>
+      <% if (latest) { %><span class="bs-cat__latest"><%= __('categories.latest', latest.title || __('untitled')) %></span><% } %>
+    </a>
+    <% }) %>
+  </section>
+<% } else { %>
+  <%
+    const is404 = page.path.indexOf('404') === 0;
+    const slug = page.path.split('/')[0].replace(/\.html$/, '');
+    const pageTitle = page.title || slug;
+    const label = page.label || (is404 ? 'NOT FOUND' : slug.toUpperCase());
+  %>
+  <%- partial('_partial/pagehead', {
+    kicker: is404 ? __('not_found.kicker') : __('page.kicker'),
+    title: is404 ? __('not_found.title') : pageTitle,
+    lead: is404 ? escape_html(__('not_found.lead')) + ' <a href="' + url_for('/') + '">' + escape_html(__('not_found.back')) + '</a>' : escape_html(page.description || ''),
+    label: label,
+    big: is404 ? '404' : null
+  }) %>
+  <div class="bs-page">
+    <div class="bs-prose" data-prose><%- page.content %></div>
+  </div>
+<% } %>

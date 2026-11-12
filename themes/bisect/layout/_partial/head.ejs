@@ -1,0 +1,48 @@
+<%
+  let pageTitle = config.title;
+  if (is_home()) pageTitle = config.title + (config.subtitle ? ' · ' + config.subtitle : '');
+  else if (is_archive()) pageTitle = __('archive.title') + ' | ' + config.title;
+  else if (is_category()) pageTitle = page.category + ' | ' + config.title;
+  else if (is_tag()) pageTitle = '#' + page.tag + ' | ' + config.title;
+  else if (page.title) pageTitle = page.title + ' | ' + config.title;
+  const desc = page.description || (is_post() && page.excerpt ? strip_html(page.excerpt).replace(/\s+/g, ' ').slice(0, 140) : config.description);
+  const fonts = theme.fonts || {};
+  const cjk = fonts.cjk || 'google';
+  const host = (fonts.host || 'https://fonts.googleapis.com').replace(/\/$/, '');
+  const feed = bs_feed();
+%>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title><%= pageTitle %></title>
+<meta name="description" content="<%= desc %>">
+<% if (config.keywords) { %><meta name="keywords" content="<%= config.keywords %>"><% } %>
+<% if (config.author) { %><meta name="author" content="<%= config.author %>"><% } %>
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#f4f9fd">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0e1628">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="<%= full_url_for(page.path).replace(/index\.html$/, '') %>">
+<%- open_graph({ twitter_card: 'summary_large_image', description: desc }) %>
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem('bs-theme');
+      if (t === 'dark' || t === 'light') document.documentElement.dataset.theme = t;
+    } catch (e) {}
+    document.documentElement.classList.add('js');
+    addEventListener('pagereveal', function (e) {
+      if (e.viewTransition) { e.viewTransition.ready.catch(function () {}); e.viewTransition.finished.catch(function () {}); }
+    });
+  })();
+</script>
+<link rel="preload" href="<%- url_for('fonts/archivo-latin.woff2') %>" as="font" type="font/woff2" crossorigin>
+<% if (cjk === 'google') { %>
+<% if (/googleapis\.com/.test(host)) { %><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><% } %>
+<link rel="stylesheet" href="<%- host %>/css2?family=Noto+Serif+SC:wght@400..900&family=Noto+Sans+SC:wght@900&display=swap">
+<% } else if (cjk === 'local') { %>
+<link rel="stylesheet" href="<%- url_for('css/bisect-cjk.css') %>">
+<% } %>
+<link rel="stylesheet" href="<%- url_for('css/bisect.css') %>">
+<% if (feed) { %><link rel="alternate" type="application/atom+xml" title="<%= config.title %>" href="<%- feed %>"><% } %>
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":"/*.xml"}}]},"eagerness":"moderate"}]}
+</script>

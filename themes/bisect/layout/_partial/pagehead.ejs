@@ -1,0 +1,11 @@
+<header class="bs-pagehead">
+  <div class="bs-pagehead__white">
+    <p class="bs-kicker"><%- kicker || '' %></p>
+    <h1 class="bs-pagehead__title"><%= title %></h1>
+    <% if (typeof lead !== 'undefined' && lead) { %><p class="bs-pagehead__lead"><%- lead %></p><% } %>
+  </div>
+  <div class="bs-pagehead__blue" aria-hidden="true">
+    <span class="bs-pagehead__en"><%= label %></span>
+    <% if (typeof big !== 'undefined' && big !== null) { %><span class="bs-pagehead__big"><%= big %></span><% } %>
+  </div>
+</header>

@@ -1,0 +1,65 @@
+<%
+  const all = site.posts.sort('date', -1);
+  const latest = all.first();
+  const years = all.map(function (p) { return p.date.year(); });
+  const minY = years.length ? Math.min.apply(null, years) : new Date().getFullYear();
+  const maxY = years.length ? Math.max.apply(null, years) : minY;
+  const hero = theme.hero || {};
+  const split = Math.min(80, Math.max(40, Number(hero.split) || 62));
+  const heroTitle = hero.title || config.title || '';
+  const titleHtml = escape_html(heroTitle).replace(/([A-Za-z][A-Za-z0-9 .&'-]*)/, '<b>$1</b>');
+  const eyebrow = hero.eyebrow || config.description;
+  const cats = site.categories.sort('length', -1).toArray().filter(function (c) { return c.length; });
+  const latestCats = latest && latest.categories ? latest.categories.map(function (c) { return c.name; }).join(' / ') : '';
+%>
+<% if (hero.enable !== false && (page.current === 1 || !page.current)) { %>
+<section class="bs-hero" data-hero style="--split:<%= split %>%">
+  <div class="bs-hero__blue" aria-hidden="true"></div>
+  <div class="bs-hero__grid">
+    <div class="bs-hero__white">
+      <p class="bs-kicker"><span class="bs-dot" aria-hidden="true"></span><%= all.length %> POSTS · <%= minY === maxY ? minY : minY + '—' + maxY %> · <%= site.tags.length %> TAGS</p>
+      <% if (eyebrow) { %><p class="bs-hero__eyebrow"><%= eyebrow %></p><% } %>
+      <% if (hero.intro) { %><p class="bs-hero__intro"><%= hero.intro %></p><% } %>
+    </div>
+    <div class="bs-hero__side">
+      <% if (latest) { %>
+      <div>
+        <p class="bs-kicker bs-kicker--blue"><%= __('latest') %></p>
+        <a class="bs-hero__latest" href="<%- url_for(latest.path) %>">
+          <span class="bs-hero__latest-t"><%= latest.title || __('untitled') %></span>
+          <span class="bs-hero__latest-m"><%= date(latest.date, 'YYYY.MM.DD') %><%= latestCats ? ' · ' + latestCats : '' %></span>
+        </a>
+      </div>
+      <% } %>
+      <%- partial('_partial/slogan', { cls: 'bs-slogan--hero' }) %>
+    </div>
+  </div>
+  <h1 class="bs-hero__title" aria-label="<%= heroTitle %>" data-hero-title>
+    <span class="bs-hero__t bs-hero__t--ink" aria-hidden="true"><%- titleHtml %></span>
+    <span class="bs-hero__t bs-hero__t--paper" aria-hidden="true"><%- titleHtml %></span>
+  </h1>
+  <div class="bs-hero__line" aria-hidden="true"></div>
+  <div class="bs-hero__handle" role="slider" tabindex="0" aria-label="<%= __('split_handle') %>" aria-orientation="horizontal" aria-valuemin="40" aria-valuemax="80" aria-valuenow="<%= split %>" aria-valuetext="<%= split %>%">
+    <span aria-hidden="true">◀ ▶</span>
+  </div>
+  <a class="bs-hero__scroll" href="#index"><span aria-hidden="true">↓</span> <%= __('start_reading') %></a>
+</section>
+<% } %>
+
+<section class="bs-index" id="index" aria-labelledby="bs-index-title">
+  <header class="bs-index__head">
+    <h2 class="bs-h2" id="bs-index-title"><span><%= __('index.title') %></span><em><%= bs_t('index.sub') ? bs_t('index.sub') + ' · ' : '' %><%= all.length %></em></h2>
+    <% if (cats.length > 1) { %>
+    <div class="bs-filter" role="group" aria-label="<%= __('index.filter') %>">
+      <button type="button" aria-pressed="true" data-filter="*"><%= __('index.all') %><sup><%= all.length %></sup></button>
+      <% cats.forEach(function (c) { %>
+      <button type="button" aria-pressed="false" data-filter="<%= c.name %>"><%= c.name %><sup><%= c.length %></sup></button>
+      <% }) %>
+    </div>
+    <% } %>
+  </header>
+  <%- partial('_partial/year-groups', { posts: page.posts, fill: false }) %>
+  <% if (page.total > 1) { %>
+  <nav class="bs-pager" aria-label="<%= __('pager.label') %>"><%- paginator({ prev_text: __('pager.prev'), next_text: __('pager.next'), mid_size: 1 }) %></nav>
+  <% } %>
+</section>

@@ -1,0 +1,115 @@
+skip: 跳到正文
+home_aria: '%s 首页'
+nav_aria: 主导航
+menu:
+  home: 文章
+  home_sub: Posts
+  archives: 归档
+  archives_sub: Archive
+  categories: 分类
+  categories_sub: Categories
+  tags: 标签
+  tags_sub: Tags
+  about: 关于
+  about_sub: About
+  toggle: 菜单
+theme_toggle: 切换深浅色
+latest: LATEST · 最新
+start_reading: 开始阅读
+split_handle: 分界线位置，可用左右方向键调整
+index:
+  title: 全部文章
+  sub: INDEX
+  filter: 按分类筛选
+  all: 全部
+pager:
+  label: 分页
+  prev: ← 较新
+  next: 较早 →
+year:
+  count: '%d 篇'
+  empty_count: 空
+  empty: 这一年一篇也没有写。
+words: '%s 字'
+untitled: 无题
+post:
+  date: 发布 DATE
+  words: 字数 WORDS
+  read: 阅读 READ
+  minutes: '%d 分钟'
+  toc: 目录 · CONTENTS
+  rail: 阅读进度与目录
+  to_top: 回到顶部
+  tags: 标签
+  license_label: LICENSE
+  license: '本文作者 %s，采用 %s 许可。'
+  reprint: '转载请注明出处：%s'
+  reward: 赞赏
+  reward_wechatpay: 微信
+  reward_alipay: 支付宝
+  reward_caption: 谢谢你
+  follow: '在 %s 上关注我 ↗'
+  newer: ← 较新 NEWER
+  older: 较早 OLDER →
+  newest: 这是最新的一篇
+  oldest: 这是最早的一篇
+comments:
+  title: 评论
+  sub: COMMENTS
+  hint: 评论由 GitHub 驱动，登录 GitHub 即可留言。
+  noscript: 在 GitHub 上查看评论
+archive:
+  kicker: ARCHIVE · 年表
+  title: 归档
+  lead: '从 %2$d 年到现在，一共 %1$d 篇。没写的年份也照实留着。'
+  year_lead: '这一年写下的 %d 篇。'
+category:
+  kicker: CATEGORY · 分类
+  lead: '这个分类下有 %d 篇文章。'
+categories:
+  kicker: CATEGORIES · 分类
+  title: 分类
+  lead: '写过的东西分成 %d 类，一篇文章可以同时属于几类。'
+  latest: '最近：%s'
+  unit: 篇
+tag:
+  kicker: TAG · 标签
+  lead: '带有这个标签的文章有 %d 篇。'
+  all: 查看全部标签 →
+tags:
+  kicker: INDEX · 索引
+  title: 标签
+  lead: '%d 个标签，按拼音排成书后索引。'
+  letters: 字母索引
+page:
+  kicker: PAGE · 页面
+not_found:
+  kicker: ERROR · 404
+  title: 这一页在线的另一边
+  lead: 它可能被移走了，也可能还没写出来。
+  back: 回到全部文章 →
+footer:
+  powered: '由 %s 与 %s 主题驱动'
+  contact: 联系我
+  to_top: 回到顶部 ↑
+search:
+  open: 搜索
+  label: 搜索文章或输入命令
+  placeholder: 搜索标题、正文、标签……  输入 > 查看命令
+  close: 关闭
+  results: 结果
+  hint_move: ↑↓ 选择
+  hint_open: ↵ 打开
+  empty: 没有找到。换个词试试，或输入 > 查看命令。
+  unavailable: 没有找到搜索索引。安装 hexo-generator-searchdb 后即可搜索。
+  kind_title: 标题
+  kind_tag: 标签
+  kind_text: 正文
+  cmd_theme: 切换深浅色
+  cmd_random: 随机读一篇
+  cmd_top: 回到页面顶部
+  cmd_archive: 打开归档
+code:
+  copy: 复制
+  copied: 已复制
+  failed: 复制失败

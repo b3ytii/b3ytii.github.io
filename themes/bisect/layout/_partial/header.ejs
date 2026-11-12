@@ -1,0 +1,42 @@
+<%
+  const isActive = function (url) {
+    if (!url || /^https?:/.test(url)) return false;
+    if (url === '/') return is_home() || is_post();
+    const p = '/' + page.path;
+    if (url === '/archives/') return is_archive();
+    if (url === '/categories/') return is_category() || page.type === 'categories';
+    if (url === '/tags/') return is_tag() || page.type === 'tags';
+    return p.indexOf(url) === 0;
+  };
+%>
+<header class="bs-header" data-header>
+  <a class="bs-brand" href="<%- url_for('/') %>" aria-label="<%= __('home_aria', config.title) %>">
+    <span class="bs-mark" aria-hidden="true"></span>
+    <span class="bs-brand__name"><%= config.title %></span>
+  </a>
+  <nav class="bs-nav" id="bs-nav" aria-label="<%= __('nav_aria') %>">
+    <ul>
+      <% (theme.nav || []).forEach(function (item, i) { const l = bs_nav_label(item); %>
+      <li>
+        <a href="<%- item.external ? item.url : url_for(item.url) %>"<%- item.external ? ' target="_blank" rel="noopener"' : '' %><%- isActive(item.url) ? ' aria-current="page"' : '' %>>
+          <span class="bs-nav__no"><%= String(i + 1).padStart(2, '0') %></span>
+          <span class="bs-nav__zh"><%= l.name %></span>
+          <% if (l.sub || item.external) { %><span class="bs-nav__en"><%= l.sub %><%- item.external ? ' ↗' : '' %></span><% } %>
+        </a>
+      </li>
+      <% }) %>
+    </ul>
+  </nav>
+  <div class="bs-tools">
+    <button class="bs-tool bs-tool--search" type="button" data-search-open aria-label="<%= __('search.open') %>">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg>
+      <kbd>⌘K</kbd>
+    </button>
+    <button class="bs-tool bs-tool--theme" type="button" data-theme-toggle aria-label="<%= __('theme_toggle') %>">
+      <span class="bs-halfdot" aria-hidden="true"></span>
+    </button>
+    <button class="bs-tool bs-tool--menu" type="button" data-menu-toggle aria-expanded="false" aria-controls="bs-nav">
+      <span class="bs-burger" aria-hidden="true"></span><span class="bs-sr"><%= __('menu.toggle') %></span>
+    </button>
+  </div>
+</header>

@@ -1,0 +1,115 @@
+skip: Skip to content
+home_aria: '%s home'
+nav_aria: Main navigation
+menu:
+  home: Posts
+  home_sub: ''
+  archives: Archive
+  archives_sub: ''
+  categories: Categories
+  categories_sub: ''
+  tags: Tags
+  tags_sub: ''
+  about: About
+  about_sub: ''
+  toggle: Menu
+theme_toggle: Toggle light and dark
+latest: Latest
+start_reading: Start reading
+split_handle: Divider position. Use the left and right arrow keys to move it.
+index:
+  title: All posts
+  sub: Index
+  filter: Filter by category
+  all: All
+pager:
+  label: Pagination
+  prev: ← Newer
+  next: Older →
+year:
+  count: '%d'
+  empty_count: Empty
+  empty: Nothing was written this year.
+words: '%s words'
+untitled: Untitled
+post:
+  date: Date
+  words: Words
+  read: Read
+  minutes: '%d min'
+  toc: Contents
+  rail: Reading progress and contents
+  to_top: Back to top
+  tags: Tags
+  license_label: License
+  license: 'Written by %s, licensed under %s.'
+  reprint: 'Please credit the source when sharing: %s'
+  reward: Tip
+  reward_wechatpay: WeChat Pay
+  reward_alipay: Alipay
+  reward_caption: Thank you
+  follow: 'Follow me on %s ↗'
+  newer: ← Newer
+  older: Older →
+  newest: This is the newest post
+  oldest: This is the oldest post
+comments:
+  title: Comments
+  sub: ''
+  hint: Comments are powered by GitHub. Sign in with GitHub to join in.
+  noscript: View comments on GitHub
+archive:
+  kicker: Archive
+  title: Archive
+  lead: '%d posts since %d. Years with nothing written are kept as they are.'
+  year_lead: '%d posts written this year.'
+category:
+  kicker: Category
+  lead: '%d posts in this category.'
+categories:
+  kicker: Categories
+  title: Categories
+  lead: 'Posts are filed under %d categories. A post can belong to several.'
+  latest: 'Latest: %s'
+  unit: posts
+tag:
+  kicker: Tag
+  lead: '%d posts with this tag.'
+  all: All tags →
+tags:
+  kicker: Index
+  title: Tags
+  lead: '%d tags, sorted into an index.'
+  letters: Index letters
+page:
+  kicker: Page
+not_found:
+  kicker: Error · 404
+  title: This page is on the other side of the line
+  lead: It may have moved, or it hasn't been written yet.
+  back: Back to all posts →
+footer:
+  powered: 'Powered by %s and the %s theme'
+  contact: Contact me
+  to_top: Back to top ↑
+search:
+  open: Search
+  label: Search posts or type a command
+  placeholder: Search titles, text and tags…  Type > for commands
+  close: Close
+  results: Results
+  hint_move: ↑↓ Move
+  hint_open: ↵ Open
+  empty: Nothing found. Try another word, or type > for commands.
+  unavailable: Search index not found. Install hexo-generator-searchdb to enable search.
+  kind_title: Title
+  kind_tag: Tag
+  kind_text: Text
+  cmd_theme: Toggle light and dark
+  cmd_random: Read a random post
+  cmd_top: Back to top
+  cmd_archive: Open the archive
+code:
+  copy: Copy
+  copied: Copied
+  failed: Copy failed

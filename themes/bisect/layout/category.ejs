@@ -1,0 +1,12 @@
+<% const sub = (theme.category_sub || {})[page.category] || 'CATEGORY'; %>
+<%- partial('_partial/pagehead', {
+  kicker: __('category.kicker'),
+  title: page.category,
+  lead: __('category.lead', page.posts.length),
+  label: String(sub).toUpperCase(),
+  big: page.posts.length
+}) %>
+<section class="bs-index">
+  <%- partial('_partial/year-groups', { posts: page.posts, fill: false }) %>
+  <% if (page.total > 1) { %><nav class="bs-pager" aria-label="<%= __('pager.label') %>"><%- paginator({ prev_text: __('pager.prev'), next_text: __('pager.next') }) %></nav><% } %>
+</section>

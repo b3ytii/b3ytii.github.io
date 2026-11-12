@@ -1,0 +1,18 @@
+<%
+  const isYear = !!page.year;
+  const posts = page.posts;
+  const total = isYear ? posts.length : site.posts.length;
+%>
+<%- partial('_partial/pagehead', {
+  kicker: __('archive.kicker'),
+  title: isYear ? String(page.year) : __('archive.title'),
+  lead: isYear ? __('archive.year_lead', total) : __('archive.lead', total, bs_first_year()),
+  label: 'ARCHIVE',
+  big: total
+}) %>
+<section class="bs-index bs-index--archive">
+  <%- partial('_partial/year-groups', { posts: posts, fill: !isYear }) %>
+  <% if (page.total > 1) { %>
+  <nav class="bs-pager" aria-label="<%= __('pager.label') %>"><%- paginator({ prev_text: __('pager.prev'), next_text: __('pager.next'), mid_size: 1 }) %></nav>
+  <% } %>
+</section>

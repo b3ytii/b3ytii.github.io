@@ -1,0 +1,29 @@
+<%
+  // posts：已按时间倒序；fill：是否补齐没有文章的年份
+  const groups = {};
+  const order = [];
+  posts.forEach(function (p) {
+    const y = p.date.year();
+    if (!groups[y]) { groups[y] = []; order.push(y); }
+    groups[y].push(p);
+  });
+  let years = order;
+  if (fill && order.length) {
+    years = [];
+    for (let y = order[0]; y >= order[order.length - 1]; y--) years.push(y);
+  }
+%>
+<div class="bs-years">
+<% years.forEach(function (y) { const list = groups[y] || []; %>
+  <section class="bs-year<%= list.length ? '' : ' is-empty' %>" data-year="<%= y %>" id="y<%= y %>">
+    <h3 class="bs-year__label"><span class="bs-year__num"><%= y %></span><span class="bs-year__count"><%= list.length ? __('year.count', list.length) : __('year.empty_count') %></span></h3>
+    <% if (list.length) { %>
+    <ol class="bs-rows">
+      <% list.forEach(function (post) { %><%- partial('_partial/post-row', { post: post }) %><% }) %>
+    </ol>
+    <% } else { %>
+    <p class="bs-year__empty"><%= __('year.empty') %></p>
+    <% } %>
+  </section>
+<% }) %>
+</div>

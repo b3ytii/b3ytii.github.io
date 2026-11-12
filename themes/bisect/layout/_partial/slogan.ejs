@@ -1,0 +1,6 @@
+<% if (config.subtitle || theme.slogan_sub) { %>
+<p class="bs-slogan<%= typeof cls !== 'undefined' ? ' ' + cls : '' %>">
+  <% if (config.subtitle) { %><span class="bs-slogan__zh"><%= config.subtitle %></span><% } %>
+  <% if (theme.slogan_sub) { %><span class="bs-slogan__en"><%= theme.slogan_sub %></span><% } %>
+</p>
+<% } %>
