@@ -6,6 +6,7 @@ description: "Walkthrough for the One-Voice Android reverse engineering challeng
 categories: [Writeups, CTF, Mobile Security]
 tags: [ctf, android, reverse engineering, mobile security]
 author: Narain Krishna
+cover:https://i.pinimg.com/736x/ee/f1/68/eef16833bcb67052e68998af1b16e012.jpg
 toc: true
 ---
 
