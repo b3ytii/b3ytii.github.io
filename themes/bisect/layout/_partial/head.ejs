@@ -41,7 +41,7 @@
 <% } else if (cjk === 'local') { %>
 <link rel="stylesheet" href="<%- url_for('css/bisect-cjk.css') %>">
 <% } %>
-<link rel="stylesheet" href="<%- url_for('css/bisect.css') %>">
+<link rel="stylesheet" href="<%- url_for('css/bisect.css') %>?v=violet">
 <% if (feed) { %><link rel="alternate" type="application/atom+xml" title="<%= config.title %>" href="<%- feed %>"><% } %>
 <script type="speculationrules">
 {"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":"/*.xml"}}]},"eagerness":"moderate"}]}
