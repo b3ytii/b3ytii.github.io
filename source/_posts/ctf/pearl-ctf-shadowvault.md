@@ -6,6 +6,7 @@ description: "CTF write-up for Shadow Vault by Narain Krishna."
 categories: ["Writeups", "CTF", "Pearl CTF"]
 tags: [ctf, writeup]
 author: Narain Krishna
+cover: https://i.pinimg.com/736x/e7/59/dd/e759dd0f38b5f04a65bb9666b5a95761.jpg
 toc: true
 ---
 
