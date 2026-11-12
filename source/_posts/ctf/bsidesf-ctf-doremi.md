@@ -6,6 +6,7 @@ description: "CTF write-up for Doremi by Narain Krishna."
 categories: ["Writeups", "CTF", "BSIDESF CTF"]
 tags: [ctf, writeup]
 author: Narain Krishna
+cover: https://i.pinimg.com/736x/6c/b9/44/6cb944ebacd8d2f16549ce700cc36ae9.jpg
 toc: true
 ---
 
