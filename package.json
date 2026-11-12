@@ -2,7 +2,7 @@
   "name": "personal-hexo-site",
   "version": "1.0.0",
   "private": true,
-  "description": "A personal blog and portfolio powered by Hexo and Theme Quieter.",
+  "description": "A personal blog and portfolio powered by Hexo and the Bisect theme.",
   "hexo": {
     "version": "7.3.0"
   },
@@ -13,7 +13,6 @@
     "deploy": "hexo deploy"
   },
   "dependencies": {
-    "crypto-js": "^4.2.0",
     "hexo": "^7.3.0",
     "hexo-cli": "^4.3.2",
     "hexo-generator-archive": "^2.0.0",
@@ -23,7 +22,6 @@
     "hexo-renderer-ejs": "^2.0.0",
     "hexo-renderer-kramed": "^0.1.4",
     "hexo-renderer-less": "^4.0.0",
-    "hexo-server": "^3.0.0",
-    "hexo-theme-quieter": "^1.0.2"
+    "hexo-server": "^3.0.0"
   }
 }

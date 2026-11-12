@@ -21,4 +21,4 @@ I’ll be sharing writing, projects, experiments, and lessons learned here. Repl
 - Personal projects and experiments
 - Reading notes and ideas in progress
 
-The site is powered by **Hexo** and the **Redefine** theme, with dark mode enabled by default.
+The site is powered by **Hexo** and the **Bisect** theme, with light and dark modes.

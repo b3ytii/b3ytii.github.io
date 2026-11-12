@@ -2,7 +2,7 @@
 title: About
 date: 2026-11-09 16:00:00
 type: about
-layout: about
+layout: page
 comments: false
 aside: true
 ---

@@ -1,0 +1,48 @@
+nav:
+  - { key: home, url: / }
+  - { key: archives, url: /archives/ }
+  - { key: categories, url: /categories/ }
+  - { key: tags, url: /tags/ }
+  - { key: about, url: /about/ }
+
+hero:
+  enable: true
+  title: Narain Krishna
+  eyebrow: Notes, projects, and experiments in security and technology.
+  intro: CTF write-ups, technical investigations, and things I learn along the way.
+  split: 62
+
+since: 2026
+serif_categories: []
+
+toc:
+  enable: true
+  number: true
+  max_depth: 3
+
+fonts:
+  cjk: system
+  host: https://fonts.googleapis.com
+
+social:
+  GitHub: https://github.com/NarainKrishna
+
+sites: []
+
+creative_commons:
+  license: false
+
+reward:
+  enable: false
+
+follow_me: {}
+
+comments:
+  provider: none
+
+chatra:
+  enable: false
+
+mermaid:
+  enable: true
+  js: https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.min.js
