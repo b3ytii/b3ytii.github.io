@@ -2,9 +2,9 @@
 layout: post
 title: "Secure Catalog APK"
 date: 2026-04-17 11:23:25 +0530
-description: "CTF write-up for Secure Catalog APK."
+description: "Walkthrough for Secure Catalog APK from Cyberchaze CTF."
 categories: ["Writeups", "CTF", "Cyberchaze CTF"]
-tags: [ctf, writeup]
+tags: [ctf, writeup, androidsecurity, mobileCTF]
 author: Narain Krishna
 cover: https://i.pinimg.com/736x/e8/c3/31/e8c3316dd4bea8ee4ce5c1d4629a73d6.jpg
 toc: true

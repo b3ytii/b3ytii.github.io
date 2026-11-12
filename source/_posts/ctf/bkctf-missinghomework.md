@@ -2,9 +2,9 @@
 layout: post
 title: "Missing HomeWork"
 date: 2026-09-06 14:48:40 +0530
-description: "CTF write-up for Missing HomeWork."
+description: "Walkthrough for Missing HomeWork from BKCTF."
 categories: ["Writeups", "CTF", "BKCTF"]
-tags: [ctf, writeup]
+tags: [ctf, writeup, androidsecurity, mobileCTF]
 author: Narain Krishna
 cover: https://i.pinimg.com/736x/8c/3c/ba/8c3cbac6af3af9a3ed0df10a160b6651.jpg
 

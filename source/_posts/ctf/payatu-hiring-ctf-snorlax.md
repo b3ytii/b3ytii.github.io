@@ -2,9 +2,9 @@
 layout: post
 title: "Snorlax"
 date: 2026-04-18 12:55:53 +0530
-description: "CTF write-up for Snorlax."
+description: "Walkthrough for Snorlax from Payatu Hiring CTF."
 categories: ["Writeups", "CTF", "Payatu Hiring CTF"]
-tags: [ctf, writeup]
+tags: [ctf, writeup, androidsecurity, mobileCTF]
 author: Narain Krishna
 cover: https://i.pinimg.com/1200x/a6/5a/3f/a65a3f7a85b5bd9e9e895abf0f0b28ed.jpg
 toc: true

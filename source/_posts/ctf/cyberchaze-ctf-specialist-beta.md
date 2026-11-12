@@ -2,9 +2,9 @@
 layout: post
 title: "Specialist_Beta"
 date: 2026-04-17 11:23:25 +0530
-description: "CTF write-up for Specialist_Beta."
+description: "Walkthrough for Specialist_Beta from Cyberchaze CTF."
 categories: ["Writeups", "CTF", "Cyberchaze CTF"]
-tags: [ctf, writeup]
+tags: [ctf, writeup, androidsecurity, mobileCTF]
 author: Narain Krishna
 cover: https://i.pinimg.com/1200x/3a/a7/f1/3aa7f14a4d5c3aa1251c27bca81f19f1.jpg
 toc: true

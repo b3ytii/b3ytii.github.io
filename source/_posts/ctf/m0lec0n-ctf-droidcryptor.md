@@ -2,9 +2,9 @@
 layout: post
 title: "Droid Cryptor"
 date: 2026-05-07 21:48:19 +0530
-description: "CTF write-up for Droid Cryptor."
+description: "Walkthrough for Droid Cryptor from m0leC0n CTF."
 categories: ["Writeups", "CTF", "m0leC0n CTF"]
-tags: [ctf, writeup]
+tags: [ctf, writeup, androidsecurity, mobileCTF]
 author: Narain Krishna
 cover: https://i.pinimg.com/736x/bc/17/55/bc1755d9b973bfbb8b1ed5da5d269dff.jpg
 toc: true

@@ -2,9 +2,9 @@
 layout: post
 title: "Freeda Native Hook"
 date: 2026-04-20 23:22:38 +0530
-description: "CTF write-up for Freeda Native Hook."
+description: "Walkthrough for Freeda Native Hook from HeroCTF."
 categories: ["Writeups", "CTF", "HeroCTF"]
-tags: [ctf, writeup]
+tags: [ctf, writeup, androidsecurity, mobileCTF]
 author: Narain Krishna
 cover: https://i.pinimg.com/1200x/34/27/bf/3427bf3ca43eb51e4daefaad92633c30.jpg
 toc: true

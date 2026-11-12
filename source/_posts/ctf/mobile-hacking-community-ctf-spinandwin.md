@@ -2,9 +2,9 @@
 layout: post
 title: "Spin And Win"
 date: 2026-04-24 17:32:06 +0530
-description: "CTF write-up for Spin And Win."
+description: "Walkthrough for Spin And Win from Mobile Hacking Community CTF."
 categories: ["Writeups", "CTF", "Mobile Hacking Community CTF"]
-tags: [ctf, writeup]
+tags: [ctf, writeup, androidsecurity, mobileCTF]
 author: Narain Krishna
 cover: https://i.pinimg.com/736x/16/11/5b/16115b5c2dbe92eec41a1f46e2b94f9c.jpg
 toc: true

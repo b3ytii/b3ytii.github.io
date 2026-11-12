@@ -2,9 +2,9 @@
 layout: post
 title: "Root Quest"
 date: 2026-04-24 19:19:57 +0530
-description: "CTF write-up for Root Quest."
+description: "Walkthrough for Root Quest from Mobile Hacking Community CTF."
 categories: ["Writeups", "CTF", "Mobile Hacking Community CTF"]
-tags: [ctf, writeup]
+tags: [ctf, writeup, androidsecurity, mobileCTF]
 author: Narain Krishna
 cover: https://i.pinimg.com/736x/6b/90/bd/6b90bd6dd769a6d7f16cd35e764a3bbb.jpg
 toc: true

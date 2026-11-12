@@ -2,9 +2,9 @@
 layout: post
 title: "Firmware"
 date: 2026-04-17 16:29:52 +0530
-description: "CTF write-up for Firmware."
+description: "Walkthrough for Firmware from Cyberchaze CTF."
 categories: ["Writeups", "CTF", "Cyberchaze CTF"]
-tags: [ctf, writeup]
+tags: [ctf, writeup, androidsecurity, mobileCTF]
 author: Narain Krishna
 cover: https://i.pinimg.com/474x/0c/0c/85/0c0c8537f19b7526429c3978635376f3.jpg
 toc: true

@@ -2,9 +2,9 @@
 layout: post
 title: "Super Secure Catalog"
 date: 2026-04-17 11:23:25 +0530
-description: "CTF write-up for Super Secure Catalog."
+description: "Walkthrough for Super Secure Catalog from Cyberchaze CTF."
 categories: ["Writeups", "CTF", "Cyberchaze CTF"]
-tags: [ctf, writeup]
+tags: [ctf, writeup, androidsecurity, mobileCTF]
 author: Narain Krishna
 cover: https://i.pinimg.com/1200x/6b/92/7e/6b927e328e32a0f402e09aa1f2ad267b.jpg
 toc: true

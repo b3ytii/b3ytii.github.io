@@ -2,9 +2,9 @@
 layout: post
 title: "One-Voice - BrunnerCTF Writeup"
 date: 2026-08-26 12:18:33 +0530
-description: "Walkthrough for the One-Voice Android reverse engineering challenge from BrunnerCTF."
+description: "Walkthrough for One-Voice from BrunnerCTF."
 categories: [Writeups, CTF, Mobile Security]
-tags: [ctf, android, reverse engineering, mobile security]
+tags: [ctf, android, reverse engineering, mobile security, androidsecurity, mobileCTF]
 author: Narain Krishna
 cover: https://i.pinimg.com/736x/ee/f1/68/eef16833bcb67052e68998af1b16e012.jpg
 toc: true

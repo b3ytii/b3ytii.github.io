@@ -2,9 +2,9 @@
 layout: post
 title: "Prints"
 date: 2026-04-25 00:05:56 +0530
-description: "CTF write-up for Prints."
+description: "Walkthrough for Prints from Mobile Hacking Community CTF."
 categories: ["Writeups", "CTF", "Mobile Hacking Community CTF"]
-tags: [ctf, writeup]
+tags: [ctf, writeup, androidsecurity, mobileCTF]
 author: Narain Krishna
 cover: https://i.pinimg.com/736x/84/82/fd/8482fdcff265c4560bd0780791e786fc.jpg
 toc: true

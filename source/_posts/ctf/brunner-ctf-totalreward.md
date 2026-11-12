@@ -2,9 +2,9 @@
 layout: post
 title: "Total-Reward - BrunnerCTF Writeup"
 date: 2026-08-26 13:37:52 +0530
-description: "Walkthrough for the Total-Reward Android reverse engineering challenge from BrunnerCTF."
+description: "Walkthrough for Total-Reward from BrunnerCTF."
 categories: [Writeups, CTF, Mobile Security]
-tags: [ctf, android, reverse engineering, mobile security]
+tags: [ctf, android, reverse engineering, mobile security, androidsecurity, mobileCTF]
 author: Narain Krishna
 cover: https://i.pinimg.com/1200x/9b/9f/ac/9b9fac2a9887786ec260ecd717a11dfd.jpg
 toc: true

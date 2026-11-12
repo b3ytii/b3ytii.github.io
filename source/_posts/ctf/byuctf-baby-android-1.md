@@ -2,9 +2,9 @@
 layout: post
 title: "baby-android-1"
 date: 2026-04-17 11:23:25 +0530
-description: "CTF write-up for baby-android-1."
+description: "Walkthrough for baby-android-1 from ByuCTF."
 categories: ["Writeups", "CTF", "ByuCTF"]
-tags: [ctf, writeup]
+tags: [ctf, writeup, androidsecurity, mobileCTF]
 author: Narain Krishna
 cover: https://i.pinimg.com/736x/97/c0/4e/97c04e5f9812cb73720f594842c6c8cf.jpg
 toc: true

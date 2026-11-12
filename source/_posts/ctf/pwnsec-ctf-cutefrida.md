@@ -2,9 +2,9 @@
 layout: post
 title: "Cute Frida"
 date: 2026-04-21 19:02:53 +0530
-description: "CTF write-up for Cute Frida."
+description: "Walkthrough for Cute Frida from Pwnsec CTF."
 categories: ["Writeups", "CTF", "Pwnsec CTF"]
-tags: [ctf, writeup]
+tags: [ctf, writeup, androidsecurity, mobileCTF]
 author: Narain Krishna
 cover: https://i.pinimg.com/1200x/4e/de/1a/4ede1a3fab5089f9869ed60950151738.jpg
 toc: true

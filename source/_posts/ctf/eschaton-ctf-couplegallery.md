@@ -2,9 +2,9 @@
 layout: post
 title: "Couple Gallery"
 date: 2026-05-02 23:27:53 +0530
-description: "CTF write-up for Couple Gallery."
+description: "Walkthrough for Couple Gallery from Eschaton CTF."
 categories: ["Writeups", "CTF", "Eschaton CTF"]
-tags: [ctf, writeup]
+tags: [ctf, writeup, androidsecurity, mobileCTF]
 author: Narain Krishna
 cover: https://i.pinimg.com/736x/b9/ec/9e/b9ec9eaa5a53a64f60ad1946849fa16a.jpg
 toc: true

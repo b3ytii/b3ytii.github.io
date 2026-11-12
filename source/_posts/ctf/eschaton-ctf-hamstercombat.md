@@ -2,9 +2,9 @@
 layout: post
 title: "Hamster Combat"
 date: 2026-05-02 23:41:36 +0530
-description: "CTF write-up for Hamster Combat."
+description: "Walkthrough for Hamster Combat from Eschaton CTF."
 categories: ["Writeups", "CTF", "Eschaton CTF"]
-tags: [ctf, writeup]
+tags: [ctf, writeup, androidsecurity, mobileCTF]
 author: Narain Krishna
 cover: https://i.pinimg.com/736x/68/ed/bd/68edbd22f337e4e37c16e34d84b593bb.jpg
 toc: true

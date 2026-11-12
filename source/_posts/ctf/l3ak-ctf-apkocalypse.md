@@ -2,9 +2,9 @@
 layout: post
 title: "Apkocalypse"
 date: 2026-04-29 23:31:55 +0530
-description: "CTF write-up for Apkocalypse."
+description: "Walkthrough for Apkocalypse from l3ak CTF."
 categories: ["Writeups", "CTF", "l3ak CTF"]
-tags: [ctf, writeup]
+tags: [ctf, writeup, androidsecurity, mobileCTF]
 author: Narain Krishna
 cover: https://i.pinimg.com/736x/e3/6c/d3/e36cd35db523c670cd04afc66ae5d754.jpg
 toc: true

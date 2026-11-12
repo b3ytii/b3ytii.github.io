@@ -2,9 +2,9 @@
 layout: post
 title: "Freeda Simple Hoot"
 date: 2026-04-20 23:11:18 +0530
-description: "CTF write-up for Freeda Simple Hoot."
+description: "Walkthrough for Freeda Simple Hoot from HeroCTF."
 categories: ["Writeups", "CTF", "HeroCTF"]
-tags: [ctf, writeup]
+tags: [ctf, writeup, androidsecurity, mobileCTF]
 author: Narain Krishna
 cover: https://i.pinimg.com/736x/4a/c3/91/4ac3914b99cf563e58e29fd09331b3d4.jpg
 toc: true

@@ -2,9 +2,9 @@
 layout: post
 title: "Baby Android"
 date: 2026-09-03 19:56:56 +0530
-description: "CTF write-up for Baby Android."
+description: "Walkthrough for Baby Android from DalCTF."
 categories: ["Writeups", "CTF", "DalCTF"]
-tags: [ctf, writeup]
+tags: [ctf, writeup, androidsecurity, mobileCTF]
 author: Narain Krishna
 cover: https://i.pinimg.com/1200x/85/31/4f/85314f1b21ff07d8db9906542fe01f8b.jpg
 toc: true

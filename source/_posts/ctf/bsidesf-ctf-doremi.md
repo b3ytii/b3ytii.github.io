@@ -2,9 +2,9 @@
 layout: post
 title: "Doremi"
 date: 2026-09-03 19:58:50 +0530
-description: "CTF write-up for Doremi."
+description: "Walkthrough for Doremi from BSIDESF CTF."
 categories: ["Writeups", "CTF", "BSIDESF CTF"]
-tags: [ctf, writeup]
+tags: [ctf, writeup, androidsecurity, mobileCTF]
 author: Narain Krishna
 cover: https://i.pinimg.com/736x/6c/b9/44/6cb944ebacd8d2f16549ce700cc36ae9.jpg
 toc: true

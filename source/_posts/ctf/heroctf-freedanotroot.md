@@ -2,9 +2,9 @@
 layout: post
 title: "Freeda Not Root"
 date: 2026-04-20 23:11:18 +0530
-description: "CTF write-up for Freeda Not Root."
+description: "Walkthrough for Freeda Not Root from HeroCTF."
 categories: ["Writeups", "CTF", "HeroCTF"]
-tags: [ctf, writeup]
+tags: [ctf, writeup, androidsecurity, mobileCTF]
 author: Narain Krishna
 cover: https://i.pinimg.com/736x/45/57/b7/4557b7dcd032bec32156f01a06383067.jpg
 toc: true

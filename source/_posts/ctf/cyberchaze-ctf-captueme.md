@@ -2,9 +2,9 @@
 layout: post
 title: "Capture Me !!"
 date: 2026-04-17 11:58:00 +0530
-description: "CTF write-up for Capture Me !!"
+description: "Walkthrough for Capture Me !! from Cyberchaze CTF."
 categories: ["Writeups", "CTF", "Cyberchaze CTF"]
-tags: [ctf, writeup]
+tags: [ctf, writeup, androidsecurity, mobileCTF]
 author: Narain Krishna
 cover: https://i.pinimg.com/736x/0d/12/01/0d120101e5beece33b52b488cc1e8fc7.jpg
 toc: true

@@ -2,9 +2,9 @@
 layout: post
 title: "No Matter What You See"
 date: 2026-04-24 17:10:53 +0530
-description: "CTF write-up for No Matter What You See."
+description: "Walkthrough for No Matter What You See from Mobile Hacking Community CTF."
 categories: ["Writeups", "CTF", "Mobile Hacking Community CTF"]
-tags: [ctf, writeup]
+tags: [ctf, writeup, androidsecurity, mobileCTF]
 author: Narain Krishna
 cover: https://i.pinimg.com/736x/f5/ea/73/f5ea734a80883d98fbbd62299f4270dd.jpg
 toc: true

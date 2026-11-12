@@ -2,9 +2,9 @@
 layout: post
 title: "Where Am I"
 date: 2026-04-18 19:42:46 +0530
-description: "CTF write-up for Where Am I."
+description: "Walkthrough for Where Am I from Payatu Hiring CTF."
 categories: ["Writeups", "CTF", "Payatu Hiring CTF"]
-tags: [ctf, writeup]
+tags: [ctf, writeup, androidsecurity, mobileCTF]
 author: Narain Krishna
 cover: https://i.pinimg.com/1200x/c4/ed/54/c4ed54e3016c50ae66f72dd82f64446d.jpg
 toc: true

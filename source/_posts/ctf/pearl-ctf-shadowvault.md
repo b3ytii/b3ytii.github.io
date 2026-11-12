@@ -2,9 +2,9 @@
 layout: post
 title: "Shadow Vault"
 date: 2026-05-04 20:20:08 +0530
-description: "CTF write-up for Shadow Vault."
+description: "Walkthrough for Shadow Vault from Pearl CTF."
 categories: ["Writeups", "CTF", "Pearl CTF"]
-tags: [ctf, writeup]
+tags: [ctf, writeup, androidsecurity, mobileCTF]
 author: Narain Krishna
 cover: https://i.pinimg.com/736x/e7/59/dd/e759dd0f38b5f04a65bb9666b5a95761.jpg
 toc: true

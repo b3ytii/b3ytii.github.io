@@ -2,9 +2,9 @@
 layout: post
 title: "Based"
 date: 2026-04-23 23:43:03 +0530
-description: "CTF write-up for Based."
+description: "Walkthrough for Based from Mobile Hacking Community CTF."
 categories: ["Writeups", "CTF", "Mobile Hacking Community CTF"]
-tags: [ctf, writeup]
+tags: [ctf, writeup, androidsecurity, mobileCTF]
 author: Narain Krishna
 cover: https://i.pinimg.com/736x/44/52/c6/4452c6c68d0499faa766ed77c6c4febb.jpg
 toc: true

@@ -2,9 +2,9 @@
 layout: post
 title: "Freaky Frida"
 date: 2026-05-01 15:30:06 +0530
-description: "CTF write-up for Freaky Frida."
+description: "Walkthrough for Freaky Frida from Pwnsec CTF."
 categories: ["Writeups", "CTF", "Pwnsec CTF"]
-tags: [ctf, writeup]
+tags: [ctf, writeup, androidsecurity, mobileCTF]
 cover: https://i.pinimg.com/736x/eb/da/8b/ebda8b18d8bd80e348048d61f797ce38.jpg
 author: Narain Krishna
 toc: true

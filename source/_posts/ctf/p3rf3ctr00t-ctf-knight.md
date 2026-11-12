@@ -2,9 +2,9 @@
 layout: post
 title: "Knight"
 date: 2026-04-24 16:53:08 +0530
-description: "CTF write-up for Knight."
+description: "Walkthrough for Knight from P3RF3CTR00T CTF."
 categories: ["Writeups", "CTF", "P3RF3CTR00T CTF"]
-tags: [ctf, writeup]
+tags: [ctf, writeup, androidsecurity, mobileCTF]
 author: Narain Krishna
 cover: https://i.pinimg.com/736x/9b/19/9b/9b199bfc96dc9ee095a3b31cc62cc9c2.jpg
 toc: true

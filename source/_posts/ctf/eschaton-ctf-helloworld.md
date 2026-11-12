@@ -2,9 +2,9 @@
 layout: post
 title: "Hello World"
 date: 2026-05-02 20:51:05 +0530
-description: "CTF write-up for Hello World."
+description: "Walkthrough for Hello World from Eschaton CTF."
 categories: ["Writeups", "CTF", "Eschaton CTF"]
-tags: [ctf, writeup]
+tags: [ctf, writeup, androidsecurity, mobileCTF]
 author: Narain Krishna
 cover: https://i.pinimg.com/736x/24/b6/42/24b642891733fc30346131864588f98f.jpg
 toc: true

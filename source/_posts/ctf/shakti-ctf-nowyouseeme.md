@@ -2,9 +2,9 @@
 layout: post
 title: "nowyouseeme"
 date: 2026-04-23 12:05:11 +0530
-description: "CTF write-up for nowyouseeme."
+description: "Walkthrough for nowyouseeme from Shakti CTF."
 categories: ["Writeups", "CTF", "Shakti CTF"]
-tags: [ctf, writeup]
+tags: [ctf, writeup, androidsecurity, mobileCTF]
 author: Narain Krishna
 cover: https://i.pinimg.com/736x/f3/fc/39/f3fc39860420bd289ea6e7f70c8d07f5.jpg
 toc: true
