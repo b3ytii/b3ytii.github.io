@@ -17,8 +17,8 @@
 <meta name="description" content="<%= desc %>">
 <% if (config.keywords) { %><meta name="keywords" content="<%= config.keywords %>"><% } %>
 <% if (config.author) { %><meta name="author" content="<%= config.author %>"><% } %>
-<meta name="theme-color" media="(prefers-color-scheme: light)" content="#f4f9fd">
-<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0e1628">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#f7f7f8">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0a0a0a">
 <meta name="color-scheme" content="light dark">
 <link rel="canonical" href="<%= full_url_for(page.path).replace(/index\.html$/, '') %>">
 <%- open_graph({ twitter_card: 'summary_large_image', description: desc }) %>
@@ -41,7 +41,7 @@
 <% } else if (cjk === 'local') { %>
 <link rel="stylesheet" href="<%- url_for('css/bisect-cjk.css') %>">
 <% } %>
-<link rel="stylesheet" href="<%- url_for('css/bisect.css') %>?v=royal-purple">
+<link rel="stylesheet" href="<%- url_for('css/bisect.css') %>?v=red-theme">
 <% if (feed) { %><link rel="alternate" type="application/atom+xml" title="<%= config.title %>" href="<%- feed %>"><% } %>
 <script type="speculationrules">
 {"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":"/*.xml"}}]},"eagerness":"moderate"}]}

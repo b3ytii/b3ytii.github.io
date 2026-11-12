@@ -22,25 +22,25 @@
 
 /* ---------- Tokens ---------- */
 :root {
-  /* Near-black foundation, royal-purple structure, and white typography */
-  --paper: #050505;
-  --paper-2: #140d1c;
+  /* Near-black foundation, red structure, and white typography */
+  --paper: #0a0a0a;
+  --paper-2: #180d10;
   --ink: #ffffff;
-  --ink-2: #f0eafa;
-  --muted: #c7b9d6;
-  --line: #3b2852;
-  --blue: #7b2cbf;
-  --blue-deep: #3c096c;
+  --ink-2: #f4e8e9;
+  --muted: #d3b8bb;
+  --line: #54272d;
+  --blue: #d71920;
+  --blue-deep: #8f0d16;
   --on-blue: #ffffff;
   --on-blue-2: rgba(255, 255, 255, .84);
-  --electric: #c77dff;
-  --link: #c77dff;
-  --code-bg: #050505;
+  --electric: #ff6b73;
+  --link: #ff6b73;
+  --code-bg: #0a0a0a;
   --code-fg: #ffffff;
   --gen-w: #ffffff;
-  --gen-b: #7b2cbf;
-  --gen-e: #c77dff;
-  --gen-label: #050505;
+  --gen-b: #d71920;
+  --gen-e: #ff6b73;
+  --gen-label: #0a0a0a;
 
   /* 字 */
   --f-display: "Archivo", "Bisect Sans Heavy", "Noto Sans SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
@@ -61,33 +61,77 @@
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --paper: #050505;
-    --paper-2: #140d1c;
+    --paper: #0a0a0a;
+    --paper-2: #180d10;
     --ink: #ffffff;
-    --ink-2: #f0eafa;
-    --muted: #c7b9d6;
-    --line: #3b2852;
-    --blue-deep: #3c096c;
-    --link: #c77dff;
-    --code-bg: #050505;
+    --ink-2: #f4e8e9;
+    --muted: #d3b8bb;
+    --line: #54272d;
+    --blue-deep: #8f0d16;
+    --link: #ff6b73;
+    --code-bg: #0a0a0a;
     --gen-w: #ffffff;
-    --gen-label: #f0eafa;
+    --gen-label: #f4e8e9;
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
-  --paper: #050505;
-  --paper-2: #140d1c;
+  --paper: #0a0a0a;
+  --paper-2: #180d10;
   --ink: #ffffff;
-  --ink-2: #f0eafa;
-  --muted: #c7b9d6;
-  --line: #3b2852;
-  --blue-deep: #3c096c;
-  --link: #c77dff;
-  --code-bg: #050505;
+  --ink-2: #f4e8e9;
+  --muted: #d3b8bb;
+  --line: #54272d;
+  --blue-deep: #8f0d16;
+  --link: #ff6b73;
+  --code-bg: #0a0a0a;
   --gen-w: #ffffff;
-  --gen-label: #f0eafa;
+  --gen-label: #f4e8e9;
   color-scheme: dark;
+}
+:root[data-theme="light"] {
+  --paper: #f7f7f8;
+  --paper-2: #ffffff;
+  --ink: #171717;
+  --ink-2: #343434;
+  --muted: #62656b;
+  --line: #d7c6c8;
+  --blue: #b5121b;
+  --blue-deep: #8f0d16;
+  --on-blue: #ffffff;
+  --on-blue-2: rgba(255, 255, 255, .88);
+  --electric: #b5121b;
+  --link: #9d0208;
+  --code-bg: #eeeef0;
+  --code-fg: #171717;
+  --gen-w: #ffffff;
+  --gen-b: #b5121b;
+  --gen-e: #d71920;
+  --gen-label: #171717;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --paper: #f7f7f8;
+    --paper-2: #ffffff;
+    --ink: #171717;
+    --ink-2: #343434;
+    --muted: #62656b;
+    --line: #d7c6c8;
+    --blue: #b5121b;
+    --blue-deep: #8f0d16;
+    --on-blue: #ffffff;
+    --on-blue-2: rgba(255, 255, 255, .88);
+    --electric: #b5121b;
+    --link: #9d0208;
+    --code-bg: #eeeef0;
+    --code-fg: #171717;
+    --gen-w: #ffffff;
+    --gen-b: #b5121b;
+    --gen-e: #d71920;
+    --gen-label: #171717;
+    color-scheme: light;
+  }
 }
 
 /* ---------- Base ---------- */
@@ -794,10 +838,10 @@ main { display: block; outline: none; }
 }
 .bs-code__copy:hover { background: var(--electric); color: var(--gen-label); }
 .bs-prose figure.highlight .keyword, .bs-prose figure.highlight .selector-tag { color: var(--electric); }
-.bs-prose figure.highlight .string, .bs-prose figure.highlight .number, .bs-prose figure.highlight .literal { color: #a5b4fc; }
+.bs-prose figure.highlight .string, .bs-prose figure.highlight .number, .bs-prose figure.highlight .literal { color: #ff8a90; }
 .bs-prose figure.highlight .comment, .bs-prose figure.highlight .meta { color: #8c8c8c; font-style: italic; }
 .bs-prose figure.highlight .title, .bs-prose figure.highlight .function, .bs-prose figure.highlight .section { color: #ffffff; font-weight: 600; }
-.bs-prose figure.highlight .built_in, .bs-prose figure.highlight .attr, .bs-prose figure.highlight .type, .bs-prose figure.highlight .params, .bs-prose figure.highlight .variable { color: #c77dff; }
+.bs-prose figure.highlight .built_in, .bs-prose figure.highlight .attr, .bs-prose figure.highlight .type, .bs-prose figure.highlight .params, .bs-prose figure.highlight .variable { color: #ff6b73; }
 .bs-prose pre:not(figure pre) {
   margin: 2em 0; padding: 1.2em 1.3em; overflow-x: auto;
   background: var(--code-bg); color: var(--code-fg);
