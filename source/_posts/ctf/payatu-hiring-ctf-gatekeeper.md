@@ -5,6 +5,7 @@ date: 2026-04-18 10:56:56 +0530
 description: "CTF write-up for Gate Keeper by Narain Krishna."
 categories: ["Writeups", "CTF", "Payatu Hiring CTF"]
 tags: [ctf, writeup]
+cover: https://i.pinimg.com/736x/04/e0/0b/04e00b83a64eaf4b9ae7c746843d321c.jpg
 author: Narain Krishna
 toc: true
 ---
