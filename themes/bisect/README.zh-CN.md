@@ -4,8 +4,6 @@
 
 [English](README.md) · [在线预览](https://blog.liuxiu.us) · [反馈问题](https://github.com/LiuXiu233/hexo-theme-bisect/issues)
 
-![Bisect 首页](screenshots/home-light.png)
-
 Bisect 只有一个视觉主角：一条贯穿全站的分界线。它把首页切成白和蓝两半，在文章页记录你读到了哪里，翻页时扫过屏幕，切换深浅色时把整站翻面。其余的一切都保持安静，让文字本身被读完。
 
 ## 特性
@@ -22,10 +20,6 @@ Bisect 只有一个视觉主角：一条贯穿全站的分界线。它把首页�
 - **常用功能都在。** utterances 或 giscus 评论、Chatra 在线聊天、赞赏码、CC 许可声明、Mermaid 图表、RSS。
 - **多语言。** 简体中文、繁體中文、English。
 - **没有框架，不需要构建。** 纯 HTML、CSS、JavaScript。关掉脚本也能完整阅读；尊重系统的「减少动态效果」设置。
-
-| 索引 | 文章 | 深色 | 手机 |
-| --- | --- | --- | --- |
-| ![](screenshots/index-hover.png) | ![](screenshots/post.png) | ![](screenshots/home-dark.png) | ![](screenshots/mobile-home.png) |
 
 ## 安装
 

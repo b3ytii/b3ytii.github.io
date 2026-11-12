@@ -4,8 +4,6 @@
 
 [简体中文](README.zh-CN.md) · [Live demo](https://blog.liuxiu.us) · [Report an issue](https://github.com/LiuXiu233/hexo-theme-bisect/issues)
 
-![Bisect home page](screenshots/home-light.png)
-
 Bisect is built around a single idea: one divider runs through the whole site. It splits the home page into white and blue, tracks your reading progress, sweeps across the screen when you change pages, and flips the site between light and dark. Everything else stays quiet so your writing can be read.
 
 ## Features
@@ -22,10 +20,6 @@ Bisect is built around a single idea: one divider runs through the whole site. I
 - **The usual extras.** utterances or giscus comments, Chatra chat, reward QR codes, Creative Commons notice, Mermaid diagrams, RSS link.
 - **Languages.** English, 简体中文, 繁體中文.
 - **No framework, no build step.** Plain HTML, CSS and JavaScript. Pages stay readable without JavaScript, and motion respects `prefers-reduced-motion`.
-
-| Index | Post | Dark | Mobile |
-| --- | --- | --- | --- |
-| ![](screenshots/index-hover.png) | ![](screenshots/post.png) | ![](screenshots/home-dark.png) | ![](screenshots/mobile-home.png) |
 
 ## Install
 
