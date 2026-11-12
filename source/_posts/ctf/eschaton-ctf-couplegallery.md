@@ -6,6 +6,7 @@ description: "CTF write-up for Couple Gallery by Narain Krishna."
 categories: ["Writeups", "CTF", "Eschaton CTF"]
 tags: [ctf, writeup]
 author: Narain Krishna
+cover: https://i.pinimg.com/736x/b9/ec/9e/b9ec9eaa5a53a64f60ad1946849fa16a.jpg
 toc: true
 ---
 
