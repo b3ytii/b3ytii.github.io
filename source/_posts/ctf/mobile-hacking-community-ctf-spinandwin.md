@@ -6,6 +6,7 @@ description: "CTF write-up for Spin And Win by Narain Krishna."
 categories: ["Writeups", "CTF", "Mobile Hacking Community CTF"]
 tags: [ctf, writeup]
 author: Narain Krishna
+cover: https://i.pinimg.com/736x/16/11/5b/16115b5c2dbe92eec41a1f46e2b94f9c.jpg
 toc: true
 ---
 
