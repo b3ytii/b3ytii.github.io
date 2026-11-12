@@ -6,7 +6,7 @@ description: "CTF write-up for Knight by Narain Krishna."
 categories: ["Writeups", "CTF", "P3RF3CTR00T CTF"]
 tags: [ctf, writeup]
 author: Narain Krishna
-cover: https://v1.pinimg.com/videos/iht/expMp4/87/c9/60/87c960e6252c484abc5abe8da1d36ae6_720w.mp4
+cover: https://i.pinimg.com/736x/9b/19/9b/9b199bfc96dc9ee095a3b31cc62cc9c2.jpg
 toc: true
 ---
 
