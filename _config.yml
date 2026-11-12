@@ -11,6 +11,12 @@ permalink_defaults:
 
 theme: bisect
 
+search:
+  path: search.xml
+  field: post
+  content: true
+  format: html
+
 per_page: 0
 index_generator:
   path: ''
