@@ -6,6 +6,7 @@ description: "CTF write-up for Apkocalypse by Narain Krishna."
 categories: ["Writeups", "CTF", "l3ak CTF"]
 tags: [ctf, writeup]
 author: Narain Krishna
+cover: https://i.pinimg.com/736x/e3/6c/d3/e36cd35db523c670cd04afc66ae5d754.jpg
 toc: true
 ---
 

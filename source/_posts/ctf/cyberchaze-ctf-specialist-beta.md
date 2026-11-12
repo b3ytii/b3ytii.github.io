@@ -6,6 +6,7 @@ description: "CTF write-up for Specialist_Beta by Narain Krishna."
 categories: ["Writeups", "CTF", "Cyberchaze CTF"]
 tags: [ctf, writeup]
 author: Narain Krishna
+cover: https://i.pinimg.com/1200x/3a/a7/f1/3aa7f14a4d5c3aa1251c27bca81f19f1.jpg
 toc: true
 ---
 

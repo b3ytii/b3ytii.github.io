@@ -6,6 +6,7 @@ description: "CTF write-up for Brain Calc by Narain Krishna."
 categories: ["Writeups", "CTF", "l3ak CTF"]
 tags: [ctf, writeup]
 author: Narain Krishna
+cover: https://i.pinimg.com/736x/02/19/1a/02191a206c63249be95ee85e4fe82e12.jpg
 toc: true
 ---
 

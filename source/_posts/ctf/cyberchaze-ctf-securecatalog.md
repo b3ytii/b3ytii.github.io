@@ -6,6 +6,7 @@ description: "CTF write-up for Secure Catalog APK by Narain Krishna."
 categories: ["Writeups", "CTF", "Cyberchaze CTF"]
 tags: [ctf, writeup]
 author: Narain Krishna
+cover: https://i.pinimg.com/736x/e8/c3/31/e8c3316dd4bea8ee4ce5c1d4629a73d6.jpg
 toc: true
 ---
 

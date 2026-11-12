@@ -6,6 +6,7 @@ description: "CTF write-up for Cute Frida by Narain Krishna."
 categories: ["Writeups", "CTF", "Pwnsec CTF"]
 tags: [ctf, writeup]
 author: Narain Krishna
+cover: https://i.pinimg.com/1200x/4e/de/1a/4ede1a3fab5089f9869ed60950151738.jpg
 toc: true
 ---
 

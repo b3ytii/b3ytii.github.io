@@ -6,6 +6,7 @@ description: "CTF write-up for Hello World by Narain Krishna."
 categories: ["Writeups", "CTF", "Eschaton CTF"]
 tags: [ctf, writeup]
 author: Narain Krishna
+cover: https://i.pinimg.com/736x/24/b6/42/24b642891733fc30346131864588f98f.jpg
 toc: true
 ---
 

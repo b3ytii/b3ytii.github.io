@@ -6,6 +6,7 @@ description: "CTF write-up for Freeda Native Hook by Narain Krishna."
 categories: ["Writeups", "CTF", "HeroCTF"]
 tags: [ctf, writeup]
 author: Narain Krishna
+cover: https://i.pinimg.com/1200x/34/27/bf/3427bf3ca43eb51e4daefaad92633c30.jpg
 toc: true
 ---
 

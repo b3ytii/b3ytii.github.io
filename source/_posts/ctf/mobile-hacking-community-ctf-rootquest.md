@@ -6,6 +6,7 @@ description: "CTF write-up for Root Quest by Narain Krishna."
 categories: ["Writeups", "CTF", "Mobile Hacking Community CTF"]
 tags: [ctf, writeup]
 author: Narain Krishna
+cover: https://i.pinimg.com/736x/6b/90/bd/6b90bd6dd769a6d7f16cd35e764a3bbb.jpg
 toc: true
 ---
 

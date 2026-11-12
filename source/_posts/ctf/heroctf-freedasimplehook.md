@@ -6,6 +6,7 @@ description: "CTF write-up for Freeda Simple Hoot by Narain Krishna."
 categories: ["Writeups", "CTF", "HeroCTF"]
 tags: [ctf, writeup]
 author: Narain Krishna
+cover: https://i.pinimg.com/736x/4a/c3/91/4ac3914b99cf563e58e29fd09331b3d4.jpg
 toc: true
 ---
 

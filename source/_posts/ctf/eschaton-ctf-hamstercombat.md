@@ -6,6 +6,7 @@ description: "CTF write-up for Hamster Combat by Narain Krishna."
 categories: ["Writeups", "CTF", "Eschaton CTF"]
 tags: [ctf, writeup]
 author: Narain Krishna
+cover: https://i.pinimg.com/736x/68/ed/bd/68edbd22f337e4e37c16e34d84b593bb.jpg
 toc: true
 ---
 

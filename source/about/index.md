@@ -10,16 +10,17 @@ aside: true
 # About me
 
 Hi, I’m **Narain Krishna**.
+Btech cybersecurity Undergrad @ Amrita Vishwa Vidhyapeetham
+Member of [bi0s pentest](https://pentest.bi0s.in/) - Android Security team
 
-This is a placeholder for your personal introduction. Add your background, interests, current work, and the kinds of projects or ideas you want to share.
+I like to larp alot of things like android security,osint,video games etc
+Trying my best to larp cybersecurity more perfectly everyday.
 
-## Currently
 
-- Based in: Your city
-- Working on: A few interesting things
-- Writing about: Technology, design, and life
+\- larp god
+## OSINT me
 
-## Find me online
-
-- [GitHub](https://github.com/your-username)
-- [Email](mailto:hello@example.com)
+- [GitHub](https://github.com/b3ytii/)
+- [Email](mailto:narainkrishna47@gmail.com)
+- Discord(@b3ytii)
+- [LinkedIn](https://www.linkedin.com/in/narain-krishna-07128a374/)

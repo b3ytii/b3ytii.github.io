@@ -6,6 +6,7 @@ description: "CTF write-up for baby-android-2 by Narain Krishna."
 categories: ["Writeups", "CTF", "ByuCTF"]
 tags: [ctf, writeup]
 author: Narain Krishna
+cover: https://i.pinimg.com/736x/76/c3/83/76c383c75e503d362ff2b67823176a51.jpg
 toc: true
 ---
 
