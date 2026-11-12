@@ -17,7 +17,7 @@ I like to larp alot of things like android security,osint,video games etc
 Trying my best to larp cybersecurity more perfectly everyday.
 idk rest
 
-- larp god
+\- larp god
 ## OSINT me
 
 - [GitHub](https://github.com/b3ytii/)
