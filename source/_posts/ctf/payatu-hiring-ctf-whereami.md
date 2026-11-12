@@ -6,6 +6,7 @@ description: "CTF write-up for Where Am I by Narain Krishna."
 categories: ["Writeups", "CTF", "Payatu Hiring CTF"]
 tags: [ctf, writeup]
 author: Narain Krishna
+cover: https://i.pinimg.com/1200x/c4/ed/54/c4ed54e3016c50ae66f72dd82f64446d.jpg
 toc: true
 ---
 
