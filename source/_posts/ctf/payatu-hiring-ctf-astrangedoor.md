@@ -2,7 +2,7 @@
 layout: post
 title: "A Strange Door"
 date: 2026-04-20 23:22:38 +0530
-description: "CTF write-up for A Strange Door by Narain Krishna."
+description: "CTF write-up for A Strange Door."
 categories: ["Writeups", "CTF", "Payatu Hiring CTF"]
 tags: [ctf, writeup]
 cover: https://i.pinimg.com/736x/1c/f7/0e/1cf70ed8495aa1119e814da793a486d8.jpg

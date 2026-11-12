@@ -2,7 +2,7 @@
 layout: post
 title: "Capture Me !!"
 date: 2026-04-17 11:58:00 +0530
-description: "CTF write-up for Capture Me !! by Narain Krishna."
+description: "CTF write-up for Capture Me !!"
 categories: ["Writeups", "CTF", "Cyberchaze CTF"]
 tags: [ctf, writeup]
 author: Narain Krishna

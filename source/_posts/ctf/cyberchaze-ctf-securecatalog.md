@@ -2,7 +2,7 @@
 layout: post
 title: "Secure Catalog APK"
 date: 2026-04-17 11:23:25 +0530
-description: "CTF write-up for Secure Catalog APK by Narain Krishna."
+description: "CTF write-up for Secure Catalog APK."
 categories: ["Writeups", "CTF", "Cyberchaze CTF"]
 tags: [ctf, writeup]
 author: Narain Krishna

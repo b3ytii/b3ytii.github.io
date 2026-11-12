@@ -2,7 +2,7 @@
 layout: post
 title: "Apkocalypse"
 date: 2026-04-29 23:31:55 +0530
-description: "CTF write-up for Apkocalypse by Narain Krishna."
+description: "CTF write-up for Apkocalypse."
 categories: ["Writeups", "CTF", "l3ak CTF"]
 tags: [ctf, writeup]
 author: Narain Krishna

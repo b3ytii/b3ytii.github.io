@@ -2,7 +2,7 @@
 layout: post
 title: "Where Am I"
 date: 2026-04-18 19:42:46 +0530
-description: "CTF write-up for Where Am I by Narain Krishna."
+description: "CTF write-up for Where Am I."
 categories: ["Writeups", "CTF", "Payatu Hiring CTF"]
 tags: [ctf, writeup]
 author: Narain Krishna

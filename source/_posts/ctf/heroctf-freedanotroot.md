@@ -2,7 +2,7 @@
 layout: post
 title: "Freeda Not Root"
 date: 2026-04-20 23:11:18 +0530
-description: "CTF write-up for Freeda Not Root by Narain Krishna."
+description: "CTF write-up for Freeda Not Root."
 categories: ["Writeups", "CTF", "HeroCTF"]
 tags: [ctf, writeup]
 author: Narain Krishna

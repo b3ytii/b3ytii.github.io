@@ -2,7 +2,7 @@
 layout: post
 title: "Baby Android"
 date: 2026-09-03 19:56:56 +0530
-description: "CTF write-up for Baby Android by Narain Krishna."
+description: "CTF write-up for Baby Android."
 categories: ["Writeups", "CTF", "DalCTF"]
 tags: [ctf, writeup]
 author: Narain Krishna

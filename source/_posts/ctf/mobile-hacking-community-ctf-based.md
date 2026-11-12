@@ -2,7 +2,7 @@
 layout: post
 title: "Based"
 date: 2026-04-23 23:43:03 +0530
-description: "CTF write-up for Based by Narain Krishna."
+description: "CTF write-up for Based."
 categories: ["Writeups", "CTF", "Mobile Hacking Community CTF"]
 tags: [ctf, writeup]
 author: Narain Krishna

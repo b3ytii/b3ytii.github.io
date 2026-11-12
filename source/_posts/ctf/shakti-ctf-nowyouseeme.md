@@ -2,7 +2,7 @@
 layout: post
 title: "nowyouseeme"
 date: 2026-04-23 12:05:11 +0530
-description: "CTF write-up for nowyouseeme by Narain Krishna."
+description: "CTF write-up for nowyouseeme."
 categories: ["Writeups", "CTF", "Shakti CTF"]
 tags: [ctf, writeup]
 author: Narain Krishna

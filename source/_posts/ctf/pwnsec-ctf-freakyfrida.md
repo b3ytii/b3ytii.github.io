@@ -2,7 +2,7 @@
 layout: post
 title: "Freaky Frida"
 date: 2026-05-01 15:30:06 +0530
-description: "CTF write-up for Freaky Frida by Narain Krishna."
+description: "CTF write-up for Freaky Frida."
 categories: ["Writeups", "CTF", "Pwnsec CTF"]
 tags: [ctf, writeup]
 cover: https://i.pinimg.com/736x/eb/da/8b/ebda8b18d8bd80e348048d61f797ce38.jpg

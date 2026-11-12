@@ -2,7 +2,7 @@
 layout: post
 title: "Prints"
 date: 2026-04-25 00:05:56 +0530
-description: "CTF write-up for Prints by Narain Krishna."
+description: "CTF write-up for Prints."
 categories: ["Writeups", "CTF", "Mobile Hacking Community CTF"]
 tags: [ctf, writeup]
 author: Narain Krishna

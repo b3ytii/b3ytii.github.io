@@ -2,7 +2,7 @@
 layout: post
 title: "Firmware"
 date: 2026-04-17 16:29:52 +0530
-description: "CTF write-up for Firmware by Narain Krishna."
+description: "CTF write-up for Firmware."
 categories: ["Writeups", "CTF", "Cyberchaze CTF"]
 tags: [ctf, writeup]
 author: Narain Krishna

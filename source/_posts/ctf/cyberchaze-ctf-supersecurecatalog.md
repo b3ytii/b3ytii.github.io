@@ -2,7 +2,7 @@
 layout: post
 title: "Super Secure Catalog"
 date: 2026-04-17 11:23:25 +0530
-description: "CTF write-up for Super Secure Catalog by Narain Krishna."
+description: "CTF write-up for Super Secure Catalog."
 categories: ["Writeups", "CTF", "Cyberchaze CTF"]
 tags: [ctf, writeup]
 author: Narain Krishna

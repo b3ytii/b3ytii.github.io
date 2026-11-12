@@ -2,7 +2,7 @@
 layout: post
 title: "Shadow Vault"
 date: 2026-05-04 20:20:08 +0530
-description: "CTF write-up for Shadow Vault by Narain Krishna."
+description: "CTF write-up for Shadow Vault."
 categories: ["Writeups", "CTF", "Pearl CTF"]
 tags: [ctf, writeup]
 author: Narain Krishna

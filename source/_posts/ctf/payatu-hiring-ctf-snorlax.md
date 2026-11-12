@@ -2,7 +2,7 @@
 layout: post
 title: "Snorlax"
 date: 2026-04-18 12:55:53 +0530
-description: "CTF write-up for Snorlax by Narain Krishna."
+description: "CTF write-up for Snorlax."
 categories: ["Writeups", "CTF", "Payatu Hiring CTF"]
 tags: [ctf, writeup]
 author: Narain Krishna

@@ -2,7 +2,7 @@
 layout: post
 title: "Cute Frida"
 date: 2026-04-21 19:02:53 +0530
-description: "CTF write-up for Cute Frida by Narain Krishna."
+description: "CTF write-up for Cute Frida."
 categories: ["Writeups", "CTF", "Pwnsec CTF"]
 tags: [ctf, writeup]
 author: Narain Krishna

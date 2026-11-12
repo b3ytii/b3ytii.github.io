@@ -2,7 +2,7 @@
 layout: post
 title: "Path Finder"
 date: 2026-04-20 23:22:38 +0530
-description: "CTF write-up for Path Finder by Narain Krishna."
+description: "CTF write-up for Path Finder."
 categories: ["Writeups", "CTF", "Payatu Hiring CTF"]
 tags: [ctf, writeup]
 cover: https://i.pinimg.com/736x/90/bc/d8/90bcd8c3231f039c800edd11b42c32b9.jpg

@@ -2,7 +2,7 @@
 layout: post
 title: "Hamster Combat"
 date: 2026-05-02 23:41:36 +0530
-description: "CTF write-up for Hamster Combat by Narain Krishna."
+description: "CTF write-up for Hamster Combat."
 categories: ["Writeups", "CTF", "Eschaton CTF"]
 tags: [ctf, writeup]
 author: Narain Krishna

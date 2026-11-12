@@ -2,7 +2,7 @@
 layout: post
 title: "Couple Gallery"
 date: 2026-05-02 23:27:53 +0530
-description: "CTF write-up for Couple Gallery by Narain Krishna."
+description: "CTF write-up for Couple Gallery."
 categories: ["Writeups", "CTF", "Eschaton CTF"]
 tags: [ctf, writeup]
 author: Narain Krishna

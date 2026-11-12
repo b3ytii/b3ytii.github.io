@@ -2,7 +2,7 @@
 layout: post
 title: "Knight"
 date: 2026-04-24 16:53:08 +0530
-description: "CTF write-up for Knight by Narain Krishna."
+description: "CTF write-up for Knight."
 categories: ["Writeups", "CTF", "P3RF3CTR00T CTF"]
 tags: [ctf, writeup]
 author: Narain Krishna

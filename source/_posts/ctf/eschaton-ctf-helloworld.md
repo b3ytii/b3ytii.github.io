@@ -2,7 +2,7 @@
 layout: post
 title: "Hello World"
 date: 2026-05-02 20:51:05 +0530
-description: "CTF write-up for Hello World by Narain Krishna."
+description: "CTF write-up for Hello World."
 categories: ["Writeups", "CTF", "Eschaton CTF"]
 tags: [ctf, writeup]
 author: Narain Krishna

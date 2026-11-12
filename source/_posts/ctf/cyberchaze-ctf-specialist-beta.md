@@ -2,7 +2,7 @@
 layout: post
 title: "Specialist_Beta"
 date: 2026-04-17 11:23:25 +0530
-description: "CTF write-up for Specialist_Beta by Narain Krishna."
+description: "CTF write-up for Specialist_Beta."
 categories: ["Writeups", "CTF", "Cyberchaze CTF"]
 tags: [ctf, writeup]
 author: Narain Krishna
