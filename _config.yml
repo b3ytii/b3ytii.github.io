@@ -4,7 +4,7 @@ description: some write-ups and random blogs maybe
 author: Narain Krishna
 language: en
 timezone: Asia/Kolkata
-url: https://narainkrishna.github.io
+url: https://b3ytii.github.io
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -16,6 +16,9 @@ search:
   field: post
   content: true
   format: html
+
+sitemap:
+  path: sitemap.xml
 
 per_page: 0
 index_generator:
