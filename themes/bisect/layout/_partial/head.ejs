@@ -10,19 +10,60 @@
   const cjk = fonts.cjk || 'google';
   const host = (fonts.host || 'https://fonts.googleapis.com').replace(/\/$/, '');
   const feed = bs_feed();
+  const canonicalUrl = full_url_for(page.path).replace(/index\.html$/, '');
+  const siteName = config.title || '';
+  const authorName = config.author || siteName;
+  const isNoIndex = page.noindex === true;
+  const cover = is_post() ? bs_cover(page) : '';
+  const imageUrl = cover ? (cover.match(/^https?:\/\//) ? cover : full_url_for(cover)) : '';
+  const baseDescription = desc || config.description || siteName;
+
+  let schemaData;
+  if (is_post()) {
+    schemaData = {
+      '@context': 'https://schema.org',
+      '@type': 'BlogPosting',
+      headline: page.title || siteName,
+      description: baseDescription,
+      mainEntityOfPage: canonicalUrl,
+      url: canonicalUrl,
+      datePublished: date_xml(page.date),
+      dateModified: date_xml(page.updated || page.date),
+      author: {
+        '@type': 'Person',
+        name: authorName
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: siteName
+      }
+    };
+    if (imageUrl) schemaData.image = [imageUrl];
+  } else {
+    schemaData = {
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      name: siteName,
+      url: config.url || canonicalUrl,
+      description: baseDescription
+    };
+  }
 %>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title><%= pageTitle %></title>
 <meta name="description" content="<%= desc %>">
 <meta name="google-site-verification" content="D1JsU6X31u_7uXr7031aFz8UubO8DDIj6flZzdMG9e4" />
+<meta name="robots" content="<%= isNoIndex ? 'noindex, nofollow, noarchive' : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' %>">
 <% if (config.keywords) { %><meta name="keywords" content="<%= config.keywords %>"><% } %>
 <% if (config.author) { %><meta name="author" content="<%= config.author %>"><% } %>
+<meta name="twitter:creator" content="@NarainKrishna">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f7f7f8">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0a0a0a">
 <meta name="color-scheme" content="light dark">
-<link rel="canonical" href="<%= full_url_for(page.path).replace(/index\.html$/, '') %>">
+<link rel="canonical" href="<%= canonicalUrl %>">
 <%- open_graph({ twitter_card: 'summary_large_image', description: desc }) %>
+<script type="application/ld+json"><%- JSON.stringify(schemaData) %></script>
 <script>
   (function () {
     try {
