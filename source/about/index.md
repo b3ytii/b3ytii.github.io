@@ -13,14 +13,18 @@ Hi, I’m **Narain Krishna**.
 Btech cybersecurity Undergrad @ Amrita Vishwa Vidhyapeetham
 Member of [bi0s pentest](https://pentest.bi0s.in/) - Android Security team
 
-I like to larp alot of things like android security,osint,video games etc
-Trying my best to larp cybersecurity more perfectly everyday.
+I do  like watching movies and series, favourite watch was Better call saul.Occasionally, play football. 
+Currently larping as a Cybersecurity enthusiast. My main interest lies in android security and linux.
+I really enjoy ricing linux, trying out various dotfiles or configs that i randomly find online.
 
+rest, idk really wht to write here.
+
+_"I usually avoid reverse engineering cuz its reverse, i only move forward."_
 
 \- larp god
 ## OSINT me
 
 - [GitHub](https://github.com/b3ytii/)
 - [Email](mailto:narainkrishna47@gmail.com)
-- Discord(@b3ytii)
 - [LinkedIn](https://www.linkedin.com/in/narain-krishna-07128a374/)
+- Discord(@b3ytii)
