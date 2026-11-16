@@ -389,6 +389,9 @@ main { display: block; outline: none; }
 .bs-hero__t { display: block; padding: .06em var(--gx) .1em; }
 .bs-hero__t--ink { color: var(--ink); clip-path: inset(0 calc(100% - var(--split)) 0 0); }
 .bs-hero__t--paper { position: absolute; inset: 0; color: var(--on-blue); clip-path: inset(0 0 0 var(--split)); }
+:root:not([data-theme="light"]) .bs-hero__t--paper {
+  color: var(--paper);
+}
 
 .bs-hero__line {
   position: absolute; top: 0; bottom: 0; left: var(--split); z-index: 2;
