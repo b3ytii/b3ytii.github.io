@@ -29,7 +29,7 @@ We need a six digit pincode to unlock the app, we can proceed to inspect it in j
 
 While inspecting it we can see that the app is written in `React Native` , So to actually decompile the apk we would need a `React Native` like - `Hermes Decompiler`
 
-sauce:https://github.com/P1sec/hermes-dec
+link:https://github.com/P1sec/hermes-dec
 We can clone the repo and follow the steps given
 
 `7z x com.mcsc.couplegallery.apk -o./out`

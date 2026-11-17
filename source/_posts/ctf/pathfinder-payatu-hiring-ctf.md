@@ -58,7 +58,7 @@ The scheme,host and path specified in the manifest
 
 javascript code is passed as an parameter of `url`
 
-The javascript code contains `AndroidFunction.showFlag()` , which calls the functons we want
+The javascript code contains `AndroidFunction.showFlag()` , which calls the functions we want
 
 The link contains `payatu.com` which is commented out so it does not interfere with the code execution
 

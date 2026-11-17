@@ -41,7 +41,7 @@ So, we just need to decrypt the ciphertext and the `IV` and `KEY` are hardcoded 
 
 Rather than the traditional approach of getting the `IV` and `KEY` and then decrypting it ourselves, I wanted to try out a frida script i found , which hooks all the cryptographic function in a apk and logs its output
 
-sauce:https://codeshare.frida.re/@L0WK3Y-IAAN/crypto-detection/
+link:https://codeshare.frida.re/@L0WK3Y-IAAN/crypto-detection/
 We just need to load this script and click the button once,
 
 ![Crypto hook](/images/ctf/p3rf3ctr00t-ctf-knight/image-4.png)

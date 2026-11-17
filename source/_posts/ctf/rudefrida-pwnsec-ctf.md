@@ -74,12 +74,12 @@ call `get_flag`
 
 To bypass the root check, I'm using a script from the frida-codeshare
 
-sauce:https://codeshare.frida.re/@fdciabdul/frida-multiple-bypass/
+link:https://codeshare.frida.re/@fdciabdul/frida-multiple-bypass/
 This also includes `ssl-unpinning` which we do not require here, so we only need to take till line `805`
 
 To bypass the frida checks im using `phantom-frida`
 
-sauce:https://github.com/TheQmaks/phantom-frida
+link:https://github.com/TheQmaks/phantom-frida
 ![phantom-frida](/images/ctf/pwnsec-ctf-rudefrida/image-6.png)
 
 `phatom-frida` bypasses all the major 16 detection techniques

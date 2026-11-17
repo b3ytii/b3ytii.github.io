@@ -46,7 +46,7 @@ Looking further in jadx we can find a Retrofit Client class and a hardcoded link
 We can capture the request via `BurpSuite` and check the passed parameters, to bypass the ssl pinning we can use `android-unpinner`
 
 `android-unpinner all app-debug.apk`
-sauce:https://github.com/mitmproxy/android-unpinner
+link:https://github.com/mitmproxy/android-unpinner
 ![Burp](/images/ctf/pearl-ctf-shadowvault/image-5.png)
 
 We have successfully captured the `POST` request, it is sending two parameters

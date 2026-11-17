@@ -31,15 +31,15 @@ Now, we can inspect the apk in jadx,
 
 ![jadx](/images/ctf/heroctf-freedanotroot/image-2.png)
 
-We see that the apk has native library `libtoolChecker.so` which is probably a libary used for detecting rooted devices, We can open the native lib in Ghidra to understand more about it
+We see that the apk has native library `libtoolChecker.so` which is probably a library used for detecting rooted devices, We can open the native lib in Ghidra to understand more about it
 
 ![libtoolChecker](/images/ctf/heroctf-freedanotroot/image-3.png)
 
-As suspected, it is a standard libary `rootbeer` which is used for detection of root devices, This libary particularly checks for root binaries for that
+As suspected, it is a standard library `rootbeer` which is used for detection of root devices, This library particularly checks for root binaries for that
 
 We can use an anti-root bypass script to bypass this check, I used `antiroot` from frida-codeshare
 
-sauce:https://codeshare.frida.re/@dzonerzy/fridantiroot/
+link:https://codeshare.frida.re/@dzonerzy/fridantiroot/
 We can load this script, to bypass the check -
 
 ![Bypass](/images/ctf/heroctf-freedanotroot/image-4.png)

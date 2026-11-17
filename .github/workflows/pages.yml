@@ -17,7 +17,7 @@ concurrency:
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -29,20 +29,21 @@ jobs:
           cache: npm
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Build Hexo site
         run: npm run build
 
-      - name: Validate generated homepage
-        shell: pwsh
+      - name: Validate generated site
         run: |
-          if ((Get-Item public/index.html).Length -le 0) {
-            throw 'Generated homepage is empty'
-          }
-          if (-not (Select-String -Path public/index.html -Pattern '<title>' -Quiet)) {
-            throw 'Generated homepage has no title'
-          }
+          test -s public/index.html || { echo '::error::index.html is missing or empty'; exit 1; }
+          grep -q '<title>' public/index.html || { echo '::error::index.html has no title'; exit 1; }
+          test -s public/sitemap.xml || { echo '::error::sitemap.xml is missing or empty'; exit 1; }
+          grep -q '<urlset' public/sitemap.xml || { echo '::error::sitemap.xml is not a valid sitemap'; exit 1; }
+          test -s public/404.html || { echo '::error::404.html is missing or empty'; exit 1; }
+          POST_COUNT=$(find public -path '*/ctf/*/index.html' | wc -l)
+          echo "Post pages generated: $POST_COUNT"
+          [ "$POST_COUNT" -ge 40 ] || { echo '::error::expected at least 40 post pages'; exit 1; }
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3

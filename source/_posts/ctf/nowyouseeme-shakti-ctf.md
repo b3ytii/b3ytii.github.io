@@ -32,7 +32,7 @@ Now, we can proceed to inspect it in jadx,
 
 ![jadx](/images/ctf/shakti-ctf-nowyouseeme/image-2.png)
 
-The Main Activity hasn't much in it, but wee see another class `FlagEngine` and calls a native method `getFlag(str)` but one thing is confusing ,
+The Main Activity hasn't much in it, but we see another class `FlagEngine` and calls a native method `getFlag(str)` but one thing is confusing ,
 
 ```java
 static {

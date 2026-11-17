@@ -14,7 +14,7 @@ toc: true
 
 ### Analysis
 
-When we inspect the Manifest file,we see ann activity which handles deeplinks
+When we inspect the Manifest file,we see an activity which handles deeplinks
 
 ![Manifest](/images/ctf/cyberchaze-ctf-specialist-beta/image.png)
 

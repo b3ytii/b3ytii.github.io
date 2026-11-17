@@ -101,7 +101,7 @@ For that, we need to inspect `libFreakyFrid.so` in Ghidra
 
 In the launcher activity, there is method `CheckAsYouLike(str)` which takes our input and then calls another native method `strinfromJNI(str)`
 
-From Ghidra, we understoon that we input is being compared with the flag and the some strings are being logged according to the result of `strcmp`
+From Ghidra, we understood that our input is being compared with the flag and the some strings are being logged according to the result of `strcmp`
 
 So, we can write a frida script to call the `CheckAsYouLike(str)` from Java and then hook the `strcmp` and log the arguments.
 

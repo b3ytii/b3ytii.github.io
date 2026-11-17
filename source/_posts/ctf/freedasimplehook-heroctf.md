@@ -30,7 +30,7 @@ Now, we can inspect the APK in jadx to understand the logic
 
 ![MainActivity](/images/ctf/heroctf-freedasimplehook/image-2.png)
 
-This is cleary not the actual logic handling the password validation, but we know that it changes the textview to `Password incorrect,try again` when we enter anything random, So we should do a global search of this phrase to find the actual logic that handles it.
+This is clearly not the actual logic handling the password validation, but we know that it changes the textview to `Password incorrect,try again` when we enter anything random, So we should do a global search of this phrase to find the actual logic that handles it.
 
 ![c8 class](/images/ctf/heroctf-freedasimplehook/image-3.png)
 

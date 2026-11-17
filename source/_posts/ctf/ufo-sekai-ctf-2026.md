@@ -25,10 +25,10 @@ We can start by opening the apk in our emulator,
 
 This seems like a file opener application which supports a variety of extensions, after searching for a bit...I found that this same application is available in playstore
 
-link:https://play.google.com/store/apps/detailsid=com.krauq.universalfileopener&hl=en_IN
+link:https://play.google.com/store/apps/details?id=com.krauq.universalfileopener&hl=en_IN
 This app has a premium subscription, but since this is a legit app we can rule out a possibility of bypassing them to find the flag.
 
-Now, we can proceed to inspect it in Jaddx,
+Now, we can proceed to inspect it in jadx,
 
 ![jadx](/images/ctf/sekai-ctf-2026-ufo/image-2.png)
 
@@ -36,7 +36,7 @@ An obfuscated code, which makes it much harder to find anything related to the f
 
 ![Obfuscated code](/images/ctf/sekai-ctf-2026-ufo/image-3.png)
 
-The class `b7.w` initializes a interger preference key `ambient_trace` and if we track this key ,
+The class `b7.w` initializes an integer preference key `ambient_trace` and if we track this key ,
 
 ![b7.w](/images/ctf/sekai-ctf-2026-ufo/image-4.png)
 

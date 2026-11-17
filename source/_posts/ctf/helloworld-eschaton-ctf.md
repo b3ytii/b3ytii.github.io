@@ -40,7 +40,7 @@ We can inspect the `/apps/com.mcsc.helloworld/a/base.apk` in jadx
 
 ![jadx](/images/ctf/eschaton-ctf-helloworld/image-3.png)
 
-We see that it app imports `sqlcipher` and a particulartly interesting string `1s_th1s_th3_fl4g` and also a hidden database is mentioned `.notinhere.db`
+We see that it app imports `sqlcipher` and a particularly interesting string `1s_th1s_th3_fl4g` and also a hidden database is mentioned `.notinhere.db`
 
 We can navigate to `/apps/com.mcsc.helloworld/db` and do `ls -al`
 

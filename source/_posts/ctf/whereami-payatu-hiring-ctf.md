@@ -45,9 +45,9 @@ Basically, our broadcast must contain a string extra with key `loc` and value `M
 
 So, in our adb shell
 
-`am start -n com.payatu.whereami/.MainActivity` --> launchs the app
+`am start -n com.payatu.whereami/.MainActivity` --> launches the app
 
-`am broadcast -a com.payatu.whereami.MY_ACTION -n com.payatu.whereami/.BroadCastListener --es loc Mjolnir` --> To lauch the flag activity
+`am broadcast -a com.payatu.whereami.MY_ACTION -n com.payatu.whereami/.BroadCastListener --es loc Mjolnir` --> To launch the flag activity
 
 ![Flag](/images/ctf/payatu-hiring-ctf-whereami/image-4.png)
 

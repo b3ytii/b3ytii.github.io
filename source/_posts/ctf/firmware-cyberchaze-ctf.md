@@ -33,9 +33,9 @@ We can check the file type : `file firmware.bin`,
 
 ![file](/images/ctf/cyberchaze-ctf-firmware/image-2.png)
 
-It is a 7zip archieve, we can use `7z x firmware.bin` to extract..but it requires a password to do so, That password is probably in the APK itself
+It is a 7zip archive, we can use `7z x firmware.bin` to extract..but it requires a password to do so, That password is probably in the APK itself
 
-When we inspeact `strings.xml`,
+When we inspect `strings.xml`,
 
 ![strings.xml](/images/ctf/cyberchaze-ctf-firmware/image-3.png)
 
@@ -52,7 +52,7 @@ Welcome to the Flag Challenge!
 Can you find the hidden flag?
 
 ```
-It was an executale file, we can try running strings in it
+It was an executable file, we can try running strings in it
 
 ![strings](/images/ctf/cyberchaze-ctf-firmware/image-4.png)
 

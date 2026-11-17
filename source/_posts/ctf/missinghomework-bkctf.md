@@ -116,7 +116,7 @@ To view the string pool of `AndroidManifest.xml` we need to use a tool, called `
 
 After installing it , we can open that and we need to install `AndroidManifest.bt` from the Template Respository.
 
-After installing the Template, we need to excute it and view it by enabling the template result window.
+After installing the Template, we need to execute it and view it by enabling the template result window.
 
 In the Template Result Window, we can expand `StringOffset` attribute, after scrolling down a bit we see single char values, we can combine all the individual char to get `YmtjdGZ7dGgzX3czMXJkM3N0X2IxbjRyeV94bTFfZjBybTR0X2wwbGx9`
 

@@ -24,7 +24,7 @@ We must use a biometric bypass frida script to login
 
 For that, I used ` Universal Android Biometric Bypass`
 
-sauce:https://codeshare.frida.re/@ax/universal-android-biometric-bypass/
+link:https://codeshare.frida.re/@ax/universal-android-biometric-bypass/
 We can load this script and try to login,
 
 ![Flag](/images/ctf/mobile-hacking-community-ctf-prints/image-2.png)

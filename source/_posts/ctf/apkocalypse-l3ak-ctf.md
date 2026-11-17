@@ -106,7 +106,7 @@ At the starting of the native method, it starts a thread in which the function `
 
 The bypass of this kind which specifically disables the thread making is available in github
 
-sauce:https://github.com/apkunpacker/AntiFrida_Bypass/blob/main/AntiAntiFrida3.js
+link:https://github.com/apkunpacker/AntiFrida_Bypass/blob/main/AntiAntiFrida3.js
 So, our finally our frida script should:
 
 Bypass the Java root detection

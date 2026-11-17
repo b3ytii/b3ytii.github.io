@@ -71,7 +71,7 @@ PRAGMA key = 'pass123';
 .tables
 ```
 ![sqlcipher](/images/ctf/cyberchaze-ctf-securecatalog/image.webp)
-We see a tablle `secret` and if the run `SELECT * FROM SECRET;` we get the flag
+We see a table `secret` and if the run `SELECT * FROM SECRET;` we get the flag
 
 ## Flag
 

@@ -61,7 +61,7 @@ The `js` file has nearly 200,000 lines of code, We can either use grep or `ctrl+
         r2[8] = r5;
         r2[12] = r4;
 ```
-This code snippet has the details about the encrpytion like `'SEAL_SALT': 'totalreward'`, `SEAL_ITERATIONS': 10000,` etc..
+This code snippet has the details about the encryption like `'SEAL_SALT': 'totalreward'`, `SEAL_ITERATIONS': 10000,` etc..
 
 Nearby to it , we can see functions like `openSealed()` and `deriveKeys()`
 
