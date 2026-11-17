@@ -2,7 +2,7 @@
 layout: post
 title: "Freeda Simple Hook - HeroCTF"
 date: 2026-04-20 23:11:18 +0530
-description: "Walkthrough for Freeda Simple Hoot from HeroCTF."
+description: "Walkthrough for Freeda Simple Hook from HeroCTF."
 categories: ["Writeups", "CTF", "HeroCTF"]
 tags: [ctf, writeup, androidsecurity, mobileCTF, frida, jadx]
 author: Narain Krishna
