@@ -19,7 +19,7 @@ I really enjoy ricing linux, trying out various dotfiles or configs that i rando
 
 rest, idk really wht to write here.
 
-_"I usually avoid reverse engineering cuz its reverse, i only move forward."_
+*"I usually avoid reverse engineering cuz its reverse, i only move forward."*
 
 \- larp god
 ## OSINT me
