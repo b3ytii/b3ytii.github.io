@@ -6,7 +6,7 @@ description: "Walkthrough for Super Secure Catalog from Cyberchaze CTF."
 categories: ["Writeups", "CTF", "Cyberchaze CTF"]
 tags: [ctf, writeup, androidsecurity, mobileCTF, cryptography, jadx]
 author: Narain Krishna
-cover: https://i.pinimg.com/1200x/6b/92/7e/6b927e328e32a0f402e09aa1f2ad267b.jpg
+cover: /images/covers/supersecurecatalog-cyberchaze-ctf.jpg
 toc: true
 ---
 

@@ -6,7 +6,7 @@ description: "Walkthrough for One-Voice from BrunnerCTF."
 categories: [Writeups, CTF, Mobile Security]
 tags: [ctf, writeup, android, reverse engineering, mobile security, androidsecurity, mobileCTF, jadx]
 author: Narain Krishna
-cover: https://i.pinimg.com/736x/ee/f1/68/eef16833bcb67052e68998af1b16e012.jpg
+cover: /images/covers/onevoice-brunner-ctf.jpg
 toc: true
 ---
 

@@ -6,7 +6,7 @@ description: "Walkthrough for Root Quest from Mobile Hacking Community CTF."
 categories: ["Writeups", "CTF", "Mobile Hacking Community CTF"]
 tags: [ctf, writeup, androidsecurity, mobileCTF, frida, root-detection]
 author: Narain Krishna
-cover: https://i.pinimg.com/736x/6b/90/bd/6b90bd6dd769a6d7f16cd35e764a3bbb.jpg
+cover: /images/covers/rootquest-mobile-hacking-community-ctf.jpg
 toc: true
 ---
 

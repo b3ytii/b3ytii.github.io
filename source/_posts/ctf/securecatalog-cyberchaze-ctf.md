@@ -6,7 +6,7 @@ description: "Walkthrough for Secure Catalog APK from Cyberchaze CTF."
 categories: ["Writeups", "CTF", "Cyberchaze CTF"]
 tags: [ctf, writeup, androidsecurity, mobileCTF, sqlite, cryptography]
 author: Narain Krishna
-cover: https://i.pinimg.com/736x/e8/c3/31/e8c3316dd4bea8ee4ce5c1d4629a73d6.jpg
+cover: /images/covers/securecatalog-cyberchaze-ctf.jpg
 toc: true
 ---
 

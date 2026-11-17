@@ -6,7 +6,7 @@ description: "Walkthrough for Total-Reward from BrunnerCTF."
 categories: [Writeups, CTF, Mobile Security]
 tags: [ctf, writeup, android, reverse engineering, mobile security, androidsecurity, mobileCTF, react-native]
 author: Narain Krishna
-cover: https://i.pinimg.com/1200x/9b/9f/ac/9b9fac2a9887786ec260ecd717a11dfd.jpg
+cover: /images/covers/totalreward-brunner-ctf.jpg
 toc: true
 ---
 

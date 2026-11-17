@@ -5,7 +5,7 @@ date: 2026-05-01 15:30:06 +0530
 description: "Walkthrough for Freaky Frida from Pwnsec CTF."
 categories: ["Writeups", "CTF", "Pwnsec CTF"]
 tags: [ctf, writeup, androidsecurity, mobileCTF, frida, ghidra, native-library]
-cover: https://i.pinimg.com/736x/eb/da/8b/ebda8b18d8bd80e348048d61f797ce38.jpg
+cover: /images/covers/freakyfrida-pwnsec-ctf.jpg
 author: Narain Krishna
 toc: true
 ---

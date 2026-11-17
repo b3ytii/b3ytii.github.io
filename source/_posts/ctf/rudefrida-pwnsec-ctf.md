@@ -6,7 +6,7 @@ description: "Walkthrough for Rude Frida from Pwnsec CTF."
 categories: ["Writeups", "CTF", "Pwnsec CTF"]
 tags: [ctf, writeup, androidsecurity, mobileCTF, frida, ghidra, native-library]
 author: Narain Krishna
-cover: https://i.pinimg.com/736x/a5/0a/86/a50a86ff513150750977777306f5ae4e.jpg
+cover: /images/covers/rudefrida-pwnsec-ctf.jpg
 toc: true
 ---
 

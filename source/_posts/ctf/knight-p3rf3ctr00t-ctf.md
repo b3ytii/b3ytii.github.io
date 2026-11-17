@@ -6,7 +6,7 @@ description: "Walkthrough for Knight from P3RF3CTR00T CTF."
 categories: ["Writeups", "CTF", "P3RF3CTR00T CTF"]
 tags: [ctf, writeup, androidsecurity, mobileCTF, jadx]
 author: Narain Krishna
-cover: https://i.pinimg.com/736x/9b/19/9b/9b199bfc96dc9ee095a3b31cc62cc9c2.jpg
+cover: /images/covers/knight-p3rf3ctr00t-ctf.jpg
 toc: true
 ---
 

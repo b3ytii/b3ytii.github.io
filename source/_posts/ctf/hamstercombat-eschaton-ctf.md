@@ -6,7 +6,7 @@ description: "Walkthrough for Hamster Combat from Eschaton CTF."
 categories: ["Writeups", "CTF", "Eschaton CTF"]
 tags: [ctf, writeup, androidsecurity, mobileCTF, jadx]
 author: Narain Krishna
-cover: https://i.pinimg.com/736x/68/ed/bd/68edbd22f337e4e37c16e34d84b593bb.jpg
+cover: /images/covers/hamstercombat-eschaton-ctf.jpg
 toc: true
 ---
 

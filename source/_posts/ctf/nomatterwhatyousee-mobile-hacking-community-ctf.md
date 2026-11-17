@@ -6,7 +6,7 @@ description: "Walkthrough for No Matter What You See from Mobile Hacking Communi
 categories: ["Writeups", "CTF", "Mobile Hacking Community CTF"]
 tags: [ctf, writeup, androidsecurity, mobileCTF, adb, exported-activity]
 author: Narain Krishna
-cover: https://i.pinimg.com/736x/f5/ea/73/f5ea734a80883d98fbbd62299f4270dd.jpg
+cover: /images/covers/nomatterwhatyousee-mobile-hacking-community-ctf.jpg
 toc: true
 ---
 

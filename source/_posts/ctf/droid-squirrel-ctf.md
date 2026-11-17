@@ -5,7 +5,7 @@ date: 2026-04-17 11:23:25 +0530
 description: "Walkthrough for DROID from Squirrel CTF."
 categories: ["Writeups", "CTF", "Squirrel CTF"]
 tags: [ctf, writeup, androidsecurity, mobileCTF, jadx, cryptography]
-cover: https://i.pinimg.com/736x/e0/e1/82/e0e182b282305ff164b936b7b01ce531.jpg
+cover: /images/covers/droid-squirrel-ctf.jpg
 author: Narain Krishna
 toc: true
 ---

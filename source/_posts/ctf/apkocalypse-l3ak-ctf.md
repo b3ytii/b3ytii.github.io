@@ -6,7 +6,7 @@ description: "Walkthrough for Apkocalypse from l3ak CTF."
 categories: ["Writeups", "CTF", "l3ak CTF"]
 tags: [ctf, writeup, androidsecurity, mobileCTF, frida, ghidra, native-library]
 author: Narain Krishna
-cover: https://i.pinimg.com/736x/e3/6c/d3/e36cd35db523c670cd04afc66ae5d754.jpg
+cover: /images/covers/apkocalypse-l3ak-ctf.jpg
 toc: true
 ---
 

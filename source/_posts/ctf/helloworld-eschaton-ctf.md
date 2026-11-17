@@ -6,7 +6,7 @@ description: "Walkthrough for Hello World from Eschaton CTF."
 categories: ["Writeups", "CTF", "Eschaton CTF"]
 tags: [ctf, writeup, androidsecurity, mobileCTF, sqlite, jadx]
 author: Narain Krishna
-cover: https://i.pinimg.com/736x/24/b6/42/24b642891733fc30346131864588f98f.jpg
+cover: /images/covers/helloworld-eschaton-ctf.jpg
 toc: true
 ---
 

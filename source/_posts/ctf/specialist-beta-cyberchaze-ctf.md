@@ -6,7 +6,7 @@ description: "Walkthrough for Specialist_Beta from Cyberchaze CTF."
 categories: ["Writeups", "CTF", "Cyberchaze CTF"]
 tags: [ctf, writeup, androidsecurity, mobileCTF, deeplink, jadx]
 author: Narain Krishna
-cover: https://i.pinimg.com/1200x/3a/a7/f1/3aa7f14a4d5c3aa1251c27bca81f19f1.jpg
+cover: /images/covers/specialist-beta-cyberchaze-ctf.jpg
 toc: true
 ---
 

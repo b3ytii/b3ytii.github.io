@@ -6,7 +6,7 @@ description: "Walkthrough for Do You Miss Me? from Cyberchaze CTF."
 categories: ["Writeups", "CTF", "Cyberchaze CTF"]
 tags: [ctf, writeup, androidsecurity, mobileCTF, base64, jadx]
 author: Narain Krishna
-cover: https://i.pinimg.com/736x/3b/66/48/3b66485dcd5f069a513a5763c20f42a9.jpg
+cover: /images/covers/doyoumissme-cyberchaze-ctf.jpg
 toc: true
 ---
 

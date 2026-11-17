@@ -6,7 +6,7 @@ description: "Walkthrough for Brain Calc from l3ak CTF."
 categories: ["Writeups", "CTF", "l3ak CTF"]
 tags: [ctf, writeup, androidsecurity, mobileCTF, base64, jadx]
 author: Narain Krishna
-cover: https://i.pinimg.com/736x/02/19/1a/02191a206c63249be95ee85e4fe82e12.jpg
+cover: /images/covers/braincalc-l3ak-ctf.jpg
 toc: true
 ---
 

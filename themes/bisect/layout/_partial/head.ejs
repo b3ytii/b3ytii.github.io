@@ -77,6 +77,9 @@
   })();
 </script>
 <link rel="preload" href="<%- url_for('fonts/archivo-latin.woff2') %>" as="font" type="font/woff2" crossorigin>
+<link rel="icon" href="<%- url_for('favicon.svg') %>" type="image/svg+xml">
+<link rel="icon" href="<%- url_for('favicon-32.png') %>" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="<%- url_for('apple-touch-icon.png') %>">
 <% if (cjk === 'google') { %>
 <% if (/googleapis\.com/.test(host)) { %><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><% } %>
 <link rel="stylesheet" href="<%- host %>/css2?family=Noto+Serif+SC:wght@400..900&family=Noto+Sans+SC:wght@900&display=swap">

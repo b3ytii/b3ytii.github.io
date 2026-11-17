@@ -6,7 +6,7 @@ description: "Walkthrough for Capture Me !! from Cyberchaze CTF."
 categories: ["Writeups", "CTF", "Cyberchaze CTF"]
 tags: [ctf, writeup, androidsecurity, mobileCTF, frida, base64]
 author: Narain Krishna
-cover: https://i.pinimg.com/736x/0d/12/01/0d120101e5beece33b52b488cc1e8fc7.jpg
+cover: /images/covers/captueme-cyberchaze-ctf.jpg
 toc: true
 ---
 

@@ -6,7 +6,7 @@ description: "Walkthrough for baby-android-2 from ByuCTF."
 categories: ["Writeups", "CTF", "ByuCTF"]
 tags: [ctf, writeup, androidsecurity, mobileCTF, frida, native-library]
 author: Narain Krishna
-cover: https://i.pinimg.com/736x/76/c3/83/76c383c75e503d362ff2b67823176a51.jpg
+cover: /images/covers/baby-android-2-byuctf.jpg
 toc: true
 ---
 

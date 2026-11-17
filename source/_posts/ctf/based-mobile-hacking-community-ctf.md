@@ -6,7 +6,7 @@ description: "Walkthrough for Based from Mobile Hacking Community CTF."
 categories: ["Writeups", "CTF", "Mobile Hacking Community CTF"]
 tags: [ctf, writeup, androidsecurity, mobileCTF, frida, base64]
 author: Narain Krishna
-cover: https://i.pinimg.com/736x/44/52/c6/4452c6c68d0499faa766ed77c6c4febb.jpg
+cover: /images/covers/based-mobile-hacking-community-ctf.jpg
 toc: true
 ---
 

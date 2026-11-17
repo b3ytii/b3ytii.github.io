@@ -6,7 +6,7 @@ description: "Walkthrough for Firmware from Cyberchaze CTF."
 categories: ["Writeups", "CTF", "Cyberchaze CTF"]
 tags: [ctf, writeup, androidsecurity, mobileCTF, ghidra, native-library]
 author: Narain Krishna
-cover: https://i.pinimg.com/474x/0c/0c/85/0c0c8537f19b7526429c3978635376f3.jpg
+cover: /images/covers/firmware-cyberchaze-ctf.jpg
 toc: true
 ---
 

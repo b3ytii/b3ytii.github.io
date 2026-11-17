@@ -5,7 +5,7 @@ date: 2026-04-20 23:22:38 +0530
 description: "Walkthrough for Path Finder from Payatu Hiring CTF."
 categories: ["Writeups", "CTF", "Payatu Hiring CTF"]
 tags: [ctf, writeup, androidsecurity, mobileCTF, deeplink, webview, adb]
-cover: https://i.pinimg.com/736x/90/bc/d8/90bcd8c3231f039c800edd11b42c32b9.jpg
+cover: /images/covers/pathfinder-payatu-hiring-ctf.jpg
 author: Narain Krishna
 toc: true
 ---

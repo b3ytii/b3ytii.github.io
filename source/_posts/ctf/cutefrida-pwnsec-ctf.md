@@ -6,7 +6,7 @@ description: "Walkthrough for Cute Frida from Pwnsec CTF."
 categories: ["Writeups", "CTF", "Pwnsec CTF"]
 tags: [ctf, writeup, androidsecurity, mobileCTF, frida, jadx]
 author: Narain Krishna
-cover: https://i.pinimg.com/1200x/4e/de/1a/4ede1a3fab5089f9869ed60950151738.jpg
+cover: /images/covers/cutefrida-pwnsec-ctf.jpg
 toc: true
 ---
 

@@ -6,7 +6,7 @@ description: "Walkthrough for Couple Gallery from Eschaton CTF."
 categories: ["Writeups", "CTF", "Eschaton CTF"]
 tags: [ctf, writeup, androidsecurity, mobileCTF, react-native, jadx]
 author: Narain Krishna
-cover: https://i.pinimg.com/736x/b9/ec/9e/b9ec9eaa5a53a64f60ad1946849fa16a.jpg
+cover: /images/covers/couplegallery-eschaton-ctf.jpg
 toc: true
 ---
 

@@ -5,7 +5,7 @@ date: 2026-04-20 23:22:38 +0530
 description: "Walkthrough for A Strange Door from Payatu Hiring CTF."
 categories: ["Writeups", "CTF", "Payatu Hiring CTF"]
 tags: [ctf, writeup, androidsecurity, mobileCTF, frida, native-library]
-cover: https://i.pinimg.com/736x/1c/f7/0e/1cf70ed8495aa1119e814da793a486d8.jpg
+cover: /images/covers/astrangedoor-payatu-hiring-ctf.jpg
 author: Narain Krishna
 toc: true
 ---

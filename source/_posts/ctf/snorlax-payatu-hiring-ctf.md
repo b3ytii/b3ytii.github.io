@@ -6,7 +6,7 @@ description: "Walkthrough for Snorlax from Payatu Hiring CTF."
 categories: ["Writeups", "CTF", "Payatu Hiring CTF"]
 tags: [ctf, writeup, androidsecurity, mobileCTF, frida, native-library]
 author: Narain Krishna
-cover: https://i.pinimg.com/1200x/a6/5a/3f/a65a3f7a85b5bd9e9e895abf0f0b28ed.jpg
+cover: /images/covers/snorlax-payatu-hiring-ctf.jpg
 toc: true
 ---
 

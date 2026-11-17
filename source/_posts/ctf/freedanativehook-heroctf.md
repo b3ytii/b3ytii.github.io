@@ -6,7 +6,7 @@ description: "Walkthrough for Freeda Native Hook from HeroCTF."
 categories: ["Writeups", "CTF", "HeroCTF"]
 tags: [ctf, writeup, androidsecurity, mobileCTF, frida, ghidra, native-library]
 author: Narain Krishna
-cover: https://i.pinimg.com/1200x/34/27/bf/3427bf3ca43eb51e4daefaad92633c30.jpg
+cover: /images/covers/freedanativehook-heroctf.jpg
 toc: true
 ---
 

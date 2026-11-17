@@ -6,7 +6,7 @@ description: "Walkthrough for Baby Android from DalCTF."
 categories: ["Writeups", "CTF", "DalCTF"]
 tags: [ctf, writeup, androidsecurity, mobileCTF, jadx]
 author: Narain Krishna
-cover: https://i.pinimg.com/1200x/85/31/4f/85314f1b21ff07d8db9906542fe01f8b.jpg
+cover: /images/covers/babyandroid-dalctf.jpg
 toc: true
 ---
 

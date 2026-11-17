@@ -6,7 +6,7 @@ description: "Walkthrough for Freeda Simple Hoot from HeroCTF."
 categories: ["Writeups", "CTF", "HeroCTF"]
 tags: [ctf, writeup, androidsecurity, mobileCTF, frida, jadx]
 author: Narain Krishna
-cover: https://i.pinimg.com/736x/4a/c3/91/4ac3914b99cf563e58e29fd09331b3d4.jpg
+cover: /images/covers/freedasimplehook-heroctf.jpg
 toc: true
 ---
 

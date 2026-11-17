@@ -6,7 +6,7 @@ description: "Walkthrough for Prints from Mobile Hacking Community CTF."
 categories: ["Writeups", "CTF", "Mobile Hacking Community CTF"]
 tags: [ctf, writeup, androidsecurity, mobileCTF, biometrics]
 author: Narain Krishna
-cover: https://i.pinimg.com/736x/84/82/fd/8482fdcff265c4560bd0780791e786fc.jpg
+cover: /images/covers/prints-mobile-hacking-community-ctf.jpg
 toc: true
 ---
 

@@ -6,7 +6,7 @@ description: "Walkthrough for baby-android-1 from ByuCTF."
 categories: ["Writeups", "CTF", "ByuCTF"]
 tags: [ctf, writeup, androidsecurity, mobileCTF, jadx]
 author: Narain Krishna
-cover: https://i.pinimg.com/736x/97/c0/4e/97c04e5f9812cb73720f594842c6c8cf.jpg
+cover: /images/covers/baby-android-1-byuctf.jpg
 toc: true
 ---
 

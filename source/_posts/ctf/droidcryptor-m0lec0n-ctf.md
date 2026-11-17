@@ -6,7 +6,7 @@ description: "Walkthrough for Droid Cryptor from m0leC0n CTF."
 categories: ["Writeups", "CTF", "m0leC0n CTF"]
 tags: [ctf, writeup, androidsecurity, mobileCTF, cryptography, base64]
 author: Narain Krishna
-cover: https://i.pinimg.com/736x/bc/17/55/bc1755d9b973bfbb8b1ed5da5d269dff.jpg
+cover: /images/covers/droidcryptor-m0lec0n-ctf.jpg
 toc: true
 ---
 

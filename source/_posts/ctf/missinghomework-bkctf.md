@@ -6,8 +6,7 @@ description: "Walkthrough for Missing HomeWork from BKCTF."
 categories: ["Writeups", "CTF", "BKCTF"]
 tags: [ctf, writeup, androidsecurity, mobileCTF, steganography, base64]
 author: Narain Krishna
-cover: https://i.pinimg.com/736x/8c/3c/ba/8c3cbac6af3af9a3ed0df10a160b6651.jpg
-
+cover: /images/covers/missinghomework-bkctf.jpg
 toc: true
 ---
 

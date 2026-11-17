@@ -803,6 +803,31 @@ main { display: block; outline: none; }
   word-break: break-all;
 }
 .bs-prose flag::before { content: "⚑"; color: var(--blue); font-weight: 700; margin-right: .5em; }
+/* ---------- Series cross-links ---------- */
+.bs-series {
+  margin: 2.5em 0 0;
+  padding: 1.2em 1.4em;
+  border: 1.5px solid var(--ink);
+  background: var(--code-bg);
+}
+.bs-series__label {
+  margin: 0 0 .6em;
+  font: 600 .72rem/1 var(--f-mono);
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.bs-series ol { margin: 0; padding: 0; list-style: none; counter-reset: series; }
+.bs-series li {
+  counter-increment: series;
+  padding: .3rem 0;
+  font: 700 .95rem/1.5 var(--f-body);
+  color: var(--muted);
+}
+.bs-series li::before { content: counter(series, decimal-leading-zero) " "; font: 500 .75rem/1 var(--f-mono); color: var(--blue); }
+.bs-series li[aria-current="page"]::after { content: " ←"; color: var(--blue); }
+.bs-series a { color: var(--ink); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .25em; transition: color .2s; }
+.bs-series a:hover { color: var(--blue); }
 .bs-prose table { width: 100%; border-collapse: collapse; font-size: .92em; line-height: 1.6; }
 .bs-prose .bs-table { margin: 2em 0; overflow-x: auto; border-top: 1.5px solid var(--ink); border-bottom: 1.5px solid var(--ink); }
 .bs-prose th { padding: .8em 1em; text-align: left; font: 600 .74rem/1.4 var(--f-mono); letter-spacing: .08em; color: var(--muted); border-bottom: 1px solid var(--line); white-space: nowrap; }

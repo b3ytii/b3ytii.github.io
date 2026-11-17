@@ -6,7 +6,7 @@ description: "Walkthrough for Freeda Not Root from HeroCTF."
 categories: ["Writeups", "CTF", "HeroCTF"]
 tags: [ctf, writeup, androidsecurity, mobileCTF, frida, objection]
 author: Narain Krishna
-cover: https://i.pinimg.com/736x/45/57/b7/4557b7dcd032bec32156f01a06383067.jpg
+cover: /images/covers/freedanotroot-heroctf.jpg
 toc: true
 ---
 

@@ -6,7 +6,7 @@ description: "Walkthrough for Shadow Vault from Pearl CTF."
 categories: ["Writeups", "CTF", "Pearl CTF"]
 tags: [ctf, writeup, androidsecurity, mobileCTF, burpsuite, ssl-pinning]
 author: Narain Krishna
-cover: https://i.pinimg.com/736x/e7/59/dd/e759dd0f38b5f04a65bb9666b5a95761.jpg
+cover: /images/covers/shadowvault-pearl-ctf.jpg
 toc: true
 ---
 
