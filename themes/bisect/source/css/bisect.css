@@ -789,6 +789,20 @@ main { display: block; outline: none; }
   color: var(--link);
   border-radius: 2px;
 }
+/* ---------- CTF flag badge ---------- */
+.bs-prose flag {
+  display: inline-block;
+  margin: 2px 0;
+  padding: .15em .6em;
+  background: var(--code-bg);
+  color: var(--code-fg);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--blue);
+  border-radius: 3px;
+  font: 500 .88em/1.6 var(--f-mono);
+  word-break: break-all;
+}
+.bs-prose flag::before { content: "⚑"; color: var(--blue); font-weight: 700; margin-right: .5em; }
 .bs-prose table { width: 100%; border-collapse: collapse; font-size: .92em; line-height: 1.6; }
 .bs-prose .bs-table { margin: 2em 0; overflow-x: auto; border-top: 1.5px solid var(--ink); border-bottom: 1.5px solid var(--ink); }
 .bs-prose th { padding: .8em 1em; text-align: left; font: 600 .74rem/1.4 var(--f-mono); letter-spacing: .08em; color: var(--muted); border-bottom: 1px solid var(--line); white-space: nowrap; }
