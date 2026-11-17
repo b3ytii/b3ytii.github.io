@@ -21,21 +21,21 @@ If you've never reverse engineered an Android application, now is the time!! Get
 
 We can start by installing and opening the app in our emulator
 
-![alt text](/images/ctf/byuctf-baby-android-2/image-1.png)
+![App screen](/images/ctf/byuctf-baby-android-2/image-1.png)
 
 The app has a textview and button for a `flag sanity` check, we can enter the flag and check if its correct
 
 We can open the APK in jadx,
 
-![alt text](/images/ctf/byuctf-baby-android-2/image-2.png)
+![MainActivity](/images/ctf/byuctf-baby-android-2/image-2.png)
 
-![alt text](/images/ctf/byuctf-baby-android-2/image-3.png)
+![FlagChecker](/images/ctf/byuctf-baby-android-2/image-3.png)
 
 We see that the `MainActivity` calls a method `check()` from `FlagChecker` and the class `FlagChecker` loads a native library and has a native method `check`
 
 We can proceed to inspect the native library in Ghidra
 
-![alt text](/images/ctf/byuctf-baby-android-2/image-4.png)
+![Ghidra](/images/ctf/byuctf-baby-android-2/image-4.png)
 
 Our input is being checked against an encrypted string `bycnu)_aacGly~}tt+=<_MLf^i_vETkG+b{nDJrVp6=)=`, the encryption is very basic and we can use python to reverse it.
 
@@ -44,7 +44,7 @@ print(''.join('bycnu)_aacGly~}tt+?=<_ML?f^i_vETkG+b{nDJrVp6=)='[(i*i)%47] for i 
 ```
 We can run this script to get the flag,
 
-![alt text](/images/ctf/byuctf-baby-android-2/image-5.png)
+![Flag](/images/ctf/byuctf-baby-android-2/image-5.png)
 
 ## Flag
 

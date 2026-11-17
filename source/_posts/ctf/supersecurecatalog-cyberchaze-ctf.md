@@ -14,19 +14,19 @@ toc: true
 
 ### Analysis
 
-![alt text](/images/ctf/cyberchaze-ctf-supersecurecatalog/image.png)
+![Login screen](/images/ctf/cyberchaze-ctf-supersecurecatalog/image.png)
 
 The app on opening, asks for a username and a password
 
 We can move on to inspecting in it JADX
 
-![alt text](/images/ctf/cyberchaze-ctf-supersecurecatalog/image-1.png)
+![jadx](/images/ctf/cyberchaze-ctf-supersecurecatalog/image-1.png)
 
 The entered username and password is being verified in another class names `Cryto`
 
 Now,we can inspect the Crypto class
 
-![alt text](/images/ctf/cyberchaze-ctf-supersecurecatalog/image-2.png)
+![Crypto class](/images/ctf/cyberchaze-ctf-supersecurecatalog/image-2.png)
 
 A part of the flag was hardcoded,
 
@@ -34,11 +34,11 @@ A part of the flag was hardcoded,
 
 There was also the use of Native Libraries, we can inspect it in:
 
-![alt text](/images/ctf/cyberchaze-ctf-supersecurecatalog/image-3.png)
+![Ghidra](/images/ctf/cyberchaze-ctf-supersecurecatalog/image-3.png)
 
 The function was a string encoded in hexa, we can convert it to string value
 
-![alt text](/images/ctf/cyberchaze-ctf-supersecurecatalog/image-4.png)
+![Hex decode](/images/ctf/cyberchaze-ctf-supersecurecatalog/image-4.png)
 
 hexa : 666921457d
 

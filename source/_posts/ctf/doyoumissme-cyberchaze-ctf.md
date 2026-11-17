@@ -21,17 +21,17 @@ Just like the Joker’s return to Gotham, this mobile app has a hidden surprise 
 
 We can start by installing and opening the APK in our emulator
 
-![alt text](/images/ctf/cyberchaze-ctf-doyoumissme/image-1.png)
+![App screen](/images/ctf/cyberchaze-ctf-doyoumissme/image-1.png)
 
 It just has a textview with a text `Do You Miss Me`, Now we can further inspect it in jadx
 
-![alt text](/images/ctf/cyberchaze-ctf-doyoumissme/image-2.png)
+![jadx](/images/ctf/cyberchaze-ctf-doyoumissme/image-2.png)
 
 As expected, nothing much happening in Main Activity
 
 Since, the description suggests that the flag is hardcoded and hidden, we can inspect possible candidate files like `strings.xml`
 
-![alt text](/images/ctf/cyberchaze-ctf-doyoumissme/image-3.png)
+![strings.xml](/images/ctf/cyberchaze-ctf-doyoumissme/image-3.png)
 
 We find a particularly interesting string with the name `flag` and value `Q3liZXJjaGF6ZXtsOWdSUDhyakxiUHZ6djFtWTNWdVE2TXNSUjYzZUxqZDN4bE53bVQyNnExOXhZMGd4Sn0`
 

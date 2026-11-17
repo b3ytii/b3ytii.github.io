@@ -19,21 +19,21 @@ A vulnerable app stores sensitive data using insecure methods. Can you uncover w
 
 ### Analysis
 
-![alt text](/images/ctf/mobile-hacking-community-ctf-spinandwin/image-1.png)
+![App screen](/images/ctf/mobile-hacking-community-ctf-spinandwin/image-1.png)
 
 Using adb we can search it one by one
 
 Shared Preferences
 
-![alt text](/images/ctf/mobile-hacking-community-ctf-spinandwin/image-3.png)
+![SharedPreferences](/images/ctf/mobile-hacking-community-ctf-spinandwin/image-3.png)
 
 In the dir `/data/data/com.just.mobile.sec.challenge_1/shared_prefs` , we can run `cat com.just.mobile.sec.challenge1.FlagHintActivity.xml `
 
-![alt text](/images/ctf/mobile-hacking-community-ctf-spinandwin/image-2.png)
+![Prefs xml](/images/ctf/mobile-hacking-community-ctf-spinandwin/image-2.png)
 
 Databases
 
-![alt text](/images/ctf/mobile-hacking-community-ctf-spinandwin/image-5.png)
+![sqlite3](/images/ctf/mobile-hacking-community-ctf-spinandwin/image-5.png)
 
 In the dir `/data/data/com.just.mobile.sec.challenge_1/databases`
 
@@ -50,7 +50,7 @@ sqlite>
 ```
 External Storage
 
-![alt text](/images/ctf/mobile-hacking-community-ctf-spinandwin/image-4.png)
+![External storage](/images/ctf/mobile-hacking-community-ctf-spinandwin/image-4.png)
 
 In the dir `/storage/emulated/0/Android/data/com.just.mobile.sec.challenge_1/files/InsecureStorage`,
 

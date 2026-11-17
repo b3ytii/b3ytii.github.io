@@ -16,17 +16,17 @@ toc: true
 
 We can begin by inspecting the Manifest file
 
-![alt text](/images/ctf/byuctf-baby-android-1/image.png)
+![Manifest](/images/ctf/byuctf-baby-android-1/image.png)
 
 Nothing much in the manifest, only one activity
 
-![alt text](/images/ctf/byuctf-baby-android-1/image-1.png)
+![MainActivity](/images/ctf/byuctf-baby-android-1/image-1.png)
 
 The Main activity does nothing but call the Utils.cleanUp() method
 
 And if we inspect Utils Class
 
-![alt text](/images/ctf/byuctf-baby-android-1/image-2.png)
+![Utils class](/images/ctf/byuctf-baby-android-1/image-2.png)
 
 Same as the name, Utils.cleanUp() cleans the text in the textviews and sets it to nothing
 
@@ -36,7 +36,7 @@ Inside strings.xml theres nothing there
 
 But in `layout/activity_main.xml` file, we see:
 
-![alt text](/images/ctf/byuctf-baby-android-1/image-3.png)
+![Layout strings](/images/ctf/byuctf-baby-android-1/image-3.png)
 
 Every text view has one char in it has a text
 
@@ -46,7 +46,7 @@ If we assemble it by order we get,
 
 Every textview has a definite position in the layout, So we can just copy paste the textviews to our POC app to see how it will look
 
-![alt text](/images/ctf/byuctf-baby-android-1/image-4.png)
+![POC layout](/images/ctf/byuctf-baby-android-1/image-4.png)
 
 Even though, it is distorted we can read it to :
 

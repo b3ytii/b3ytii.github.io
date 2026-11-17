@@ -14,21 +14,21 @@ toc: true
 
 ### Analysis
 
-![alt text](/images/ctf/cyberchaze-ctf-securecatalog/image.png)
+![Login](/images/ctf/cyberchaze-ctf-securecatalog/image.png)
 
 The app when launched first asks for email id and a password
 
 If we dig through the string.xml file in jadx, we would find the email id and the password required to login in
 
-![alt text](/images/ctf/cyberchaze-ctf-securecatalog/image-4.png)
+![Email](/images/ctf/cyberchaze-ctf-securecatalog/image-4.png)
 
-![alt text](/images/ctf/cyberchaze-ctf-securecatalog/image-5.png)
+![Password](/images/ctf/cyberchaze-ctf-securecatalog/image-5.png)
 
 email : admin@catalog.com
 
 password : password
 
-![alt text](/images/ctf/cyberchaze-ctf-securecatalog/image-1.png)
+![Catalog](/images/ctf/cyberchaze-ctf-securecatalog/image-1.png)
 
 When we login we see a potential flag, but its encrypted with shift cipher(key=3) and if we decrypt it,
 
@@ -46,13 +46,13 @@ product_part2.db
 
 We cannot directly access the database, it is protected by sqlcipher,So we need to find the key to access it
 
-![alt text](/images/ctf/cyberchaze-ctf-securecatalog/image-2.png)
+![Manifest](/images/ctf/cyberchaze-ctf-securecatalog/image-2.png)
 
 Further, if we inspect the Manifest..we see the DBUtil activity and if we inspect that
 
-![alt text](/images/ctf/cyberchaze-ctf-securecatalog/image-3.png)
+![DBUtil](/images/ctf/cyberchaze-ctf-securecatalog/image-3.png)
 
-![alt text](/images/ctf/cyberchaze-ctf-securecatalog/image-6.png)
+![SQLite](/images/ctf/cyberchaze-ctf-securecatalog/image-6.png)
 
 We can see a base64 encoded value which is used while executing the SQL query
 
@@ -70,7 +70,7 @@ and then use `sqlcipher product_part1.db` and enter
 PRAGMA key = 'pass123';
 .tables
 ```
-![alt text](/images/ctf/cyberchaze-ctf-securecatalog/image.webp)
+![sqlcipher](/images/ctf/cyberchaze-ctf-securecatalog/image.webp)
 We see a tablle `secret` and if the run `SELECT * FROM SECRET;` we get the flag
 
 ## Flag

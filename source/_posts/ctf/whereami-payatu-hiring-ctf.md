@@ -16,19 +16,19 @@ toc: true
 
 We start by installing and opening the app in our emulator
 
-![alt text](/images/ctf/payatu-hiring-ctf-whereami/image-1.png)
+![App screen](/images/ctf/payatu-hiring-ctf-whereami/image-1.png)
 
 It shows a text that strongly hints this challenge involves `broadcasts` also it has a `7 sec` timer after that the app is terminated
 
 Now, we can inspect it in Jadx,
 
-![alt text](/images/ctf/payatu-hiring-ctf-whereami/image-2.png)
+![jadx](/images/ctf/payatu-hiring-ctf-whereami/image-2.png)
 
 As expected, it does a Broadcast Receiver which probably contains the logic behind the flag
 
 The Main Activity does not have much in it, just the logic behind the timer and termination
 
-![alt text](/images/ctf/payatu-hiring-ctf-whereami/image-3.png)
+![Receiver code](/images/ctf/payatu-hiring-ctf-whereami/image-3.png)
 
 ```java
 lic void onReceive(Context context, Intent intent) {
@@ -49,7 +49,7 @@ So, in our adb shell
 
 `am broadcast -a com.payatu.whereami.MY_ACTION -n com.payatu.whereami/.BroadCastListener --es loc Mjolnir` --> To lauch the flag activity
 
-![alt text](/images/ctf/payatu-hiring-ctf-whereami/image-4.png)
+![Flag](/images/ctf/payatu-hiring-ctf-whereami/image-4.png)
 
 ## Flag
 

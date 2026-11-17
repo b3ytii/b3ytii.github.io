@@ -23,7 +23,7 @@ From the description it is very evident that the APK has some anti frida/anti ta
 
 We can proceed to inspect it in jadx,
 
-![alt text](/images/ctf/pwnsec-ctf-freakyfrida/image-1.png)
+![Native libs](/images/ctf/pwnsec-ctf-freakyfrida/image-1.png)
 
 We see that the APK has two native libs
 
@@ -47,7 +47,7 @@ backtrace:
 ```
 `data/app/~~zgHg35F2pI9X469v-1CFHA==/com.pwnsec-xV14Nzi2wKH2vjZTbeTVXw==/base.apk!libnative-lib.so` tells us that `libnative-lib.so` is running the check and causing the crash, we can inspect the native library in Ghidra
 
-![alt text](/images/ctf/pwnsec-ctf-freakyfrida/image-2.png)
+![Frida crash](/images/ctf/pwnsec-ctf-freakyfrida/image-2.png)
 
 This native lib is highly obfuscated and the strings are encrypted, it is pretty much difficult to understand what this native library is detecting, which crashes the APK
 
@@ -89,15 +89,15 @@ Sign the APK and install it
 -> `adb install FreakyFrida.ap`
 Now we can try to open the app in our emulator
 
-![alt text](/images/ctf/pwnsec-ctf-freakyfrida/image-3.png)
+![App running](/images/ctf/pwnsec-ctf-freakyfrida/image-3.png)
 
 We have successfully replaced the native lib which causes the crash, now we can focus on getting the flag
 
 For that, we need to inspect `libFreakyFrid.so` in Ghidra
 
-![alt text](/images/ctf/pwnsec-ctf-freakyfrida/image-4.png)
+![Ghidra](/images/ctf/pwnsec-ctf-freakyfrida/image-4.png)
 
-![alt text](/images/ctf/pwnsec-ctf-freakyfrida/image-5.png)
+![FreakyFrida](/images/ctf/pwnsec-ctf-freakyfrida/image-5.png)
 
 In the launcher activity, there is method `CheckAsYouLike(str)` which takes our input and then calls another native method `strinfromJNI(str)`
 
@@ -130,7 +130,7 @@ Java.perform(() => {
 ```
 Now, we just need to load this script,
 
-![alt text](/images/ctf/pwnsec-ctf-freakyfrida/image-6.png)
+![Flag](/images/ctf/pwnsec-ctf-freakyfrida/image-6.png)
 
 ## Flag
 

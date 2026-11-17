@@ -21,11 +21,11 @@ So my girlfriend, she stored all our private images on a "Secure App". As expect
 
 We can start by installing and open the apk in our emulator
 
-![alt text](/images/ctf/eschaton-ctf-couplegallery/image-1.png)
+![Passcode screen](/images/ctf/eschaton-ctf-couplegallery/image-1.png)
 
 We need a six digit pincode to unlock the app, we can proceed to inspect it in jadx
 
-![alt text](/images/ctf/eschaton-ctf-couplegallery/image-2.png)
+![MainActivity](/images/ctf/eschaton-ctf-couplegallery/image-2.png)
 
 While inspecting it we can see that the app is written in `React Native` , So to actually decompile the apk we would need a `React Native` like - `Hermes Decompiler`
 
@@ -43,18 +43,18 @@ We can clone the repo and follow the steps given
 Now using `grep` we can search for any hardcoded 6 digits inside the `my_output_file.js` file
 
 `cat my_output_file.js | grep -nE "r[0-9]+ = '[0-9]{6}'"`
-![alt text](/images/ctf/eschaton-ctf-couplegallery/image-3.png)
+![grep](/images/ctf/eschaton-ctf-couplegallery/image-3.png)
 
 We get a code `369963` , we can try to input that in the apk
 
-![alt text](/images/ctf/eschaton-ctf-couplegallery/image-4.png)
+![Hidden image](/images/ctf/eschaton-ctf-couplegallery/image-4.png)
 
 In the apk we find a image which contains the second part of the flag
 
 `_1s_s3cure_k3y_w4s_369963`
 We can guess and use grep to get the first part of the flag from `my_output_file.js`.
 
-![alt text](/images/ctf/eschaton-ctf-couplegallery/image-5.png)
+![Flag](/images/ctf/eschaton-ctf-couplegallery/image-5.png)
 
 ## Flag
 

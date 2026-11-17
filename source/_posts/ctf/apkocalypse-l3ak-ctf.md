@@ -21,14 +21,14 @@ Just grab the flag from this simple file storage app.
 
 We can start by installing and opening the apk in our emulator
 
-![alt text](/images/ctf/l3ak-ctf-apkocalypse/image-1.png)
+![App crash](/images/ctf/l3ak-ctf-apkocalypse/image-1.png)
 
 We cannot enter the app, it crashes immediately and a toast is displayed
 
 `Root access detected, some features may be disabled.`
 Now, we can proceed to inspect it in jadx
 
-![alt text](/images/ctf/l3ak-ctf-apkocalypse/image-2.png)
+![jadx](/images/ctf/l3ak-ctf-apkocalypse/image-2.png)
 
 We see that a class `RootDetection` has a method `isDeviceRooted()` which if returned true, the app is terminated
 
@@ -44,7 +44,7 @@ Java.perform(() => {
 })
 
 ```
-![alt text](/images/ctf/l3ak-ctf-apkocalypse/image-3.png)
+![App unlocked](/images/ctf/l3ak-ctf-apkocalypse/image-3.png)
 
 We can access the app now,
 

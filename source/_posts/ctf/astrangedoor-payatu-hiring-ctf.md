@@ -16,11 +16,11 @@ toc: true
 
 We can start by inspecting the APK in jadx,
 
-![alt text](/images/ctf/payatu-hiring-ctf-astrangedoor/image-1.png)
+![jadx](/images/ctf/payatu-hiring-ctf-astrangedoor/image-1.png)
 
 We have to input a pincode, which is passed to a native function `checkPasscode` and then if its correct the other activity is launched also another native function `decryptflag()` is called and passed along as an intent extra.
 
-![alt text](/images/ctf/payatu-hiring-ctf-astrangedoor/image-2.png)
+![FlagActivity](/images/ctf/payatu-hiring-ctf-astrangedoor/image-2.png)
 
 The second Activity(launched if the passcode is correct) gets the flag from the intent and displays it in a textview
 
@@ -40,7 +40,7 @@ Interceptor.attach(f, {
 ```
 We can load this frida script,
 
-![alt text](/images/ctf/payatu-hiring-ctf-astrangedoor/image-3.png)
+![Flag](/images/ctf/payatu-hiring-ctf-astrangedoor/image-3.png)
 
 ## Flag
 

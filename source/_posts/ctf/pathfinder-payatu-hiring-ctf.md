@@ -16,7 +16,7 @@ toc: true
 
 We can start by inspecting the APK in jadx, since this is a webview-XSS challenge
 
-![alt text](/images/ctf/payatu-hiring-ctf-pathfinder/image-1.png)
+![Manifest](/images/ctf/payatu-hiring-ctf-pathfinder/image-1.png)
 
 The Main Activity itself has intent filers for a deeplink, from this we get an idea on how our link should be i.e `ctf://payatu/web`
 
@@ -28,7 +28,7 @@ R.sting.host = payatu.com
 
 R.string.url_param = url
 
-![alt text](/images/ctf/payatu-hiring-ctf-pathfinder/image-4.png)
+![Strings](/images/ctf/payatu-hiring-ctf-pathfinder/image-4.png)
 
 The flow of checking is:
 
@@ -44,7 +44,7 @@ The `urlToLoad` is passed to `redirect()`(this is a function inside WebViewRedir
 
 We can inspect `WebViewRedirect.html`,
 
-![alt text](/images/ctf/payatu-hiring-ctf-pathfinder/image-2.png)
+![showflag()](/images/ctf/payatu-hiring-ctf-pathfinder/image-2.png)
 
 This file contains  `showflag()` , which we should call
 
@@ -64,7 +64,7 @@ The link contains `payatu.com` which is commented out so it does not interfere w
 
 We can pass with through adb `am start -a android.intent.action.VIEW -d tf://payatu/weburl=javascript:AndroidFunction.showFlag()//payatu.com`
 
-![alt text](/images/ctf/payatu-hiring-ctf-pathfinder/image-3.png)
+![Flag](/images/ctf/payatu-hiring-ctf-pathfinder/image-3.png)
 
 ## Flag
 

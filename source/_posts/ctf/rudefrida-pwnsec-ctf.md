@@ -22,11 +22,11 @@ We can install the APK and try to open it in our emulator, but we are instantly 
 
 To know , whats happening we can inspect it in Jadx
 
-![alt text](/images/ctf/pwnsec-ctf-rudefrida/image-1.png)
+![App crash](/images/ctf/pwnsec-ctf-rudefrida/image-1.png)
 
 There isnt much in MainActivity, But we see a native lib `libRudeFrida.so` being loaded , we can open this native lib in Ghidra to understand whats happening
 
-![alt text](/images/ctf/pwnsec-ctf-rudefrida/image-2.png)
+![jadx](/images/ctf/pwnsec-ctf-rudefrida/image-2.png)
 
 The `stringfromJNI()` calls two other functions:
 
@@ -36,11 +36,11 @@ FridaCheck()
 
 We can inspect both these functions to understand what they are doing-
 
-![alt text](/images/ctf/pwnsec-ctf-rudefrida/image-3.png)
+![is_root_simple](/images/ctf/pwnsec-ctf-rudefrida/image-3.png)
 
 `is_root_simple()` is trying to access some root binaries in the device for root detection
 
-![alt text](/images/ctf/pwnsec-ctf-rudefrida/image-4.png)
+![FridaCheck](/images/ctf/pwnsec-ctf-rudefrida/image-4.png)
 
 `FridaCheck()` checks for the default ports used by frida-server
 
@@ -60,7 +60,7 @@ And the sum of the passed parameters has to be equal to `0x539` which is `1337` 
 
 And if we scroll down a bit,
 
-![alt text](/images/ctf/pwnsec-ctf-rudefrida/image-5.png)
+![get_flag](/images/ctf/pwnsec-ctf-rudefrida/image-5.png)
 
 This function does not return anything , but logs some strings which probably could be the flag
 
@@ -80,13 +80,13 @@ This also includes `ssl-unpinning` which we do not require here, so we only need
 To bypass the frida checks im using `phantom-frida`
 
 sauce:https://github.com/TheQmaks/phantom-frida
-![alt text](/images/ctf/pwnsec-ctf-rudefrida/image-6.png)
+![phantom-frida](/images/ctf/pwnsec-ctf-rudefrida/image-6.png)
 
 `phatom-frida` bypasses all the major 16 detection techniques
 
 To call the `get_flag` method , we should first know the exported symbol - To find that we just need to do a search in ghidra
 
-![alt text](/images/ctf/pwnsec-ctf-rudefrida/image-8.png)
+![Symbols](/images/ctf/pwnsec-ctf-rudefrida/image-8.png)
 
 Now, our frida script -
 
@@ -101,7 +101,7 @@ P.S: Our script will not have any anti-frida bypass since we are using `phantom-
 
 Now, we just need to run this script and check our logs,
 
-![alt text](/images/ctf/pwnsec-ctf-rudefrida/image-7.png)
+![Flag](/images/ctf/pwnsec-ctf-rudefrida/image-7.png)
 
 ## Flag
 

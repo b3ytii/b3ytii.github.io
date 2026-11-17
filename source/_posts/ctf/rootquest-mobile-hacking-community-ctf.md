@@ -21,13 +21,13 @@ An application implements checks to detect rooted devices and emulators, prevent
 
 We can start by installing and opening the APK,
 
-![alt text](/images/ctf/mobile-hacking-community-ctf-rootquest/image-1.png)
+![Rooted block](/images/ctf/mobile-hacking-community-ctf-rootquest/image-1.png)
 
 As expected, we cant enter the app as we are running it on a rooted emulator
 
 Now, we can inspect it in jadx to understand how we should craft the bypass
 
-![alt text](/images/ctf/mobile-hacking-community-ctf-rootquest/image-2.png)
+![jadx](/images/ctf/mobile-hacking-community-ctf-rootquest/image-2.png)
 
 It just calls two static methods `isRunningOnEmulator()` and `isDeviceRooted` from the classes `EmulationUtil` and `RootUtil` respectively.
 
@@ -48,7 +48,7 @@ Java.perform(() => {
 ```
 We just need to load this script,
 
-![alt text](/images/ctf/mobile-hacking-community-ctf-rootquest/image-3.png)
+![Flag](/images/ctf/mobile-hacking-community-ctf-rootquest/image-3.png)
 
 ## Flag
 

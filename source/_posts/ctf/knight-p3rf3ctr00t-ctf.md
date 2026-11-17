@@ -21,19 +21,19 @@ Uncover the secrets of the Dark knight to get the flag
 
 We can start by installing the apk and opening it in our emulator
 
-![alt text](/images/ctf/p3rf3ctr00t-ctf-knight/image-1.png)
+![App screen](/images/ctf/p3rf3ctr00t-ctf-knight/image-1.png)
 
 The activity says that input the flag to proceed and if we input anything random it says `Incorrect Flag.Try Harder`
 
 We can inspect the APK in jadx,
 
-![alt text](/images/ctf/p3rf3ctr00t-ctf-knight/image-2.png)
+![jadx](/images/ctf/p3rf3ctr00t-ctf-knight/image-2.png)
 
 The Main Activity does not have anything related to the checking logic, But we know the it displays `Incorrect Flag.Try Harder` for wrong input
 
 So, we can do a global search for `Incorrect Flag.Try Harder` to identify the class implementing the logic
 
-![alt text](/images/ctf/p3rf3ctr00t-ctf-knight/image-3.png)
+![ei class](/images/ctf/p3rf3ctr00t-ctf-knight/image-3.png)
 
 The actual logic is being implemented in the class `ei` and see that a base64 encoded AES encrypted cipher text is being decrypted to which our input is compared.
 
@@ -44,11 +44,11 @@ Rather than the traditional approach of getting the `IV` and `KEY` and then decr
 sauce:https://codeshare.frida.re/@L0WK3Y-IAAN/crypto-detection/
 We just need to load this script and click the button once,
 
-![alt text](/images/ctf/p3rf3ctr00t-ctf-knight/image-4.png)
+![Crypto hook](/images/ctf/p3rf3ctr00t-ctf-knight/image-4.png)
 
 We should confirm the flag,
 
-![alt text](/images/ctf/p3rf3ctr00t-ctf-knight/image-5.png)
+![Flag](/images/ctf/p3rf3ctr00t-ctf-knight/image-5.png)
 
 ## Flag
 

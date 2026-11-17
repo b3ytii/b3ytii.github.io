@@ -16,11 +16,11 @@ toc: true
 
 When we inspect the Manifest file,we see ann activity which handles deeplinks
 
-![alt text](/images/ctf/cyberchaze-ctf-specialist-beta/image.png)
+![Manifest](/images/ctf/cyberchaze-ctf-specialist-beta/image.png)
 
 Further, we can check the code of that activity
 
-![alt text](/images/ctf/cyberchaze-ctf-specialist-beta/image-1.png)
+![Deeplink code](/images/ctf/cyberchaze-ctf-specialist-beta/image-1.png)
 
 Our intent should have a data uri, the length of it should be more than 14 chars but not equal to 27
 
@@ -28,7 +28,7 @@ And a base64 value is getting decoded, to which a substring of our data uri is b
 
 We can get that value from the strings.xml file
 
-![alt text](/images/ctf/cyberchaze-ctf-specialist-beta/image-2.png)
+![strings.xml](/images/ctf/cyberchaze-ctf-specialist-beta/image-2.png)
 
 base64 encoded value : ZGVlcGxpbmstc2VjcmV0LWludGVudC1kYXRh
 
@@ -56,7 +56,7 @@ So, our POC app:
 ```
 And then we get the flag,
 
-![alt text](/images/ctf/cyberchaze-ctf-specialist-beta/image-3.png)
+![Flag](/images/ctf/cyberchaze-ctf-specialist-beta/image-3.png)
 
 ## Flag
 

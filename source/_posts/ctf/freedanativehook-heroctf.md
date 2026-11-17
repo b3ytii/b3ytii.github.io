@@ -26,13 +26,13 @@ Don't waste too much time statically analyzing the application; there are much f
 
 We can start by installing and opening the app in our emulator
 
-![alt text](/images/ctf/heroctf-freedanativehook/image-1.png)
+![Rooted crash](/images/ctf/heroctf-freedanativehook/image-1.png)
 
 Same as before, the app terminates because we are on a rooted device
 
 We can proceed to inspect in further in jadx,
 
-![alt text](/images/ctf/heroctf-freedanativehook/image-2.png)
+![jadx](/images/ctf/heroctf-freedanativehook/image-2.png)
 
 This time, the apk has two native libs
 
@@ -42,19 +42,19 @@ This time, the apk has two native libs
 
 `libtoolChecker.so` is same as before - the root beer library, For that we can use the same script we used before
 
-![alt text](/images/ctf/heroctf-freedanativehook/image-3.png)
+![CheckFlag](/images/ctf/heroctf-freedanativehook/image-3.png)
 
 Also, this time the flag is hidden behind the native lib - `libv3.so`
 
 We can inspect `libv3.so` in Ghidra, to get an idea about the frida script we have to write
 
-![alt text](/images/ctf/heroctf-freedanativehook/image-4.png)
+![Ghidra](/images/ctf/heroctf-freedanativehook/image-4.png)
 
 The native library , has another function `get_flag` which probably is the one hiding the flag
 
 We see that this `get_flag()` calls a second `check_root()` function before proceeding,
 
-![alt text](/images/ctf/heroctf-freedanativehook/image-5.png)
+![check_root](/images/ctf/heroctf-freedanativehook/image-5.png)
 
 This function `check_root()` also follows some method for detecting rooted device, and if it detects it the flag will remain hidden
 
@@ -82,7 +82,7 @@ Interceptor.attach(f, {
 ```
 Now, we just have to run this script,
 
-![alt text](/images/ctf/heroctf-freedanativehook/image-6.png)
+![Flag](/images/ctf/heroctf-freedanativehook/image-6.png)
 
 ## Flag
 

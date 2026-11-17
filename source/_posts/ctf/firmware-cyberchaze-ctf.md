@@ -25,19 +25,19 @@ In APKs, these firmware are usually found in `res/rax` or `assets`
 
 We can check that using jadx.
 
-![alt text](/images/ctf/cyberchaze-ctf-firmware/image-1.png)
+![res/raw](/images/ctf/cyberchaze-ctf-firmware/image-1.png)
 
 There is a `firmware.bin` file in `res/raw`, we can right click on it to export it from jadx
 
 We can check the file type : `file firmware.bin`,
 
-![alt text](/images/ctf/cyberchaze-ctf-firmware/image-2.png)
+![file](/images/ctf/cyberchaze-ctf-firmware/image-2.png)
 
 It is a 7zip archieve, we can use `7z x firmware.bin` to extract..but it requires a password to do so, That password is probably in the APK itself
 
 When we inspeact `strings.xml`,
 
-![alt text](/images/ctf/cyberchaze-ctf-firmware/image-3.png)
+![strings.xml](/images/ctf/cyberchaze-ctf-firmware/image-3.png)
 
 There is a string with a name `useful` and value `nullc0n_2025`, which was indeed the password
 
@@ -54,7 +54,7 @@ Can you find the hidden flag?
 ```
 It was an executale file, we can try running strings in it
 
-![alt text](/images/ctf/cyberchaze-ctf-firmware/image-4.png)
+![strings](/images/ctf/cyberchaze-ctf-firmware/image-4.png)
 
 ## Flag
 

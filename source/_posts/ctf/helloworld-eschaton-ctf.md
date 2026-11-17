@@ -21,7 +21,7 @@ Hello World
 
 For this challenge, we are given an encrypted Android Backup
 
-![alt text](/images/ctf/eschaton-ctf-helloworld/image-1.png)
+![file](/images/ctf/eschaton-ctf-helloworld/image-1.png)
 
 To extract the file we would need a password, for that im using the tool - `john`
 
@@ -31,24 +31,24 @@ The steps to use it :
 
 `john --wordlist=/usr/share/dict/rockyou.txt helloworld.txt` -> brute forcing the encryption with `rockyou.txt` which has about 14 million common passwords
 
-![alt text](/images/ctf/eschaton-ctf-helloworld/image-2.png)
+![john](/images/ctf/eschaton-ctf-helloworld/image-2.png)
 
 The password of the file is `hello world`, now we can use android backup extractor to extract it
 
 `android-backup-unpack -p "hello world" -t ~/Downloads ~/Downloads/helloworld.dat`
 We can inspect the `/apps/com.mcsc.helloworld/a/base.apk` in jadx
 
-![alt text](/images/ctf/eschaton-ctf-helloworld/image-3.png)
+![jadx](/images/ctf/eschaton-ctf-helloworld/image-3.png)
 
 We see that it app imports `sqlcipher` and a particulartly interesting string `1s_th1s_th3_fl4g` and also a hidden database is mentioned `.notinhere.db`
 
 We can navigate to `/apps/com.mcsc.helloworld/db` and do `ls -al`
 
-![alt text](/images/ctf/eschaton-ctf-helloworld/image-4.png)
+![Databases](/images/ctf/eschaton-ctf-helloworld/image-4.png)
 
 We can access `.notinhere.db` using `sqlcipher` and try the pragma key as `1s_th1s_th3_fl4g`
 
-![alt text](/images/ctf/eschaton-ctf-helloworld/image-5.png)
+![sqlcipher](/images/ctf/eschaton-ctf-helloworld/image-5.png)
 
 The flag is inside the table `notes`
 

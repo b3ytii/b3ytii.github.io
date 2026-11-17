@@ -20,7 +20,7 @@ This app is so cute yet so susy, isn't it?
 
 We can start by inspecting it in frida, the APK itself is pretty useless
 
-![alt text](/images/ctf/pwnsec-ctf-cutefrida/image-1.png)
+![MainActivity](/images/ctf/pwnsec-ctf-cutefrida/image-1.png)
 
 In the Main Activity, we can see a sus string `What_do_you_mean_by_encrypted_flag` which has a value returned by `Deobfuscator$app$Release.getString(-548601664941L)`
 
@@ -40,7 +40,7 @@ Java.perform(function() {
     }
 });
 ```
-![alt text](/images/ctf/pwnsec-ctf-cutefrida/image-2.png)
+![Flag](/images/ctf/pwnsec-ctf-cutefrida/image-2.png)
 
 ## Flag
 

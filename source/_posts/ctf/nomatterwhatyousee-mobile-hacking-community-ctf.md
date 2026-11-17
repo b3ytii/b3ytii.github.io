@@ -21,14 +21,14 @@ This app mistakenly exposes a sensitive Activity. Can you leverage this exported
 
 Since the description metions about `exported component`, we can begin with inspecting the Manifest file in jadx
 
-![alt text](/images/ctf/mobile-hacking-community-ctf-nomatterwhatyousee/image-1.png)
+![Manifest](/images/ctf/mobile-hacking-community-ctf-nomatterwhatyousee/image-1.png)
 
 We see an `HiddenActivity` with the attribute `android:exported="true"` i.e this activity is exposed and can we direclty accessed via intent targeted towards this activity
 
 In our adb shell,
 
 `am start -n com.just.mobile.sec.challenge2/.HiddenActivity`
-![alt text](/images/ctf/mobile-hacking-community-ctf-nomatterwhatyousee/image-2.png)
+![adb](/images/ctf/mobile-hacking-community-ctf-nomatterwhatyousee/image-2.png)
 
 ## Flag
 

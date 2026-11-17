@@ -19,13 +19,13 @@ Join the chase in "Capture Me," where your mission is to uncover and exploit vul
 
 ### Analysis
 
-![alt text](/images/ctf/cyberchaze-ctf-captueme/image-1.png)
+![App screen](/images/ctf/cyberchaze-ctf-captueme/image-1.png)
 
 The APP has one button `FLAG` and when we click on it, it displays a toast `CAPTURE ME !!`
 
 Now, we can inspect it in jadx,
 
-![alt text](/images/ctf/cyberchaze-ctf-captueme/image-2.png)
+![Button logic](/images/ctf/cyberchaze-ctf-captueme/image-2.png)
 
 We can see the logic behind the button, when the button is clicked it is followed by a if-else block
 
@@ -55,7 +55,7 @@ Since, the `MainActivity2` has `exported="true"` we can directly open it through
 
 `am start -n com.example.ctf_2/.MainActivity2` , we can run this command in our adb terminal
 
-![alt text](/images/ctf/cyberchaze-ctf-captueme/image-3.png)
+![adb](/images/ctf/cyberchaze-ctf-captueme/image-3.png)
 
 We can see the base64 encoded flag, to decode : `echo "Q3liZXJjaGF6ZXtwcXRGdDhaUGFtT01JS0VNWmNYOEd6ckF1emNZcGk5UEVrYlphc25qVzNwZTczM2VmMn0" | base64 -d`
 

@@ -23,13 +23,13 @@ We can start by installing the `droid.apk` to our emulator and check what is it 
 
 The first screen is pretty simple, it has a user input and a button that does some kind of checking
 
-![alt text](/images/ctf/squirrel-ctf-droid/image-1.png)
+![App screen](/images/ctf/squirrel-ctf-droid/image-1.png)
 
 If we input anything random we get textview with a message `Incorrect!`
 
 Now, we can open this apk in jadx and try to understand the logic
 
-![alt text](/images/ctf/squirrel-ctf-droid/image-2.png)
+![jadx](/images/ctf/squirrel-ctf-droid/image-2.png)
 
 This main activity is not the actual Main activity, the actual logic behind the Main Activity is stored in some `kt/kotlin` source file
 
@@ -48,7 +48,7 @@ public static final Unit TextBoxWithButton$lambda$13$lambda$12$lambda$11(Mutable
 ```
 This code snippet is from the original kotlin file - `MainActivitykt` , in there we see that a method `check` is being used
 
-![alt text](/images/ctf/squirrel-ctf-droid/image-3.png)
+![XOR logic](/images/ctf/squirrel-ctf-droid/image-3.png)
 
 We see two int arrays `key` and `expected`, our input is being xored with the key and compared against `expected`
 

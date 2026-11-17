@@ -21,7 +21,7 @@ Some secrets don’t like the spotlight. They prefer memory.
 
 We can  start by installing the APK and opening it in our emulator.
 
-![alt text](/images/ctf/shakti-ctf-nowyouseeme/image-1.png)
+![App screen](/images/ctf/shakti-ctf-nowyouseeme/image-1.png)
 
 It displays the message in reverse, which we can read to
 
@@ -30,7 +30,7 @@ This is not a part of the module, making it too hard
 ```
 Now, we can proceed to inspect it in jadx,
 
-![alt text](/images/ctf/shakti-ctf-nowyouseeme/image-2.png)
+![jadx](/images/ctf/shakti-ctf-nowyouseeme/image-2.png)
 
 The Main Activity hasn't much in it, but wee see another class `FlagEngine` and calls a native method `getFlag(str)` but one thing is confusing ,
 
@@ -53,7 +53,7 @@ Error: unable to find module 'libnowyouseeme.so'
 ```
 So, we would have to rely on Ghidra to get the flag,
 
-![alt text](/images/ctf/shakti-ctf-nowyouseeme/image-3.png)
+![Ghidra](/images/ctf/shakti-ctf-nowyouseeme/image-3.png)
 
 We see that this function takes in our input and compares it with `mysecretkey` and if it matches it does a xor encryption with the encrypted bytes stored in the memory `&DAT_001006b0`
 
@@ -140,7 +140,7 @@ jcz`
 
 This happened probably because the key is not `mysecretkey`, Upon closer inspection in jadx,
 
-![alt text](/images/ctf/shakti-ctf-nowyouseeme/image-4.png)
+![DataBridge](/images/ctf/shakti-ctf-nowyouseeme/image-4.png)
 
 This class has a static method `getKey` which opens zipped file `assets/resources.dat` and then does something but returns a string back
 
@@ -159,7 +159,7 @@ We use `Java.use('android.app.ActivityThread');` and `ActivityThread.currentAppl
 
 If we load this script,
 
-![alt text](/images/ctf/shakti-ctf-nowyouseeme/image-5.png)
+![Decrypted](/images/ctf/shakti-ctf-nowyouseeme/image-5.png)
 
 It returns the string `Sh@ktiCtf_1337` we can try this as the key to decrypt the raw bytes we found
 

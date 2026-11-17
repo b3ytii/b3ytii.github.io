@@ -21,13 +21,13 @@ Quick and fun math quiz app for practicing.
 
 We can start by inspecting the app in jadx
 
-![alt text](/images/ctf/l3ak-ctf-braincalc/image-1.png)
+![Chaquopy](/images/ctf/l3ak-ctf-braincalc/image-1.png)
 
 From the decompiled Main Activity, we understand that the whole app run on python
 
 The python source code is usually stored in `assets/chaquopy`
 
-![alt text](/images/ctf/l3ak-ctf-braincalc/image-2.png)
+![Chaquopy assets](/images/ctf/l3ak-ctf-braincalc/image-2.png)
 
 We can see `app.imy` in `assets/chaquopy` , we can export that file and analyze it
 

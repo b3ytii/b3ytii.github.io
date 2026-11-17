@@ -21,7 +21,7 @@ This app is pretty handy
 
 We can start by opening the apk in our emulator,
 
-![alt text](/images/ctf/sekai-ctf-2026-ufo/image-1.png)
+![App screen](/images/ctf/sekai-ctf-2026-ufo/image-1.png)
 
 This seems like a file opener application which supports a variety of extensions, after searching for a bit...I found that this same application is available in playstore
 
@@ -30,15 +30,15 @@ This app has a premium subscription, but since this is a legit app we can rule o
 
 Now, we can proceed to inspect it in Jaddx,
 
-![alt text](/images/ctf/sekai-ctf-2026-ufo/image-2.png)
+![jadx](/images/ctf/sekai-ctf-2026-ufo/image-2.png)
 
 An obfuscated code, which makes it much harder to find anything related to the flag, But after some time of searching through the code we find something interesting
 
-![alt text](/images/ctf/sekai-ctf-2026-ufo/image-3.png)
+![Obfuscated code](/images/ctf/sekai-ctf-2026-ufo/image-3.png)
 
 The class `b7.w` initializes a interger preference key `ambient_trace` and if we track this key ,
 
-![alt text](/images/ctf/sekai-ctf-2026-ufo/image-4.png)
+![b7.w](/images/ctf/sekai-ctf-2026-ufo/image-4.png)
 
 In class `b7.a` we find something, we open particular file types like spreadsheet,pdf with signature etc the value of `ambient_trace` updates, more clearly -
 
@@ -74,15 +74,15 @@ Java.perform(function() {
 ```
 After loading this script, We see
 
-![alt text](/images/ctf/sekai-ctf-2026-ufo/image-5.png)
+![Pixel art](/images/ctf/sekai-ctf-2026-ufo/image-5.png)
 
 We can use Gemini to clean up the background and to only keep the colour pixels
 
-![alt text](/images/ctf/sekai-ctf-2026-ufo/image-6.png)
+![Cleaned](/images/ctf/sekai-ctf-2026-ufo/image-6.png)
 
 Now, we can load this photo into a photo editor and turn it into black and white and darken the black pixels
 
-![alt text](/images/ctf/sekai-ctf-2026-ufo/image-7.png)
+![Grayscale](/images/ctf/sekai-ctf-2026-ufo/image-7.png)
 
 Now, this looks like a qr code but it does not contain the three black boxes at the corners
 
@@ -92,7 +92,7 @@ The error correction level is L and Mask pattern is 5
 
 After reconstructing it, we get the final QR -
 
-![alt text](/images/ctf/sekai-ctf-2026-ufo/image-8.png)
+![Final QR](/images/ctf/sekai-ctf-2026-ufo/image-8.png)
 
 Google lens or Camera might not be able to scan this qr, So we might need to install a qr and barcode scanner from playstore,
 
